@@ -6,10 +6,14 @@
       'g.engine',
       /*'g.entity',*/
       /*'g.background-map'*
-       * 'impact.collision-map'
+       * 'g.collision-map'
        */
   )
   .defines(function(){
+
+      /** @constructor
+       *  @extends {_g.Class}
+       */
     _g.Game = _g.Class.extend({
         clearColor: '#000000',
         gravity: 0,

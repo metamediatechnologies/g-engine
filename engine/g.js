@@ -128,7 +128,8 @@
             script.onerror = function () {
                 throw ('Failed to load module ' + name + ' at ' + path + ' ' + 'required from ' + requiredFrom);
             };
-            _g.$('head')[0].appendChild(script);
+            //_g.$('head')[0].appendChild(script);
+            _g.$('head').appendChild(script);
         },
 
         _execModules: function () {
@@ -230,6 +231,10 @@
       console.log(txt);
     }
   };
+
+
+  var initializing = false,
+      fnTest = /xyz/.test(function () { xyz(); }) ? /\bparent\b/ : /.*/;
 
   /** @construcor */
   _g.Class = function () {};

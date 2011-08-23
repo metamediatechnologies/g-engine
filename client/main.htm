@@ -39,6 +39,8 @@
 		}
 	</style>
 
+  <script src="./libs/jquery.min.js" type="text/javascript"  language="javascript"  charset="utf-8"></script>
+
   <script type="text/javascript" src="../g.tmp.js"></script>
 	<script type="text/javascript" src="game.js"></script>
   <script type="text/javascript">
@@ -47,8 +49,9 @@
 
       //everything starts here
       //...
-      var newGame = new g.Game();
-      g.main();
+      //var newGame = new g.Game();
+
+      g.main('#canvas', g.Game, 60, $(window).width(), $(window).height(), 1);
       //main('#canvas', MyGame, 60, 240, 160, 2);
       // ig.main('#canvas', DropGame, 30, width, height, scale, DropLoader);
       //newGame.start();

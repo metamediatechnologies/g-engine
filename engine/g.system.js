@@ -2,8 +2,8 @@
       'g.system'
     )
     .requires(
-      //'g.timer',
-     // 'g.image'
+      'g.timer',
+      'g.image'
     )
     .defines(function () {
 
@@ -33,15 +33,17 @@
             context: null,
             smoothPositioning: true,
 
+            _loopStarted: false,
+
             init: function (canvasId, fps, width, height, scale) {
-                this.fps = this.fps || fps ;
-                this.width = this.width || width;
-                this.height = this.height || height;
-                this.scale =  this.scale || scale;
+                this.fps =  fps || this.fps;
+                this.width = width || this.width;
+                this.height = height || this.height;
+                this.scale =  scale || this.scale;
                 this.realWidth = this.width * this.scale;
                 this.realHeight = this.height * this.scale;
 
-                //this.clock = new _g.Timer();
+                this.clock = new _g.Timer();
 
 
               //Need to make fallback to flash
@@ -78,12 +80,15 @@
             stopRunLoop: function () {
                 clearInterval(this.intervalId);
                 this.running = false;
+                this._loopStarted = false;
+                _g.log('System: Main loop stopped.');
             },
 
             startRunLoop: function () {
                 this.stopRunLoop();
                 this.intervalId = setInterval(this.run.bind(this), 1000 / this.fps);
                 this.running = true;
+                _g.log('System: Main loop started.');
             },
 
             clear: function (color) {
@@ -92,8 +97,12 @@
             },
 
             run: function () {
-                //_g.Timer.step();
-                //this.tick = this.clock.tick();
+                if (!this._loopStarted) {
+                  this._loopStarted = true;
+                  g.log('System.run: Just entered main loop for the first time.');
+                }
+                _g.Timer.step();
+                this.tick = this.clock.tick();
                 this.delegate.run();
                 //_g.input.clearPressed();
                 if (this.newGameClass) {

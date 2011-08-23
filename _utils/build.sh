@@ -5,7 +5,14 @@
 cd ./_utils
 
 # 1 - PREPROCESSING
-cat ../engine/_prefix.js ../engine/g.js ../engine/g.system.js ../engine/g.main.js  ../engine/g.game.js ../engine/_suffix.js > ../g.tmp.js
+cat ../engine/_prefix.js \
+  ../engine/g.js ../engine/g.loader.js \
+  ../engine/g.timer.js ../engine/g.image.js ../engine/g.animation.js \
+  ../engine/g.map.js  \
+  ../engine/g.system.js ../engine/g.background-map.js ../engine/g.main.js  \
+  ../engine/g.game.js \
+  ../engine/_suffix.js  > ../g.tmp.js
+
 #../engine/g.game.js ../engine/g.loader.js
 
  #let clean what is possible before doing something

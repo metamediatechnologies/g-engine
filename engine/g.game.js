@@ -25,23 +25,21 @@
           backgroundAnims: {},
 
 
-      start: function() {
-            this.running = true;
-      },
-      stop: function() {
-          this.running = false;
-      },
-      pause: function() {
-      },
-
-      _tick: function () {
+          run: function () {
               this.update();
               this.draw();
-      }
-
-
-
-    });
+          },
+          /** Prepare entities for next draw iteration
+           * (e.g. recalculate position)
+           */
+          update: function() {
+            //_g.log("Game:update()");
+          },
+          /** Here we do essential graphical procedures */
+          draw: function() {
+            //_g.log("Game:draw()");
+          }
+      });
   });
 
 

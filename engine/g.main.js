@@ -4,9 +4,9 @@
       'g.main'
   )
   .requires(
-      'dom.ready'
-     // 'g.loader',
-     //'g.system',
+      'dom.ready',
+      'g.loader',
+      'g.system'
      // 'g.input',
      // 'g.sound'
   )
@@ -32,10 +32,12 @@
         _g.input = new _g.Input();
         _g.soundManager = new ig.SoundManager();
         _g.music = new _g.Music();
-        _g.ready = true;
-        var loader = new (loaderClass || _g.Loader) (gameClass, _g.resources);
-        loader.load();
       */
+        _g.ready = true;
+
+        var loader = new (loaderClass || _g.Loader) (gameClass || _g.Game, _g.resources);
+        loader.load();
+
       _g.log("main(): Exit");
     };
   });
