@@ -39,9 +39,41 @@
 		}
 	</style>
 
+  <script type="text/javascript" src="../g.tmp.js"></script>
 	<script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript">
+    main = function() {
+      console.log("OnLoad:main()");
+
+      //everything starts here
+      //...
+      var newGame = new g.Game();
+      g.main();
+      //main('#canvas', MyGame, 60, 240, 160, 2);
+      // ig.main('#canvas', DropGame, 30, width, height, scale, DropLoader);
+      //newGame.start();
+
+
+
+      /*
+        var width = 64;
+        var height = (ig.ua.mobile && !window.navigator.standalone && !ig.ua.iPad) ? 84 : 96;
+        var scale = ig.ua.iPhone4 ? 10 : 5;
+        ig.Sound.enabled = ig.ua.mobile ? false : true;
+        ig.main('#canvas', DropGame, 30, width, height, scale, DropLoader);
+        if (ig.ua.iPhone4 && window.navigator.standalone) {
+            ig.$('#canvas').style.height = '480px';
+        }
+      */
+
+      //startKotkiNaPlotki() {
+      //  g.main('#canvas', KotkiNaPlotki, 30, width, height, scale, KotkiLoader);
+      //};
+    }
+
+  </script>
 </head>
-<body id="body">
+<body id="body" onload="main()">
   <div id="game">
     <canvas id="canvas"></canvas>
   </div>

@@ -1,0 +1,75 @@
+  _g.module(
+      'g.font'
+    )
+    .requires('g.image'
+    )
+    .defines(function () {
+        _g.Font = _g.Image.extend({
+            widthMap: [],
+            indices: [],
+            firstChar: 32,
+            onload: function (ev) {
+                this._loadMetrics(this.data);
+                this.parent(ev);
+            },
+            draw: function (text, x, y, align) {
+                if (typeof (text) != 'string') {
+                    text = text.toString();
+                }
+                if (align == _g.Font.ALIGN.RIGHT || align == _g.Font.ALIGN.CENTER) {
+                    var width = 0;
+                    for (var i = 0; i < text.length; i++) {
+                        var c = text.charCodeAt(i);
+                        width += this.widthMap[c - this.firstChar] + 1;
+                    }
+                    x -= align == _g.Font.ALIGN.CENTER ? width / 2 : width;
+                }
+                for (var i = 0; i < text.length; i++) {
+                    var c = text.charCodeAt(i);
+                    x += this._drawChar(c - this.firstChar, x, y);
+                }
+            },
+            _drawChar: function (c, targetX, targetY) {
+                if (!this.loaded || c < 0 || c >= this.indices.length) {
+                    return 0;
+                }
+                var scale = _g.system.scale;
+                var charX = this.indices[c] * scale;
+                var charY = 0;
+                var charWidth = this.widthMap[c] * scale;
+                var charHeight = (this.height - 2) * scale;
+                _g.system.context.drawImage(this.data, charX, charY, charWidth, charHeight, _g.system.getDrawPos(targetX), _g.system.getDrawPos(targetY), charWidth, charHeight);
+                return this.widthMap[c] + 1;
+            },
+            _loadMetrics: function (image) {
+                this.widthMap = [];
+                this.indices = [];
+                var canvas = _g.$new('canvas');
+                canvas.width = image.width;
+                canvas.height = 1;
+                var ctx = canvas.getContext('2d');
+                ctx.drawImage(image, 0, image.height - 1, image.width, 1, 0, 0, image.width, 1);
+                var px = ctx.getImageData(0, 0, image.width, 1);
+                var currentChar = 0;
+                var currentWidth = 0;
+                for (var x = 0; x < image.width; x++) {
+                    var index = x * 4 + 3;
+                    if (px.data[index] != 0) {
+                        currentWidth++;
+                    } else if (px.data[index] == 0 && currentWidth) {
+                        this.widthMap.push(currentWidth);
+                        this.indices.push(x - currentWidth);
+                        currentChar++;
+                        currentWidth = 0;
+                   }
+                }
+                this.widthMap.push(currentWidth);
+                this.indices.push(x - currentWidth);
+            }
+        });
+        _g.Font.ALIGN = {
+            LEFT: 0,
+            RIGHT: 1,
+            CENTER: 2
+        };
+    });

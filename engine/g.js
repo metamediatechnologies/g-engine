@@ -5,26 +5,64 @@
    * Global namespace object. Entry point to Game Engine
    */
 
-  var _g = _g || {};
-  _g = {
+  //var _g = _g || {};
+  var _g = {
+        /** @type {String} */
         version: '0.1',
+        /** @type {Object} */
         global: window,
-        doc = global.document;
+        /** @type {Object} */
+        doc: window.document,
 
+
+        /** @type {_g.Game} */
         game: null,
+        /** @type {Object} */
         modules: {},
+        /** @type {Array} */
         resources: [],
-
+        /** @type {Boolean} */
         ready: false,
+        /** @type {Boolean} */
         baked: false,
 
+        /** @type {String} */
         nocache: '',
+        /** @type {Object} */
         ua: {},
 
+        /** @type {Object} */
         _current: null,
+        /** @type {Array} */
         _loadQueue: [],
+        /** @type {Number} */
         _waitForOnload: 0,
 
+        /* to be able work without jQuery */
+        $: function (selector) {
+            return selector.charAt(0) == '#' ? _g.doc.getElementById(selector.substr(1)) : _g.doc.getElementsByTagName(selector);
+        },
+        $new: function (name) {
+            return _g.doc.createElement(name);
+        },
+        /* deep copy */
+        copy: function (object) {
+            if (!object || typeof (object) != 'object' || object instanceof _g.Class) {
+                return object;
+            } else if (object instanceof Array) {
+                var c = [];
+                for (var i = 0, l = object.length; i < l; i++) {
+                    c[i] = _g.copy(object[i]);
+                }
+                return c;
+            } else {
+                var c = {};
+                for (var i in object) {
+                    c[i] = _g.copy(object[i]);
+                }
+                return c;
+            }
+        },
 
 
         module: function (name) {
@@ -75,7 +113,9 @@
 
             _g._waitForOnload++;
 
-            var path = 'lib/' + name.replace(/\./g, '/') + '.js' + _g.nocache;
+            //var path = 'lib/' + name.replace(/\./g, '/') + '.js' + _g.nocache;
+            var path = 'lib/' + name + '.js' + _g.nocache;
+           //var path = '../engine/' + name + '.js' + _g.nocache;
             var script = _g.$new('script');
             script.type = 'text/javascript';
             script.src = path;
@@ -124,7 +164,7 @@
 
         _DOMReady: function () {
             if (!_g.modules['dom.ready'].loaded) {
-                if (!document.body) {
+                if (!_g.doc.body) {
                     return setTimeout(_g._DOMReady, 13);
                 }
                 _g.modules['dom.ready'].loaded = true;
@@ -134,16 +174,30 @@
             return 0;
         },
 
+        _isCanvas: function() {
+          var elem = _g.doc.createElement( 'canvas' );
+          return !!(elem.getContext && elem.getContext('2d'));
+        },
+
         _boot: function () {
-            if (document.location.href.match(/\?nocache/)) {
+            if (_g.doc.location.href.match(/\?nocache/)) {
                 _g.setNocache(true);
             }
-            _g.ua.iPhone = /iPhone/i.test(nav_gator.userAgent);
+            _g.ua.iPhone = /iPhone/i.test(navigator.userAgent);
             _g.ua.iPhone4 = (_g.ua.iPhone && window.devicePixelRatio == 2);
-            _g.ua.iPad = /iPad/i.test(nav_gator.userAgent);
-            _g.ua.android = /android/i.test(nav_gator.userAgent);
+            _g.ua.iPad = /iPad/i.test(navigator.userAgent);
+            _g.ua.android = /android/i.test(navigator.userAgent);
             _g.ua.iOS = _g.ua.iPhone || _g.ua.iPad;
             _g.ua.mobile = _g.ua.iOS || _g.ua.android;
+
+            _g.ua.desktop = ! _g.ua.mobile;
+            _g.ua.webkit = /(webkit)[ \/]([\w.]+)/i.test(navigator.userAgent);
+            _g.ua.opera =  /(opera)(?:.*version)?[ \/]([\w.]+)/i.test(navigator.userAgent);
+            _g.ua.msie = /(msie) ([\w.]+)/i.test(navigator.userAgent);
+            _g.ua.mozilla = /(mozilla)(?:.*? rv:([\w.]+))?/i.test(navigator.userAgent);
+            _g.ua.chrome = /(chrome)[ \/]([\w.]+)/i.test(navigator.userAgent);
+            //is HTML5 canvas available?
+            //else prepare flashCanvas as
         },
 
 
@@ -158,16 +212,22 @@
                 body: null
             };
             _g._waitForOnload++;
-            if (document.readyState === 'complete') {
+            if (_g.doc.readyState === 'complete') {
                 _g._DOMReady();
             } else {
-                document.addEventListener('DOMContentLoaded', _g._DOMReady, false);
+                _g.doc.addEventListener('DOMContentLoaded', _g._DOMReady, false);
                 window.addEventListener('load', _g._DOMReady, false);
             }
-        },
+        }
   };
 
 
+
+  _g.log = function(txt) {
+    if( typeof console !== "undefined") {
+      console.log(txt);
+    }
+  };
 
 
   _g.Class = function () {};
@@ -205,7 +265,7 @@
           }
         }
         for (p in this) {
-          this[p] = ig.copy(this[p]);
+          this[p] = _g.copy(this[p]);
         }
         if (this.init) {
           this.init.apply(this, arguments);

@@ -7,7 +7,7 @@ Organizacja produktu gry
   index.html  - plik strony hosta (może to być wytmuszka, albo gra na FB)
   main.html   - glowna strona aplikacji (w niej rozpoczyna sie wszystko)
   game.js     - silnik gry (lub g.js)
-  g-data.js   - dane potrzebne do gry (tekstowe, jezykowe, logiczne)
+  g-data.json   - dane potrzebne do gry (tekstowe, jezykowe, logiczne)
 
   g-loader.png
     g-loader-bgrnd.png  - plansza z
@@ -29,5 +29,22 @@ Flow / Sequence - Przepływ działań
 
    0. oczekiwanie na zaladowanie strony aplikacji ( w niej dolaczony sa dane opis assetsow json)
    1. tworzy sie obiekt odpowiedzialny za zaladowanie aplikacji
-   2. Bootloader sciaga i prezentuje plansze ladowania
-   3. Bootloader sciaga reszte plikow (game.js, )
+   2. Bootloader sciaga i prezentuje plansze ladowania (odpowiednio inicjuje Canvas albo Flash)
+   3. Bootloader sciaga reszte plikow (g-data.json,g-graphics.png, g-audio.wav )
+   4. Po ściągnięciu albo gdy minie 10 sekund, tworzony jest obiekt Game
+   5. Gra start() i usuwana jest plansza ladowania
+   ...
+      odpowiednia interakcja powoduje ladowanie podstron oraz sceny glownej gry.
+
+
+
+ w funkcji  _tick()
+     This is the gist of what your game will do:
+
+      * you evaluate the user's input (mouse and keyboard events)
+      * then all the objects update their position and/or their appeareance
+      * you clear the screen
+      * and finally draw the objects to the screen
+      * repeat
+
+
