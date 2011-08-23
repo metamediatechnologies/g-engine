@@ -1,0 +1,427 @@
+The folder structure is:
+
+./engine – All the game engine files. The engine scripts run on both client and server from the same code.
+  modules – Contains extra engine modules that are not required to run the engine but can be included to augment capabilities.
+
+./iso_city – The isometric city builder demo folder.
+  assets – All of the game’s image, sound, etc assets.
+  client – All of the game’s client files.
+    audio – Any audio files that the game may want to use.
+    libraries – All of the libraries that the client game uses
+      jquery.js – The jquery library.
+      ga.js – Google Analytics script to log uses of the game to GA.
+    index.htm – The index page, loaded by browsers to initiate the game.
+    main.htm – The main page that will load the client engine and assets and display the game to the client.
+    game.js – The client logic script.
+
+server – All of the game’s server files.
+  server.js – The server logic script.
+  config.js – The server configuration file.
+./node_modules – The Node.js modules that the game engine uses.
+
+
+
+
+
+Contents
+
+  Engine Classes
+  All Classes
+
+
+  IgeAnimations
+  IgeAssets
+  IgeCameras
+  IgeCollection
+  IgeEngine
+  IgeEntities
+  IgeEnum
+  IgeEvents
+  IgeFacebook
+  IgeIdFactory
+  IgeMaps
+  IgeNetwork
+  IgeNetwork2
+  IgeObfuscate
+  IgePaths
+  IgeRenderer
+  IgeScreens
+  IgeSound
+  IgeTemplates
+  IgeViewports
+
+https://github.com/coolbloke1324/node-irrelon-router
+
+
+http://jawsjs.com/Game_engine_constructors
+http://jawsjs.com/docs/index.html
+
+
+http://gamequery.onaluf.org/
+
+   http://gamequery.onaluf.org/demos/4/superjavascriptfighter2.js
+   http://gamequery.onaluf.org/demos/4/iframe.html
+
+    https://github.com/onaluf/gameQuery
+
+    http://www.onaluf.org/
+
+
+EaselJS
+  The API is inspired by Flash's display list, and should be easy to pick up for both JS and AS3 developers. The key classes are:
+
+  DisplayObject
+  Abstract base class for all display elements in EaselJS. Exposes all of the display properties (ex. x, y, rotation, scaleX, scaleY, skewX, skewY, alpha, shadow, etc) that are common to all display objects.
+
+  Stage
+  The root level display container for display elements. Each time tick() is called on Stage, it will update and render the display list to its associated canvas.
+
+  Container
+  A nestable display container, which lets you aggregate display objects and manipulate them as a group.
+
+  Bitmap
+  Draws an image, video or canvas to the canvas according to its display properties.
+
+  BitmapSequence
+  Displays animated or dynamic sprite sheets (images with multiple frames on a grid), and provides APIs for managing playback and sequencing.
+
+  Shape
+  Renders a Graphics object within the context of the display list.
+
+  Graphics
+  Provides an easy to use API for drawing vector data. Can be used with Shape, or completely stand alone.
+
+  Text
+  Renders a single line of text to the stage.
+
+
+  There are also a few helper classes included:
+
+  Shadow
+  Defines all of the properties needed to display a shadow on a display object.
+
+  Ticker
+  Provides a pausable centralized tick manager for ticking Stage instances or other time based code.
+
+  UID
+  Very simple class that provides global, incremental unique numeric IDs.
+
+  SpriteSheetUtils
+  Contains utility methods for extending existing sprite sheets with flipped frames, and for outputting/debugging frame data objects.
+
+  SpriteSheet
+  Encapsulates all the data associated with a sprite sheet to be used with BitmapSequence.
+
+  Matrix2D
+  Represents a 3x3 affine transformation matrix. Used internally for calculating concatenated transformations.
+
+  Rectangle & Point
+  Represent geometric data.
+
+
+  Have a look at the included examples and API documentation for more in-depth information.
+
+-----------------------
+
+
+ImpactJS
+
+  Core and System
+    Core - Module definition, module loading and the ig.main() and utility functions
+    Class - Base Class for all classes
+    System - Hosts the current Game object and maintains the run loop.
+    Loader - Preloads all assets (images and sounds) and starts the given Game when done.
+
+  Logic
+    Game - The main hub for your game. It hosts all currently active entities, background maps and a collision map and takes care of updating and drawing everything.
+    Entity - Interactive objects in the game world are typically subclassed from this base Entity class. It provides animation, drawing and basic physics.
+    Input - Handles all Keyboard and Mouse input.
+    Timer - Timing stuff.
+    Map - Base class for CollisionMaps and BackgroundMaps.
+    CollisionMap - Trace objects against a 2D Tile Map
+
+  Graphics
+    Image - A wrapper around image resources (png, gif or jpeg). It takes care of loading and scaling the source image.
+    Animation - Animate Entities and Background Map tiles with an Animation Sheet
+    AnimationSheet - Load an Image as Animation Sheet and specify the width and height for each animation frame
+    Font - Load a bitmap font image and draw text.
+    BackgroundMap - Draw a 2D Tile Map
+
+  Sound
+    Sound - Loads a sound file to be used as background music or game sound.
+    Music - Provides functionality to play background music and create a playlist.
+    SoundManager - Loads sound files for ig.Music and ig.Sound.
+
+
+
+http://code.google.com/p/impactjs-iis-backend/
+
+  ig.module(
+      'game.my-file'
+  )
+  .requires(
+      'impact.game',
+      'impact.image',
+      'game.other-file'
+  )
+  .defines(function(){
+
+      // code for this module
+
+  });
+
+
+http://impactjs.com/documentation/getting-started
+https://github.com/cpetzold/node-impact
+
+  http://tapjs.com/pages/api/
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Impact Game</title>
+	<style type="text/css">
+		html,body {
+			background-color: #000;
+			color: #fff;
+			font-family: helvetica, arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			font-size: 12pt;
+		}
+
+		#canvas {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			border: 1px solid #555;
+		}
+	</style>
+
+	<script type="text/javascript" src="game.min.js"></script>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+</body>
+</html>
+
+
+
+
+
+
+
+-------------------------
+http://forums.appmobi.com/viewtopic.php?f=10&t=297
+<canvas id="canvas" style="margin-left: -8px; margin-top: -8px;"></canvas>
+
+
+Audio w przegladarkach
+  http://webhosting.pl/Przykra.prawda.o.audio.w.HTML5.wiekszosc.producentow.przegladarek.klamie
+  http://www.phoboslab.org/files/html5audio/
+
+
+
+http://www.isogenicengine.com/documentation/setup-your-environment/deploy-to-osx/
+http://www.isogenicengine.com/documentation/setup-your-environment/deploy-to-debian-via-virtualbox-virtualised/
+
+mongod --fork --logpath /ige/mongo/logs/mongodb.log --logappend --dbpath /ige/mongo/data
+
+mongorestore game_iso_city/db --db isogenic_city
+nano /ige/iso_city/server/config.js
+
+
+
+-----------------
+Crafty
+  http://craftyjs.com/api/
+
+   var player = Crafty.e(); player.addComponent("2D, gravity");
+
+
+view-source:http://crafty-examples.lqbs.fr/animation/
+https://github.com/AdrianGaudebert/crafty-examples/blob/master/isometric-map/isometric-map.js
+
+
+
+http://programmateur.lqbs.fr/blog/creating-an-eternal-animation-with-crafty-js/
+
+https://github.com/starmelt/craftyjstut/
+   window.onload = (function() {
+    var WIDTH = 800,
+        HEIGHT = 640;
+    // Initialize Crafty
+    Crafty.init(WIDTH, HEIGHT);
+
+    /*
+     * Create an entity with Crafty.e(..) that
+     *  - can be drawn (2D) on a HTML canvas (Canvas)
+     *  - has a background color (Color)
+     *  - can be moved with WASD or arrow keys (Fourway)
+     */
+    var pl = Crafty.e("2D, Canvas, Color, Fourway")
+                .attr({x: 160, y: 96, w: 32, h: 32}) // for Component 2D
+                .color("#FF0000") // for Component Color
+                .fourway(10); // for Component Fourway
+
+    // log the created entity to the JS console
+    console.log(pl);
+});
+
+
+
+http://getsatisfaction.com/irrelon_software/topics/bug_fix_patch_download_available_02_05_2011
+
+  o into your mongo instance by typing:
+
+mongo
+
+
+Then type:
+
+use isogenic_city
+
+
+Then:
+
+db.asset.remove();
+
+db.entity.remove();
+
+db.template.remove();
+
+etc...
+
+Or you can just drop the entire database like:
+
+db.dropDatabase();
+
+
+http://impactjs.com/documentation/debug
+
+check: function( other ) {
+        // Iterate over all targets
+        for( var t in this.target ) {
+            var ent = ig.game.getEntityByName( this.target[t] );
+
+            // Check if we got a "door" entity with the given name
+            if( ent && ent instanceof EntityDoor ) {
+                ent.open();
+            }
+        }
+    }
+
+
+
+<meta name="viewport" content="width=device-width;
+	initial-scale=1; maximum-scale=1; user-scalable=0;"/>
+
+
+
+if( ig.ua.iPhone4 ) {
+    // The game's native resolution is 160x160. It will be
+    // scaled up 4x for the iPhone4, resulting in a drawing
+    // resolution of 640x640 px
+    ig.main('#canvas', MyGame, 60, 160, 160, 4);
+}
+else {
+    // For all other devices (including desktop browsers),
+    // the game will be scaled up 2x, resulting in a drawing
+    // resolution of 320x320 px
+    ig.main('#canvas', MyGame, 60, 160, 160, 2);
+}
+
+if( ig.ua.mobile ) {
+    // Disable sound for all mobile devices
+    ig.Sound.enabled = false;
+}
+
+if( ig.ua.iPhone4 ) {
+    // The iPhone 4 has more pixels - we'll scale the
+    // game up by a factor of 4
+    ig.main('#canvas', MyGame, 60, 160, 160, 4);
+}
+else if( ig.ua.mobile ) {
+    // All other mobile devices
+    ig.main('#canvas', MyGame, 60, 160, 160, 2);
+}
+else {
+    // Desktop browsers
+    ig.main('#canvas', MyGame, 60, 240, 160, 2);
+}
+
+
+#canvas {
+	/* Remember, those 320 "px" will be displayed over 640 pixels
+	on the iPhone 4's screen, that's why we have to render
+	the game at 640x640 pixels. */
+
+	width: 320px;
+	height: 320px;
+}
+
+http://impactjs.com/documentation/impact-on-mobile-platforms
+
+
+
+// Create an AnimationSheet with the blob.png file.
+// Each frame is 16x16 px
+var animSheet = new ig.AnimationSheet( 'blob.png', 16, 16 );
+
+// Create an animation using the AnimationSheet.
+// Display each frame for 0.2 Seconds. The Sequence
+// is [2,3,4] and the Animation stops at the last
+// frame (last parameter is true)
+var jumpAnim = new ig.Animation( animSheet, 0.2, [2,3,4], true );
+
+
+
+
+All instances of ig.Image, ig.Font, ig.AnimationSheet and ig.Sound that are created
+during load-time will be appended to the preloader's chain of assets to load.
+Images and Sounds that are only created at runtime, will not be loaded by the preloader.
+
+
+
+MyGame = ig.Game.extend({
+    // This image will be loaded by the preloader. It is created
+    // as soon as the script is executed
+    titleImage: new ig.Image( 'media/title.png' ),
+
+    init: function() {
+        // This image file will NOT be loaded by the preloader. The
+        // init() method is only called after the preloader finishes
+        // and the game is started.
+        this.backgroundImage = new ig.Image( 'media/background.png' );
+    }
+});
+
+
+
+
+To bootstrap on the server you now (after declaring your onBoot method):
+
+1: Require the bootstrap class: require(igeConfig.dir_engine + '/IgeBootstrap');
+2: Create the bootstrap object: igeBootstrap = new IgeBootstrap(onBoot);
+3: Add any files that you want bootstrapped that are not part of the engine by calling igeBootstrap.require(fileUrl);
+4: Start the bootstrap process with: igeBootstrap.process();
+
+To bootstrap on the client you now call:
+
+1: Require the bootstrap class (in your HTML file head tag) by using a script tag
+2: Create the bootstrap object: window.igeBootstrap = new IgeBootstrap(onBoot);
+3: Add any files that you want bootstrapped that are not part of the engine by calling window.igeBootstrap.require(fileUrl);
+4: Start the bootstrap process with: window.igeBootstrap.process();
+
+
+
+<!-- Isogenic -->
+<script type="text/javascript" language="javascript" src="libraries/ga.js"></script>
+<script type="text/javascript" language="javascript" src="libraries/jquery.js"></script>
+<script type="text/javascript" language="javascript" src="/engine/IgeBootstrap.js"></script>
+<script type="text/javascript" language="javascript" src="game.js"></script>
+
