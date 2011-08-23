@@ -13,14 +13,22 @@
   .defines(function(){
 
       // code for this module
-
+    /**
+     *  @param {String}  canvasID
+     *  @param {_g.Game} gameClass
+     *  @param {Number}  fps
+     *  @param {Number}  width
+     *  @param {Number}  height
+     *  @param {Number}  scale
+     *  @param {Object}  loader
+     */
     _g.main = function (canvasId, gameClass,
                         fps, width, height, scale, loaderClass)
     {
       _g.log("main(): Enter");
-      /*
-        _g.system = new _g.System(canvasId, fps, width, height, scale || 1);
 
+        _g.system = new _g.System(canvasId, fps, width, height, scale || 1);
+      /*
         _g.input = new _g.Input();
         _g.soundManager = new ig.SoundManager();
         _g.music = new _g.Music();

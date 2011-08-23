@@ -3,12 +3,15 @@ e
       'g.loader'
     )
     .requires(
-      'g.image',
-      'g.font',
-      'g.sound'
-      )
-      .defines(function () {
+      //'g.image',
+      //'g.font',
+      //'g.sound'
+    )
+    .defines(function () {
 
+        /** @constructor
+         *  @extends {_g.Class}
+         */
         _g.Loader = _g.Class.extend({
             resources: [],
             gameClass: null,

@@ -40,7 +40,7 @@
 
         /* to be able work without jQuery */
         $: function (selector) {
-            return selector.charAt(0) == '#' ? _g.doc.getElementById(selector.substr(1)) : _g.doc.getElementsByTagName(selector);
+            return selector.charAt(0) == '#' ? _g.doc.getElementById(selector.substr(1)) : _g.doc.getElementsByTagName(selector)[0];
         },
         $new: function (name) {
             return _g.doc.createElement(name);
@@ -102,7 +102,9 @@
         setNocache: function (set) {
             _g.nocache = set ? '?' + Math.random().toString().substr(2) : '';
         },
-
+        /** @param {String}
+         *  @param
+         */
         _loadScript: function (name, requiredFrom) {
             _g.modules[name] = {
                 name: name,
@@ -222,14 +224,14 @@
   };
 
 
-
+  /** @param {String} */
   _g.log = function(txt) {
     if( typeof console !== "undefined") {
       console.log(txt);
     }
   };
 
-
+  /** @construcor */
   _g.Class = function () {};
   _g.Class.extend = function (prop) {
     var parent = this.prototype;

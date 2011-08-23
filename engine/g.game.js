@@ -9,6 +9,10 @@
     .defines(function(){
 
         // code for this module
+
+      /** @constructor
+       *  @extends {_g.Class}
+       */
       _g.Game = _g.Class.extend({
           clearColor: '#000000',
           gravity: 0,
