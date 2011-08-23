@@ -1,0 +1,33 @@
+
+
+
+Organizacja produktu gry
+------------------------
+
+  index.html  - plik strony hosta (może to być wytmuszka, albo gra na FB)
+  main.html   - glowna strona aplikacji (w niej rozpoczyna sie wszystko)
+  game.js     - silnik gry (lub g.js)
+  g-data.js   - dane potrzebne do gry (tekstowe, jezykowe, logiczne)
+
+  g-loader.png
+    g-loader-bgrnd.png  - plansza z
+    g-loader-sprite.png - czesci potrzebne do animacji gry
+
+  g-graphics.png (g-graphics.json - opis zawartosci plikow z grafika)
+    g-bgrnd.png
+    g-sprite.png
+    albo
+      g-scene1-bgrnd.png
+      g-scene1-sprite.png
+
+  g-audio.wav   - wszelkie zasoby dzwiekowe potrzebne do gry  (g-audio.json)
+
+
+Flow / Sequence - Przepływ działań
+-----------------------------------
+
+
+   0. oczekiwanie na zaladowanie strony aplikacji ( w niej dolaczony sa dane opis assetsow json)
+   1. tworzy sie obiekt odpowiedzialny za zaladowanie aplikacji
+   2. Bootloader sciaga i prezentuje plansze ladowania
+   3. Bootloader sciaga reszte plikow (game.js, )
