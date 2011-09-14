@@ -425,3 +425,6 @@ To bootstrap on the client you now call:
 <script type="text/javascript" language="javascript" src="/engine/IgeBootstrap.js"></script>
 <script type="text/javascript" language="javascript" src="game.js"></script>
 
+
+
+

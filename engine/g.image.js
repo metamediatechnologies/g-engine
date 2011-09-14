@@ -127,7 +127,11 @@
                 sourceY = sourceY ? sourceY * scale : 0;
                 width = (width ? width : this.width) * scale;
                 height = (height ? height : this.height) * scale;
-                _g.system.context.drawImage(this.data, sourceX, sourceY, width, height, _g.system.getDrawPos(targetX), _g.system.getDrawPos(targetY), width, height);
+                _g.system.context.drawImage(this.data, sourceX, sourceY,
+                                            width, height,
+                                            _g.system.getDrawPos(targetX),
+                                            _g.system.getDrawPos(targetY),
+                                            width, height);
             },
             /**
              *  @param {Number} targetX
@@ -152,7 +156,12 @@
                     _g.system.context.save();
                     _g.system.context.scale(scaleX, scaleY);
                 }
-                _g.system.context.drawImage(this.data, ((tile * tileWidth).floor() % this.width) * scale, ((tile * tileWidth / this.width).floor() * tileHeight) * scale, tileWidthScaled, tileHeightScaled, _g.system.getDrawPos(targetX) * scaleX - (flipX ? tileWidthScaled : 0), _g.system.getDrawPos(targetY) * scaleY - (flipY ? tileHeightScaled : 0), tileWidthScaled, tileHeightScaled);
+                _g.system.context.drawImage(this.data, ((tile * tileWidth).floor() % this.width) * scale,
+                                                        ((tile * tileWidth / this.width).floor() * tileHeight) * scale,
+                                                        tileWidthScaled, tileHeightScaled,
+                                                        _g.system.getDrawPos(targetX) * scaleX - (flipX ? tileWidthScaled : 0),
+                                                         _g.system.getDrawPos(targetY) * scaleY - (flipY ? tileHeightScaled : 0),
+                                                          tileWidthScaled, tileHeightScaled);
                 if (flipX || flipY) {
                     _g.system.context.restore();
                 }

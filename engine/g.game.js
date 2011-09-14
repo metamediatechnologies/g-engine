@@ -23,7 +23,7 @@
 
           entities: [],
           namedEntities: {},
-          collisionMap: _g.CollisionMap.staticNoCollision,
+          //collisionMap: _g.CollisionMap.staticNoCollision,
           backgroundMaps: [],
           backgroundAnims: {},
           cellSize: 64,
@@ -159,7 +159,7 @@
                 }
                 var checked = {},
                     xmin = (entity.pos.x / this.cellSize).floor(),
-                    ymin = (entity.pos.y / this.cellSize).floor(),
+                   ymin = (entity.pos.y / this.cellSize).floor(),
                     xmax = ((entity.pos.x + entity.size.x) / this.cellSize).floor() + 1,
                     ymax = ((entity.pos.y + entity.size.y) / this.cellSize).floor() + 1;
                 for (var x = xmin; x < xmax; x++) {

@@ -99,7 +99,7 @@
             run: function () {
                 if (!this._loopStarted) {
                   this._loopStarted = true;
-                  g.log('System.run: Just entered main loop for the first time.');
+                  _g.log('System.run: Just entered main loop for the first time.');
                 }
                 _g.Timer.step();
                 this.tick = this.clock.tick();

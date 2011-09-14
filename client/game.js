@@ -17,14 +17,16 @@ Changelog:
 -------------------------------------------------------------------------------
 */
 
-g.module(
+_g.module(
 	'game.main'
 )
 .requires(
+  'g.game',
+  'g.debug' // <- Add/Remove this
 )
 .defines(function(){
 
-  MyGame = ig.Game.extend({
+  MyGame = _g.Game.extend({
 
 
     loaderBgrndImage: new _g.Image( './assets/images/g-loader-bgrnd.png' ),
@@ -57,6 +59,6 @@ g.module(
 
  // Start the Game with 60fps, a resolution of 320x240, scaled
  // up by a factor of 2
-g.main( '#canvas', MyGame, 60, 512, 384, 2 );
+ //g.main( '#canvas', MyGame, 60, 512, 384, 2 );
 
 });

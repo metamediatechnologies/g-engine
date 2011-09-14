@@ -1,6 +1,6 @@
 
   if( typeof window !== "undefined") {
-    window.g = _g;
+    window._g = _g;
   }
 
 })(window);

@@ -5,7 +5,7 @@
     )
     .requires(
       'g.animation',
-      'g.engine'
+      'g.main'
     )
     .defines(function () {
         _g.Entity = _g.Class.extend({
