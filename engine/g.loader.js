@@ -76,6 +76,8 @@
 
             _loadCallback: function (path, status) {
                 if (status) {
+                    this.status = 1 - (this._unloaded.length / this.resources.length);
+                    this.draw();
                     this._unloaded.erase(path);
                 } else {
                     throw ('Failed to load resource: ' + path);

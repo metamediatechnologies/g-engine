@@ -47,8 +47,8 @@
         _g.Timer.maxStep = 0.05;
 
         _g.Timer.step = function () {
-            if ( _g.Timer.time === 0)
-              _g.log("Timer.step: Starting to walk...");
+           // if ( _g.Timer.time === 0)
+           //   _g.log("Timer.step: Starting to walk...");
 
             var current = Date.now();
             var delta = (current - _g.Timer._last) / 1000;

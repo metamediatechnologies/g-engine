@@ -3,11 +3,13 @@
 
 Organizacja produktu gry
 ------------------------
+  (wszystkie pliki powinny byc zminifikowane:) skompresowane )
 
   index.html  - plik strony hosta (może to być wytmuszka, albo gra na FB)
   main.html   - glowna strona aplikacji (w niej rozpoczyna sie wszystko)
-  game.js     - silnik gry (lub g.js)
-  g-data.json   - dane potrzebne do gry (tekstowe, jezykowe, logiczne)
+  game.js     - cała zawartość gry bazujaca na silniku
+  g.js        - silnik gry (lub g.js)
+  g-data.json - dane potrzebne do gry (tekstowe, jezykowe, logiczne)
 
   g-loader.png
     g-loader-bgrnd.png  - plansza z
