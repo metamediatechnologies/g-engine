@@ -1,6 +1,11 @@
 
 
-  G - web (html5) game engine, that hit the point
-  ===============================================
+G - web (html5) game engine, that hit the spot
+------------------------------------------------
 
-  + flash fallback
+
+
+
+TODO:
+  + flash canvas fallback
+  + flash audio fallback

@@ -3,14 +3,17 @@
     'g.sound'
     )
     .defines(function () {
+
         _g.SoundManager = _g.Class.extend({
             clips: {},
             volume: 1,
             channels: 4,
             format: 'mp3',
+
             init: function () {
                 this.format = _g.$new('audio').canPlayType('audio/mpeg') ? 'mp3' : 'ogg';
             },
+
             load: function (path, multiChannel, loadCallback) {
                 if (this.clips[path]) {
                     if (multiChannel && this.clips[path].length < this.channels) {
@@ -43,6 +46,7 @@
                 }
                 return clip;
             },
+
             get: function (path) {
                 var channels = this.clips[path];
                 for (var i = 0, clip; clip = channels[i++];) {
@@ -58,6 +62,9 @@
                 return channels[0];
             }
         });
+
+
+
         _g.Music = _g.Class.extend({
             tracks: [],
             currentTrack: null,
@@ -172,6 +179,8 @@
                 }
             }
         });
+
+
         _g.Sound = _g.Class.extend({
             path: '',
             volume: 1,
@@ -211,4 +220,6 @@
             }
         });
         _g.Sound.enabled = true;
+
+
     });

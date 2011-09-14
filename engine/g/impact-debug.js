@@ -1,3 +1,7 @@
+
+/*  http://playbiolab.com/biolab-debug.js     */
+
+
 // Built with IMPACT - impactjs.org
 Number.prototype.map = function (istart, istop, ostart, ostop) {
     return ostart + (ostop - ostart) * ((this - istart) / (istop - istart));
@@ -985,470 +989,357 @@ ig.baked=true;ig.module(';
                 });
         });
 
-    // impact/input.js
-    ig.baked = true; ig.module('impact.input'
-    mpact.input ').defines(function(){ig.KEY={'.defines(function () {
-        ig.KEY = {
-            'MOUSE1'
-            OUSE1 ':-1,' - 1, 'MOUSE2'
-            OUSE2 ':-3,' - 3, 'MWHEEL_UP'
-            WHEEL_UP ':-4,' - 4, 'MWHEEL_DOWN'
-            WHEEL_DOWN ':-5,' - 5, 'BACKSPACE'
-            ACKSPACE ':8,'
-            8, 'TAB'
-            AB ':9,'
-            9, 'ENTER'
-            NTER ':13,'
-            13, 'PAUSE'
-            AUSE ':19,'
-            19, 'CAPS'
-            APS ':20,'
-            20, 'ESC'
-            SC ':27,'
-            27, 'SPACE'
-            PACE ':32,'
-            32, 'PAGE_UP'
-            AGE_UP ':33,'
-            33, 'PAGE_DOWN'
-            AGE_DOWN ':34,'
-            34, 'END'
-            ND ':35,'
-            35, 'HOME'
-            OME ':36,'
-            36, 'LEFT_ARROW'
-            EFT_ARROW ':37,'
-            37, 'UP_ARROW'
-            P_ARROW ':38,'
-            38, 'RIGHT_ARROW'
-            IGHT_ARROW ':39,'
-            39, 'DOWN_ARROW'
-            OWN_ARROW ':40,'
-            40, 'INSERT'
-            NSERT ':45,'
-            45, 'DELETE'
-            ELETE ':46,'
-            46, '_0'
-            0 ':48,'
-            48, '_1'
-            1 ':49,'
-            49, '_2'
-            2 ':50,'
-            50, '_3'
-            3 ':51,'
-            51, '_4'
-            4 ':52,'
-            52, '_5'
-            5 ':53,'
-            53, '_6'
-            6 ':54,'
-            54, '_7'
-            7 ':55,'
-            55, '_8'
-            8 ':56,'
-            56, '_9'
-            9 ':57,'
-            57, 'A'':65,'
-            65, 'B'':66,'
-            66, 'C'':67,'
-            67, 'D'':68,'
-            68, 'E'':69,'
-            69, 'F'':70,'
-            70, 'G'':71,'
-            71, 'H'':72,'
-            72, 'I'':73,'
-            73, 'J'':74,'
-            74, 'K'':75,'
-            75, 'L'':76,'
-            76, 'M'':77,'
-            77, 'N'':78,'
-            78, 'O'':79,'
-            79, 'P'':80,'
-            80, 'Q'':81,'
-            81, 'R'':82,'
-            82, 'S'':83,'
-            83, 'T'':84,'
-            84, 'U'':85,'
-            85, 'V'':86,'
-            86, 'W'':87,'
-            87, 'X'':88,'
-            88, 'Y'':89,'
-            89, 'Z'':90,'
-            90, 'NUMPAD_0'
-            UMPAD_0 ':96,'
-            96, 'NUMPAD_1'
-            UMPAD_1 ':97,'
-            97, 'NUMPAD_2'
-            UMPAD_2 ':98,'
-            98, 'NUMPAD_3'
-            UMPAD_3 ':99,'
-            99, 'NUMPAD_4'
-            UMPAD_4 ':100,'
-            100, 'NUMPAD_5'
-            UMPAD_5 ':101,'
-            101, 'NUMPAD_6'
-            UMPAD_6 ':102,'
-            102, 'NUMPAD_7'
-            UMPAD_7 ':103,'
-            103, 'NUMPAD_8'
-            UMPAD_8 ':104,'
-            104, 'NUMPAD_9'
-            UMPAD_9 ':105,'
-            105, 'MULTIPLY'
-            ULTIPLY ':106,'
-            106, 'ADD'
-            DD ':107,'
-            107, 'SUBSTRACT'
-            UBSTRACT ':109,'
-            109, 'DECIMAL'
-            ECIMAL ':110,'
-            110, 'DIVIDE'
-            IVIDE ':111,'
-            111, 'F1'
-            1 ':112,'
-            112, 'F2'
-            2 ':113,'
-            113, 'F3'
-            3 ':114,'
-            114, 'F4'
-            4 ':115,'
-            115, 'F5'
-            5 ':116,'
-            116, 'F6'
-            6 ':117,'
-            117, 'F7'
-            7 ':118,'
-            118, 'F8'
-            8 ':119,'
-            119, 'F9'
-            9 ':120,'
-            120, 'F10'
-            10 ':121,'
-            121, 'F11'
-            11 ':122,'
-            122, 'F12'
-            12 ':123,'
-            123, 'SHIFT'
-            HIFT ':16,'
-            16, 'CTRL'
-            TRL ':17,'
-            17, 'ALT'
-            LT ':18,'
-            18, 'PLUS'
-            LUS ':187,'
-            187, 'COMMA'
-            OMMA ':188,'
-            188, 'MINUS'
-            INUS ':189,'
-            189, 'PERIOD'
-            ERIOD ':190};ig.Input=ig.Class.extend({bindings:{},actions:{},presses:{},locks:{},delayedKeyup:[],isUsingMouse:false,isUsingKeyboard:false,isUsingAccelerometer:false,mouse:{x:0,y:0},accel:{x:0,y:0,z:0},initMouse:function(){if(this.isUsingMouse){return;}
-this.isUsingMouse=true;window.addEventListener('
-            190
-        };
-        ig.Input = ig.Class.extend({
-            bindings: {},
-            actions: {},
-            presses: {},
-            locks: {},
-            delayedKeyup: [],
-            isUsingMouse: false,
-            isUsingKeyboard: false,
-            isUsingAccelerometer: false,
-            mouse: {
-                x: 0,
-                y: 0
-            },
-            accel: {
-                x: 0,
-                y: 0,
-                z: 0
-            },
-            initMouse: function () {
-                if (this.isUsingMouse) {
-                    return;
-                }
-                this.isUsingMouse = true;
-                window.addEventListener('mousewheel'
-                ousewheel ',this.mousewheel.bind(this),false);ig.system.canvas.addEventListener('
-                this.mousewheel.bind(this), false);
-                ig.system.canvas.addEventListener('contextmenu'
-                ontextmenu ',this.contextmenu.bind(this),false);ig.system.canvas.addEventListener('
-                this.contextmenu.bind(this), false);
-                ig.system.canvas.addEventListener('mousedown'
-                ousedown ',this.keydown.bind(this),false);ig.system.canvas.addEventListener('
-                this.keydown.bind(this), false);
-                ig.system.canvas.addEventListener('mouseup'
-                ouseup ',this.keyup.bind(this),false);ig.system.canvas.addEventListener('
-                this.keyup.bind(this), false);
-                ig.system.canvas.addEventListener('mousemove'
-                ousemove ',this.mousemove.bind(this),false);ig.system.canvas.addEventListener('
-                this.mousemove.bind(this), false);
-                ig.system.canvas.addEventListener('touchstart'
-                ouchstart ',this.keydown.bind(this),false);ig.system.canvas.addEventListener('
-                this.keydown.bind(this), false);
-                ig.system.canvas.addEventListener('touchend'
-                ouchend ',this.keyup.bind(this),false);ig.system.canvas.addEventListener('
-                this.keyup.bind(this), false);
-                ig.system.canvas.addEventListener('touchmove'
-                ouchmove ',this.mousemove.bind(this),false);},initKeyboard:function(){if(this.isUsingKeyboard){return;}
-this.isUsingKeyboard=true;window.addEventListener('
-                this.mousemove.bind(this), false);
-            },
-            initKeyboard: function () {
-                if (this.isUsingKeyboard) {
-                    return;
-                }
-                this.isUsingKeyboard = true;
-                window.addEventListener('keydown'
-                eydown ',this.keydown.bind(this),false);window.addEventListener('
-                this.keydown.bind(this), false);
-                window.addEventListener('keyup'
-                eyup ',this.keyup.bind(this),false);},initAccelerometer:function(){if(this.isUsingAccelerometer){return;}
-window.addEventListener('
-                this.keyup.bind(this), false);
-            },
-            initAccelerometer: function () {
-                if (this.isUsingAccelerometer) {
-                    return;
-                }
-                window.addEventListener('devicemotion'
-                evicemotion ',this.devicemotion.bind(this),false);},mousewheel:function(event){var code=event.wheel>0?ig.KEY.MWHEEL_UP:ig.KEY.MWHEEL_DOWN;var action=this.bindings[code];if(action){this.actions[action]=true;this.presses[action]=true;event.stopPropagation();this.delayedKeyup.push(action);}},mousemove:function(event){var el=ig.system.canvas;var pos={left:0,top:0};while(el!=null){pos.left+=el.offsetLeft;pos.top+=el.offsetTop;el=el.offsetParent;}
-var tx=event.pageX;var ty=event.pageY;if(event.touches){tx=event.touches[0].clientX;ty=event.touches[0].clientY;}
-this.mouse.x=(tx-pos.left)/ig.system.scale;this.mouse.y=(ty-pos.top)/ig.system.scale;},contextmenu:function(event){if(this.bindings[ig.KEY.MOUSE2]){event.stopPropagation();event.preventDefault();}},keydown:function(event){if(event.target.type=='
-                this.devicemotion.bind(this), false);
-            },
-            mousewheel: function (event) {
-                var code = event.wheel > 0 ? ig.KEY.MWHEEL_UP : ig.KEY.MWHEEL_DOWN;
-                var action = this.bindings[code];
-                if (action) {
-                    this.actions[action] = true;
-                    this.presses[action] = true;
-                    event.stopPropagation();
-                    this.delayedKeyup.push(action);
-                }
-            },
-            mousemove: function (event) {
-                var el = ig.system.canvas;
-                var pos = {
-                    left: 0,
-                    top: 0
-                };
-                while (el != null) {
-                    pos.left += el.offsetLeft;
-                    pos.top += el.offsetTop;
-                    el = el.offsetParent;
-                }
-                var tx = event.pageX;
-                var ty = event.pageY;
-                if (event.touches) {
-                    tx = event.touches[0].clientX;
-                    ty = event.touches[0].clientY;
-                }
-                this.mouse.x = (tx - pos.left) / ig.system.scale;
-                this.mouse.y = (ty - pos.top) / ig.system.scale;
-            },
-            contextmenu: function (event) {
-                if (this.bindings[ig.KEY.MOUSE2]) {
-                    event.stopPropagation();
-                    event.preventDefault();
-                }
-            },
-            keydown: function (event) {
-                if (event.target.type == 'text'
-                ext '){return;}
-var code=event.type==' {
-                    return;
-                }
-                var code = event.type == 'keydown'
-                eydown '?event.keyCode:(event.button==2?ig.KEY.MOUSE2:ig.KEY.MOUSE1);if(event.type=='
-                event.keyCode: (event.button == 2 ? ig.KEY.MOUSE2 : ig.KEY.MOUSE1);
-                if (event.type == 'touchstart'
-                ouchstart '||event.type==' | event.type == 'mousedown'
-                ousedown '){this.mousemove(event);}
-var action=this.bindings[code];if(action){this.actions[action]=true;if(!this.locks[action]){this.presses[action]=true;this.locks[action]=true;}
-event.stopPropagation();event.preventDefault();}},keyup:function(event){if(event.target.type==' {
-                    this.mousemove(event);
-                }
-                var action = this.bindings[code];
-                if (action) {
-                    this.actions[action] = true;
-                    if (!this.locks[action]) {
-                        this.presses[action] = true;
-                        this.locks[action] = true;
-                    }
-                    event.stopPropagation();
-                    event.preventDefault();
-                }
-                }, keyup: function (event) {
-                    if (event.target.type == 'text'
-                    ext '){return;}
-var code=event.type==' {
-                        return;
-                    }
-                    var code = event.type == 'keyup'
-                    eyup '?event.keyCode:(event.button==2?ig.KEY.MOUSE2:ig.KEY.MOUSE1);var action=this.bindings[code];if(action){this.delayedKeyup.push(action);event.stopPropagation();event.preventDefault();}},devicemotion:function(event){this.accel=event.accelerationIncludingGravity;},bind:function(key,action){if(key<0){this.initMouse();}
-else if(key>0){this.initKeyboard();}
-this.bindings[key]=action;},bindTouch:function(selector,action){var element=ig.$(selector);var that=this;element.addEventListener('
-                    event.keyCode: (event.button == 2 ? ig.KEY.MOUSE2 : ig.KEY.MOUSE1);
-                    var action = this.bindings[code];
-                    if (action) {
-                        this.delayedKeyup.push(action);
-                        event.stopPropagation();
-                        event.preventDefault();
-                    }
-                    }, devicemotion: function (event) {
-                        this.accel = event.accelerationIncludingGravity;
-                    },
-                    bind: function (key, action) {
-                        if (key < 0) {
-                            this.initMouse();
-                        } else if (key > 0) {
-                            this.initKeyboard();
-                        }
-                        this.bindings[key] = action;
-                    },
-                    bindTouch: function (selector, action) {
-                        var element = ig.$(selector);
-                        var that = this;
-                        element.addEventListener('touchstart'
-                        ouchstart ',function(ev){that.touchStart(ev,action);},false);element.addEventListener('
-                        function (ev) {
-                            that.touchStart(ev, action);
-                        }, false);
-                        element.addEventListener('touchend'
-                        ouchend ',function(ev){that.touchEnd(ev,action);},false);},unbind:function(key){this.bindings[key]=null;},unbindAll:function(){this.bindings=[];},state:function(action){return this.actions[action];},pressed:function(action){return this.presses[action];},clearPressed:function(){for(var i=0;i<this.delayedKeyup.length;i++){var action=this.delayedKeyup[i];this.actions[action]=false;this.locks[action]=false;}
-this.delayedKeyup=[];this.presses={};},touchStart:function(event,action){this.actions[action]=true;this.presses[action]=true;event.stopPropagation();event.preventDefault();return false;},touchEnd:function(event,action){this.delayedKeyup.push(action);event.stopPropagation();event.preventDefault();return false;}});});
-
-// impact/impact.js
-ig.baked=true;ig.module('
-                        function (ev) {
-                            that.touchEnd(ev, action);
-                        }, false);
-                    },
-                    unbind: function (key) {
-                        this.bindings[key] = null;
-                    },
-                    unbindAll: function () {
-                        this.bindings = [];
-                    },
-                    state: function (action) {
-                        return this.actions[action];
-                    },
-                    pressed: function (action) {
-                        return this.presses[action];
-                    },
-                    clearPressed: function () {
-                        for (var i = 0; i < this.delayedKeyup.length; i++) {
-                            var action = this.delayedKeyup[i];
-                            this.actions[action] = false;
-                            this.locks[action] = false;
-                        }
-                        this.delayedKeyup = [];
-                        this.presses = {};
-                    },
-                    touchStart: function (event, action) {
-                        this.actions[action] = true;
-                        this.presses[action] = true;
-                        event.stopPropagation();
-                        event.preventDefault();
-                        return false;
-                    },
-                    touchEnd: function (event, action) {
-                        this.delayedKeyup.push(action);
-                        event.stopPropagation();
-                        event.preventDefault();
-                        return false;
-                    }
-                });
-            });
-
-        // impact/impact.js
-        ig.baked = true; ig.module('impact.impact'
-        mpact.impact ').requires('.requires('dom.ready'
-        om.ready ',''impact.loader'
-        mpact.loader ',''impact.system'
-        mpact.system ',''impact.input'
-        mpact.input ',''impact.sound'
-        mpact.sound ').defines(function(){ig.main=function(canvasId,gameClass,fps,width,height,scale,loaderClass){ig.system=new ig.System(canvasId,fps,width,height,scale||1);ig.input=new ig.Input();ig.soundManager=new ig.SoundManager();ig.music=new ig.Music();ig.ready=true;var loader=new(loaderClass||ig.Loader)(gameClass,ig.resources);loader.load();};});
-
-// plugins/impact-splash-loader.js
-ig.baked=true;ig.module('.defines(function () {
-            ig.main = function (canvasId, gameClass, fps, width, height, scale, loaderClass) {
-                ig.system = new ig.System(canvasId, fps, width, height, scale || 1);
-                ig.input = new ig.Input();
-                ig.soundManager = new ig.SoundManager();
-                ig.music = new ig.Music();
-                ig.ready = true;
-                var loader = new(loaderClass || ig.Loader)(gameClass, ig.resources);
-                loader.load();
+// impact/input.js
+ig.baked = true;
+ig.module('impact.input').defines(function () {
+    ig.KEY = {
+        'MOUSE1': -1,
+        'MOUSE2': -3,
+        'MWHEEL_UP': -4,
+        'MWHEEL_DOWN': -5,
+        'BACKSPACE': 8,
+        'TAB': 9,
+        'ENTER': 13,
+        'PAUSE': 19,
+        'CAPS': 20,
+        'ESC': 27,
+        'SPACE': 32,
+        'PAGE_UP': 33,
+        'PAGE_DOWN': 34,
+        'END': 35,
+        'HOME': 36,
+        'LEFT_ARROW': 37,
+        'UP_ARROW': 38,
+        'RIGHT_ARROW': 39,
+        'DOWN_ARROW': 40,
+        'INSERT': 45,
+        'DELETE': 46,
+        '_0': 48,
+        '_1': 49,
+        '_2': 50,
+        '_3': 51,
+        '_4': 52,
+        '_5': 53,
+        '_6': 54,
+        '_7': 55,
+        '_8': 56,
+        '_9': 57,
+        'A': 65,
+        'B': 66,
+        'C': 67,
+        'D': 68,
+        'E': 69,
+        'F': 70,
+        'G': 71,
+        'H': 72,
+        'I': 73,
+        'J': 74,
+        'K': 75,
+        'L': 76,
+        'M': 77,
+        'N': 78,
+        'O': 79,
+        'P': 80,
+        'Q': 81,
+        'R': 82,
+        'S': 83,
+        'T': 84,
+        'U': 85,
+        'V': 86,
+        'W': 87,
+        'X': 88,
+        'Y': 89,
+        'Z': 90,
+        'NUMPAD_0': 96,
+        'NUMPAD_1': 97,
+        'NUMPAD_2': 98,
+        'NUMPAD_3': 99,
+        'NUMPAD_4': 100,
+        'NUMPAD_5': 101,
+        'NUMPAD_6': 102,
+        'NUMPAD_7': 103,
+        'NUMPAD_8': 104,
+        'NUMPAD_9': 105,
+        'MULTIPLY': 106,
+        'ADD': 107,
+        'SUBSTRACT': 109,
+        'DECIMAL': 110,
+        'DIVIDE': 111,
+        'F1': 112,
+        'F2': 113,
+        'F3': 114,
+        'F4': 115,
+        'F5': 116,
+        'F6': 117,
+        'F7': 118,
+        'F8': 119,
+        'F9': 120,
+        'F10': 121,
+        'F11': 122,
+        'F12': 123,
+        'SHIFT': 16,
+        'CTRL': 17,
+        'ALT': 18,
+        'PLUS': 187,
+        'COMMA': 188,
+        'MINUS': 189,
+        'PERIOD': 190
+    };
+    ig.Input = ig.Class.extend({
+        bindings: {},
+        actions: {},
+        presses: {},
+        locks: {},
+        delayedKeyup: [],
+        isUsingMouse: false,
+        isUsingKeyboard: false,
+        isUsingAccelerometer: false,
+        mouse: {
+            x: 0,
+            y: 0
+        },
+        accel: {
+            x: 0,
+            y: 0,
+            z: 0
+        },
+        initMouse: function () {
+            if (this.isUsingMouse) {
+                return;
+            }
+            this.isUsingMouse = true;
+            window.addEventListener('mousewheel', this.mousewheel.bind(this), false);
+            ig.system.canvas.addEventListener('contextmenu', this.contextmenu.bind(this), false);
+            ig.system.canvas.addEventListener('mousedown', this.keydown.bind(this), false);
+            ig.system.canvas.addEventListener('mouseup', this.keyup.bind(this), false);
+            ig.system.canvas.addEventListener('mousemove', this.mousemove.bind(this), false);
+            ig.system.canvas.addEventListener('touchstart', this.keydown.bind(this), false);
+            ig.system.canvas.addEventListener('touchend', this.keyup.bind(this), false);
+            ig.system.canvas.addEventListener('touchmove', this.mousemove.bind(this), false);
+        },
+        initKeyboard: function () {
+            if (this.isUsingKeyboard) {
+                return;
+            }
+            this.isUsingKeyboard = true;
+            window.addEventListener('keydown', this.keydown.bind(this), false);
+            window.addEventListener('keyup', this.keyup.bind(this), false);
+        },
+        initAccelerometer: function () {
+            if (this.isUsingAccelerometer) {
+                return;
+            }
+            window.addEventListener('devicemotion', this.devicemotion.bind(this), false);
+        },
+        mousewheel: function (event) {
+            var code = event.wheel > 0 ? ig.KEY.MWHEEL_UP : ig.KEY.MWHEEL_DOWN;
+            var action = this.bindings[code];
+            if (action) {
+                this.actions[action] = true;
+                this.presses[action] = true;
+                event.stopPropagation();
+                this.delayedKeyup.push(action);
+            }
+        },
+        mousemove: function (event) {
+            var el = ig.system.canvas;
+            var pos = {
+                left: 0,
+                top: 0
             };
-        });
+            while (el != null) {
+                pos.left += el.offsetLeft;
+                pos.top += el.offsetTop;
+                el = el.offsetParent;
+            }
+            var tx = event.pageX;
+            var ty = event.pageY;
+            if (event.touches) {
+                tx = event.touches[0].clientX;
+                ty = event.touches[0].clientY;
+            }
+            this.mouse.x = (tx - pos.left) / ig.system.scale;
+            this.mouse.y = (ty - pos.top) / ig.system.scale;
+        },
+        contextmenu: function (event) {
+            if (this.bindings[ig.KEY.MOUSE2]) {
+                event.stopPropagation();
+                event.preventDefault();
+            }
+        },
+        keydown: function (event) {
+            if (event.target.type == 'text') {
+                return;
+            }
+            var code = event.type == 'keydown' ? event.keyCode : (event.button == 2 ? ig.KEY.MOUSE2 : ig.KEY.MOUSE1);
+            if (event.type == 'touchstart' || event.type == 'mousedown') {
+                this.mousemove(event);
+            }
+            var action = this.bindings[code];
+            if (action) {
+                this.actions[action] = true;
+                if (!this.locks[action]) {
+                    this.presses[action] = true;
+                    this.locks[action] = true;
+                }
+                event.stopPropagation();
+                event.preventDefault();
+            }
+        },
+        keyup: function (event) {
+            if (event.target.type == 'text') {
+                return;
+            }
+            var code = event.type == 'keyup' ? event.keyCode : (event.button == 2 ? ig.KEY.MOUSE2 : ig.KEY.MOUSE1);
+            var action = this.bindings[code];
+            if (action) {
+                this.delayedKeyup.push(action);
+                event.stopPropagation();
+                event.preventDefault();
+            }
+        },
+        devicemotion: function (event) {
+            this.accel = event.accelerationIncludingGravity;
+        },
+        bind: function (key, action) {
+            if (key < 0) {
+                this.initMouse();
+            } else if (key > 0) {
+                this.initKeyboard();
+            }
+            this.bindings[key] = action;
+        },
+        bindTouch: function (selector, action) {
+            var element = ig.$(selector);
+            var that = this;
+            element.addEventListener('touchstart', function (ev) {
+                that.touchStart(ev, action);
+            }, false);
+            element.addEventListener('touchend', function (ev) {
+                that.touchEnd(ev, action);
+            }, false);
+        },
+        unbind: function (key) {
+            this.bindings[key] = null;
+        },
+        unbindAll: function () {
+            this.bindings = [];
+        },
+        state: function (action) {
+            return this.actions[action];
+        },
+        pressed: function (action) {
+            return this.presses[action];
+        },
+        clearPressed: function () {
+            for (var i = 0; i < this.delayedKeyup.length; i++) {
+                var action = this.delayedKeyup[i];
+                this.actions[action] = false;
+                this.locks[action] = false;
+            }
+            this.delayedKeyup = [];
+            this.presses = {};
+        },
+        touchStart: function (event, action) {
+            this.actions[action] = true;
+            this.presses[action] = true;
+            event.stopPropagation();
+            event.preventDefault();
+            return false;
+        },
+        touchEnd: function (event, action) {
+            this.delayedKeyup.push(action);
+            event.stopPropagation();
+            event.preventDefault();
+            return false;
+        }
+    });
+});
+
 
         // plugins/impact-splash-loader.js
-        ig.baked = true; ig.module('plugins.impact-splash-loader'
-        lugins.impact - splash - loader ').requires('.requires('impact.loader'
-        mpact.loader ').defines(function(){ig.ImpactSplashLoader=ig.Loader.extend({endTime:0,fadeToWhiteTime:200,fadeToGameTime:800,logoWidth:340,logoHeight:120,end:function(){this.parent();this.endTime=Date.now();ig.system.setDelegate(this);},run:function(){var t=Date.now()-this.endTime;var alpha=1;if(t<this.fadeToWhiteTime){this.draw();alpha=t.map(0,this.fadeToWhiteTime,0,1);}
-else if(t<this.fadeToGameTime){ig.game.run();alpha=t.map(this.fadeToWhiteTime,this.fadeToGameTime,1,0);}
-else{ig.system.setDelegate(ig.game);return;}
-ig.system.context.fillStyle='.defines(function () {
-            ig.ImpactSplashLoader = ig.Loader.extend({
-                endTime: 0,
-                fadeToWhiteTime: 200,
-                fadeToGameTime: 800,
-                logoWidth: 340,
-                logoHeight: 120,
-                end: function () {
-                    this.parent();
-                    this.endTime = Date.now();
-                    ig.system.setDelegate(this);
-                },
-                run: function () {
-                    var t = Date.now() - this.endTime;
-                    var alpha = 1;
-                    if (t < this.fadeToWhiteTime) {
-                        this.draw();
-                        alpha = t.map(0, this.fadeToWhiteTime, 0, 1);
-                    } else if (t < this.fadeToGameTime) {
-                        ig.game.run();
-                        alpha = t.map(this.fadeToWhiteTime, this.fadeToGameTime, 1, 0);
-                    } else {
-                        ig.system.setDelegate(ig.game);
-                        return;
-                    }
-                    ig.system.context.fillStyle = 'rgba(255,255,255,'
-                    gba(255, 255, 255, '+alpha+'
-                    alpha + ')'';ig.system.context.fillRect(0,0,ig.system.realWidth,ig.system.realHeight);},draw:function(){this._drawStatus+=(this.status-this._drawStatus)/5;var ctx=ig.system.context;var w=ig.system.realWidth;var h=ig.system.realHeight;var scale=w/this.logoWidth/3;var center=(w-this.logoWidth*scale)/2;ctx.fillStyle='
-                    ig.system.context.fillRect(0, 0, ig.system.realWidth, ig.system.realHeight);
-                    }, draw: function () {
-                        this._drawStatus += (this.status - this._drawStatus) / 5;
-                        var ctx = ig.system.context;
-                        var w = ig.system.realWidth;
-                        var h = ig.system.realHeight;
-                        var scale = w / this.logoWidth / 3;
-                        var center = (w - this.logoWidth * scale) / 2;
-                        ctx.fillStyle = 'rgba(0,0,0,0.8)'
-                        gba(0, 0, 0, 0.8)';ctx.fillRect(0,0,w,h);ctx.fillStyle='
-                        ctx.fillRect(0, 0, w, h);
-                        ctx.fillStyle = 'rgb(128,128,128)'
-                        gb(128, 128, 128)';ctx.textAlign='
-                        ctx.textAlign = 'right'
-                        ight ';ctx.font='
-                        ctx.font = '10px Arial'
-                        0px Arial ';ctx.fillText('
-                        ctx.fillText('http://impactjs.com'
-                        ttp: //impactjs.com',w-10,h-10);ctx.textAlign='left';ctx.save();ctx.translate(center,h/2.5);ctx.scale(scale,scale);ctx.lineWidth='3';ctx.strokeStyle='rgb(255,255,255)';ctx.strokeRect(25,this.logoHeight+40,300,20);ctx.fillStyle='rgb(255,255,255)';ctx.fillRect(30,this.logoHeight+45,290*this._drawStatus,10);this.drawPaths('rgb(255,255,255)',ig.ImpactSplashLoader.PATHS_IMPACT);var comet=ig.ImpactSplashLoader.PATHS_COMET;comet[5][0]=3-Math.random()*this._drawStatus*7;comet[5][1]=3-Math.random()*this._drawStatus*10;comet[7][0]=29.5-Math.random()*this._drawStatus*10;comet[7][1]=40.4-Math.random()*this._drawStatus*10;comet[9][0]=16.1-Math.random()*this._drawStatus*10;comet[9][1]=36.1-Math.random()*this._drawStatus*5;ctx.translate(-Math.random()*this._drawStatus*7,-Math.random()*this._drawStatus*5);this.drawPaths('rgb(243,120,31)',comet);ctx.restore();},drawPaths:function(color,paths){var ctx=ig.system.context;ctx.fillStyle=color;for(var i=0;i<paths.length;i+=2){ctx[ig.ImpactSplashLoader.OPS[paths[i]]].apply(ctx,paths[i+1]);}}});ig.ImpactSplashLoader.OPS={bp:'beginPath',cp:'closePath',f:'fill',m:'moveTo',l:'lineTo',bc:'bezierCurveTo'};ig.ImpactSplashLoader.PATHS_COMET=['bp',[],'m',[85.1,58.3],'l',[0.0,0.0],'l',[29.5,40.4],'l',[16.1,36.1],'l',[54.6,91.6],'bc',[65.2,106.1,83.4,106.7,93.8,95.7],'bc',[103.9,84.9,98.6,67.6,85.1,58.3],'cp',[],'m',[76.0,94.3],'bc',[68.5,94.3,62.5,88.2,62.5,80.8],'bc',[62.5,73.3,68.5,67.2,76.0,67.2],'bc',[83.5,67.2,89.6,73.3,89.6,80.8],'bc',[89.6,88.2,83.5,94.3,76.0,94.3],'cp',[],'f',[]];ig.ImpactSplashLoader.PATHS_IMPACT=['bp',[],'m',[128.8,98.7],'l',[114.3,98.7],'l',[114.3,26.3],'l',[128.8,26.3],'l',[128.8,98.7],'cp',[],'f',[],'bp',[],'m',[159.2,70.1],'l',[163.6,26.3],'l',[184.6,26.3],'l',[184.6,98.7],'l',[170.3,98.7],'l',[170.3,51.2],'l',[164.8,98.7],'l',[151.2,98.7],'l',[145.7,50.7],'l',[145.7,98.7],'l',[134.1,98.7],'l',[134.1,26.3],'l',[155.0,26.3],'l',[159.2,70.1],'cp',[],'f',[],'bp',[],'m',[204.3,98.7],'l',[189.8,98.7],'l',[189.8,26.3],'l',[211.0,26.3],'bc',[220.0,26.3,224.5,30.7,224.5,39.7],'l',[224.5,60.1],'bc',[224.5,69.1,220.0,73.6,211.0,73.6],'l',[204.3,73.6],'l',[204.3,98.7],'cp',[],'m',[207.4,38.7],'l',[204.3,38.7],'l',[204.3,61.2],'l',[207.4,61.2],'bc',[209.1,61.2,210.0,60.3,210.0,58.6],'l',[210.0,41.3],'bc',[210.0,39.5,209.1,38.7,207.4,38.7],'cp',[],'f',[],'bp',[],'m',[262.7,98.7],'l',[248.3,98.7],'l',[247.1,88.2],'l',[238.0,88.2],'l',[237.0,98.7],'l',[223.8,98.7],'l',[233.4,26.3],'l',[253.1,26.3],'l',[262.7,98.7],'cp',[],'m',[239.4,75.5],'l',[245.9,75.5],'l',[242.6,43.9],'l',[239.4,75.5],'cp',[],'f',[],'bp',[],'m',[300.9,66.7],'l',[300.9,85.9],'bc',[300.9,94.9,296.4,99.4,287.4,99.4],'l',[278.5,99.4],'bc',[269.5,99.4,265.1,94.9,265.1,85.9],'l',[265.1,39.1],'bc',[265.1,30.1,269.5,25.6,278.5,25.6],'l',[287.2,25.6],'bc',[296.2,25.6,300.7,30.1,300.7,39.1],'l',[300.7,56.1],'l',[286.4,56.1],'l',[286.4,40.7],'bc',[286.4,38.9,285.6,38.1,283.8,38.1],'l',[282.1,38.1],'bc',[280.4,38.1,279.5,38.9,279.5,40.7],'l',[279.5,84.3],'bc',[279.5,86.1,280.4,86.9,282.1,86.9],'l',[284.0,86.9],'bc',[285.8,86.9,286.6,86.1,286.6,84.3],'l',[286.6,66.7],'l',[300.9,66.7],'cp',[],'f',[],'bp',[],'m',[312.5,98.7],'l',[312.5,39.2],'l',[303.7,39.2],'l',[303.7,26.3],'l',[335.8,26.3],'l',[335.8,39.2],'l',[327.0,39.2],'l',[327.0,98.7],'l',[312.5,98.7],'cp',[],'f',[]];});
-                        // impact/animation.js
-                        ig.baked = true;
-                        ig.module('impact.animation'
-                        mpact.animation ').requires('.requires('impact.timer'
-                        mpact.timer ',''impact.image'
-                        mpact.image ').defines(function(){ig.AnimationSheet=ig.Class.extend({width:8,height:8,image:null,init:function(path,width,height){this.width=width;this.height=height;this.image=new ig.Image(path);}});ig.Animation=ig.Class.extend({sheet:null,timer:null,sequence:[],flip:{x:false,y:false},pivot:{x:0,y:0},frame:0,tile:0,loopCount:0,alpha:1,angle:0,init:function(sheet,frameTime,sequence,stop){this.sheet=sheet;this.pivot={x:sheet.width/2,y:sheet.height/2};this.timer=new ig.Timer();this.frameTime=frameTime;this.sequence=sequence;this.stop=!!stop;this.tile=this.sequence[0];},rewind:function(){this.timer.reset();this.loopCount=0;this.tile=this.sequence[0];return this;},gotoFrame:function(f){this.timer.set(this.frameTime*-f);this.update();},gotoRandomFrame:function(){this.gotoFrame(Math.floor(Math.random()*this.sequence.length))},update:function(){var frameTotal=Math.floor(this.timer.delta()/this.frameTime);this.loopCount=Math.floor(frameTotal/this.sequence.length);if(this.stop&&this.loopCount>0){this.frame=this.sequence.length-1;}
-else{this.frame=frameTotal%this.sequence.length;}
-this.tile=this.sequence[this.frame];},draw:function(targetX,targetY){var bbsize=Math.max(this.sheet.width,this.sheet.height);if(targetX>ig.system.width||targetY>ig.system.height||targetX+bbsize<0||targetY+bbsize<0){return;}
-if(this.alpha!=1){ig.system.context.globalAlpha=this.alpha;}
-if(this.angle==0){this.sheet.image.drawTile(targetX,targetY,this.tile,this.sheet.width,this.sheet.height,this.flip.x,this.flip.y);}
-else{ig.system.context.save();ig.system.context.translate(ig.system.getDrawPos(targetX+this.pivot.x),ig.system.getDrawPos(targetY+this.pivot.y));ig.system.context.rotate(this.angle);this.sheet.image.drawTile(-this.pivot.x,-this.pivot.y,this.tile,this.sheet.width,this.sheet.height,this.flip.x,this.flip.y);ig.system.context.restore();}
-if(this.alpha!=1){ig.system.context.globalAlpha=1;}}});});
-
+ig.baked = true;
+ig.module('plugins.impact-splash-loader').requires('impact.loader').defines(function () {
+    ig.ImpactSplashLoader = ig.Loader.extend({
+        endTime: 0,
+        fadeToWhiteTime: 200,
+        fadeToGameTime: 800,
+        logoWidth: 340,
+        logoHeight: 120,
+        end: function () {
+            this.parent();
+            this.endTime = Date.now();
+            ig.system.setDelegate(this);
+        },
+        run: function () {
+            var t = Date.now() - this.endTime;
+            var alpha = 1;
+            if (t < this.fadeToWhiteTime) {
+                this.draw();
+                alpha = t.map(0, this.fadeToWhiteTime, 0, 1);
+            } else if (t < this.fadeToGameTime) {
+                ig.game.run();
+                alpha = t.map(this.fadeToWhiteTime, this.fadeToGameTime, 1, 0);
+            } else {
+                ig.system.setDelegate(ig.game);
+                return;
+            }
+            ig.system.context.fillStyle = 'rgba(255,255,255,' + alpha + ')';
+            ig.system.context.fillRect(0, 0, ig.system.realWidth, ig.system.realHeight);
+        },
+        draw: function () {
+            this._drawStatus += (this.status - this._drawStatus) / 5;
+            var ctx = ig.system.context;
+            var w = ig.system.realWidth;
+            var h = ig.system.realHeight;
+            var scale = w / this.logoWidth / 3;
+            var center = (w - this.logoWidth * scale) / 2;
+            ctx.fillStyle = 'rgba(0,0,0,0.8)';
+            ctx.fillRect(0, 0, w, h);
+            ctx.fillStyle = 'rgb(128,128,128)';
+            ctx.textAlign = 'right';
+            ctx.font = '10px Arial';
+            ctx.fillText('http://impactjs.com', w - 10, h - 10);
+            ctx.textAlign = 'left';
+            ctx.save();
+            ctx.translate(center, h / 2.5);
+            ctx.scale(scale, scale);
+            ctx.lineWidth = '3';
+            ctx.strokeStyle = 'rgb(255,255,255)';
+            ctx.strokeRect(25, this.logoHeight + 40, 300, 20);
+            ctx.fillStyle = 'rgb(255,255,255)';
+            ctx.fillRect(30, this.logoHeight + 45, 290 * this._drawStatus, 10);
+            this.drawPaths('rgb(255,255,255)', ig.ImpactSplashLoader.PATHS_IMPACT);
+            var comet = ig.ImpactSplashLoader.PATHS_COMET;
+            comet[5][0] = 3 - Math.random() * this._drawStatus * 7;
+            comet[5][1] = 3 - Math.random() * this._drawStatus * 10;
+            comet[7][0] = 29.5 - Math.random() * this._drawStatus * 10;
+            comet[7][1] = 40.4 - Math.random() * this._drawStatus * 10;
+            comet[9][0] = 16.1 - Math.random() * this._drawStatus * 10;
+            comet[9][1] = 36.1 - Math.random() * this._drawStatus * 5;
+            ctx.translate(-Math.random() * this._drawStatus * 7, -Math.random() * this._drawStatus * 5);
+            this.drawPaths('rgb(243,120,31)', comet);
+            ctx.restore();
+        },
+        drawPaths: function (color, paths) {
+            var ctx = ig.system.context;
+            ctx.fillStyle = color;
+            for (var i = 0; i < paths.length; i += 2) {
+                ctx[ig.ImpactSplashLoader.OPS[paths[i]]].apply(ctx, paths[i + 1]);
+            }
+        }
+    });
+    ig.ImpactSplashLoader.OPS = {
+        bp: 'beginPath',
+        cp: 'closePath',
+        f: 'fill',
+        m: 'moveTo',
+        l: 'lineTo',
+        bc: 'bezierCurveTo'
+    };
+    ig.ImpactSplashLoader.PATHS_COMET = ['bp', [], 'm', [85.1, 58.3], 'l', [0.0, 0.0], 'l', [29.5, 40.4], 'l', [16.1, 36.1], 'l', [54.6, 91.6], 'bc', [65.2, 106.1, 83.4, 106.7, 93.8, 95.7], 'bc', [103.9, 84.9, 98.6, 67.6, 85.1, 58.3], 'cp', [], 'm', [76.0, 94.3], 'bc', [68.5, 94.3, 62.5, 88.2, 62.5, 80.8], 'bc', [62.5, 73.3, 68.5, 67.2, 76.0, 67.2], 'bc', [83.5, 67.2, 89.6, 73.3, 89.6, 80.8], 'bc', [89.6, 88.2, 83.5, 94.3, 76.0, 94.3], 'cp', [], 'f', []];
+    ig.ImpactSplashLoader.PATHS_IMPACT = ['bp', [], 'm', [128.8, 98.7], 'l', [114.3, 98.7], 'l', [114.3, 26.3], 'l', [128.8, 26.3], 'l', [128.8, 98.7], 'cp', [], 'f', [], 'bp', [], 'm', [159.2, 70.1], 'l', [163.6, 26.3], 'l', [184.6, 26.3], 'l', [184.6, 98.7], 'l', [170.3, 98.7], 'l', [170.3, 51.2], 'l', [164.8, 98.7], 'l', [151.2, 98.7], 'l', [145.7, 50.7], 'l', [145.7, 98.7], 'l', [134.1, 98.7], 'l', [134.1, 26.3], 'l', [155.0, 26.3], 'l', [159.2, 70.1], 'cp', [], 'f', [], 'bp', [], 'm', [204.3, 98.7], 'l', [189.8, 98.7], 'l', [189.8, 26.3], 'l', [211.0, 26.3], 'bc', [220.0, 26.3, 224.5, 30.7, 224.5, 39.7], 'l', [224.5, 60.1], 'bc', [224.5, 69.1, 220.0, 73.6, 211.0, 73.6], 'l', [204.3, 73.6], 'l', [204.3, 98.7], 'cp', [], 'm', [207.4, 38.7], 'l', [204.3, 38.7], 'l', [204.3, 61.2], 'l', [207.4, 61.2], 'bc', [209.1, 61.2, 210.0, 60.3, 210.0, 58.6], 'l', [210.0, 41.3], 'bc', [210.0, 39.5, 209.1, 38.7, 207.4, 38.7], 'cp', [], 'f', [], 'bp', [], 'm', [262.7, 98.7], 'l', [248.3, 98.7], 'l', [247.1, 88.2], 'l', [238.0, 88.2], 'l', [237.0, 98.7], 'l', [223.8, 98.7], 'l', [233.4, 26.3], 'l', [253.1, 26.3], 'l', [262.7, 98.7], 'cp', [], 'm', [239.4, 75.5], 'l', [245.9, 75.5], 'l', [242.6, 43.9], 'l', [239.4, 75.5], 'cp', [], 'f', [], 'bp', [], 'm', [300.9, 66.7], 'l', [300.9, 85.9], 'bc', [300.9, 94.9, 296.4, 99.4, 287.4, 99.4], 'l', [278.5, 99.4], 'bc', [269.5, 99.4, 265.1, 94.9, 265.1, 85.9], 'l', [265.1, 39.1], 'bc', [265.1, 30.1, 269.5, 25.6, 278.5, 25.6], 'l', [287.2, 25.6], 'bc', [296.2, 25.6, 300.7, 30.1, 300.7, 39.1], 'l', [300.7, 56.1], 'l', [286.4, 56.1], 'l', [286.4, 40.7], 'bc', [286.4, 38.9, 285.6, 38.1, 283.8, 38.1], 'l', [282.1, 38.1], 'bc', [280.4, 38.1, 279.5, 38.9, 279.5, 40.7], 'l', [279.5, 84.3], 'bc', [279.5, 86.1, 280.4, 86.9, 282.1, 86.9], 'l', [284.0, 86.9], 'bc', [285.8, 86.9, 286.6, 86.1, 286.6, 84.3], 'l', [286.6, 66.7], 'l', [300.9, 66.7], 'cp', [], 'f', [], 'bp', [], 'm', [312.5, 98.7], 'l', [312.5, 39.2], 'l', [303.7, 39.2], 'l', [303.7, 26.3], 'l', [335.8, 26.3], 'l', [335.8, 39.2], 'l', [327.0, 39.2], 'l', [327.0, 98.7], 'l', [312.5, 98.7], 'cp', [], 'f', []];
+});
 // impact/entity.js
 ig.baked=true;ig.module('.defines(function () {
                             ig.AnimationSheet = ig.Class.extend({
@@ -2293,45 +2184,431 @@ return(this.pos[axis]-(this.pos[axis]-this.trap.pos[axis]+this.offset[axis]
 +this.currentLookAhead[axis])*ig.system.tick*this.damping).limit(0,this.max[axis]);},draw:function(){if(this.debug){ig.system.context.fillStyle='rgba(255,0,255,0.3)';ig.system.context.fillRect((this.trap.pos.x-this.pos.x)*ig.system.scale,(this.trap.pos.y-this.pos.y)*ig.system.scale,this.trap.size.x*ig.system.scale,this.trap.size.y*ig.system.scale);}}});});
 
 // biolab/entities/particle.js
-ig.baked=true;ig.module('biolab.entities.particle').requires('impact.entity').defines(function(){EntityParticle=ig.Entity.extend({size:{x:4,y:4},offset:{x:0,y:0},maxVel:{x:160,y:160},minBounceVelocity:0,type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.NONE,collides:ig.Entity.COLLIDES.LITE,lifetime:5,fadetime:1,bounciness:0.6,friction:{x:20,y:0},init:function(x,y,settings){this.parent(x,y,settings);var vx=this.vel.x;this.vel.x=(Math.random()*2-1)*vx;this.vel.y=Math.random()*-(this.vel.y-20)*Math.cos(Math.abs(this.vel.x)/vx)-20;this.currentAnim.flip.x=(Math.random()>0.5);this.currentAnim.flip.y=(Math.random()>0.5);this.currentAnim.gotoRandomFrame();this.idleTimer=new ig.Timer();},update:function(){if(this.idleTimer.delta()>this.lifetime){this.kill();return;}
-this.currentAnim.alpha=this.idleTimer.delta().map(this.lifetime-this.fadetime,this.lifetime,1,0);this.parent();}});});
-
+ig.baked = true;
+ig.module('biolab.entities.particle').requires('impact.entity').defines(function () {
+    EntityParticle = ig.Entity.extend({
+        size: {
+            x: 4,
+            y: 4
+        },
+        offset: {
+            x: 0,
+            y: 0
+        },
+        maxVel: {
+            x: 160,
+            y: 160
+        },
+        minBounceVelocity: 0,
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.NONE,
+        collides: ig.Entity.COLLIDES.LITE,
+        lifetime: 5,
+        fadetime: 1,
+        bounciness: 0.6,
+        friction: {
+            x: 20,
+            y: 0
+        },
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            var vx = this.vel.x;
+            this.vel.x = (Math.random() * 2 - 1) * vx;
+            this.vel.y = Math.random() * -(this.vel.y - 20) * Math.cos(Math.abs(this.vel.x) / vx) - 20;
+            this.currentAnim.flip.x = (Math.random() > 0.5);
+            this.currentAnim.flip.y = (Math.random() > 0.5);
+            this.currentAnim.gotoRandomFrame();
+            this.idleTimer = new ig.Timer();
+        },
+        update: function () {
+            if (this.idleTimer.delta() > this.lifetime) {
+                this.kill();
+                return;
+            }
+            this.currentAnim.alpha = this.idleTimer.delta().map(this.lifetime - this.fadetime, this.lifetime, 1, 0);
+            this.parent();
+        }
+    });
+});
 // biolab/entities/player.js
-ig.baked=true;ig.module('biolab.entities.player').requires('impact.entity','biolab.entities.particle').defines(function(){EntityPlayer=ig.Entity.extend({size:{x:8,y:14},offset:{x:4,y:2},maxVel:{x:60,y:240},accelDef:{ground:400,air:200},frictionDef:{ground:400,air:100},jump:120,bounciness:0,health:10,type:ig.Entity.TYPE.A,checkAgainst:ig.Entity.TYPE.NONE,collides:ig.Entity.COLLIDES.PASSIVE,flip:false,flippedAnimOffset:24,idle:false,moved:false,wasStanding:false,canHighJump:false,highJumpTimer:null,idleTimer:null,sfxPlasma:new ig.Sound('media/sounds/plasma.ogg'),sfxDie:new ig.Sound('media/sounds/die-respawn.ogg',false),animSheet:new ig.AnimationSheet('media/sprites/player.png',16,16),init:function(x,y,settings){this.friction.y=0;this.parent(x,y,settings);this.idleTimer=new ig.Timer();this.highJumpTimer=new ig.Timer();this.addAnim('idle',1,[0]);this.addAnim('scratch',0.3,[2,1,2,1,2],true);this.addAnim('shrug',0.3,[3,3,3,3,3,3,4,3,3],true);this.addAnim('run',0.07,[6,7,8,9,10,11]);this.addAnim('jump',1,[15]);this.addAnim('fall',0.4,[12,13]);this.addAnim('land',0.15,[14]);this.addAnim('die',0.07,[18,19,20,21,22,23,16,16,16]);this.addAnim('spawn',0.07,[16,16,16,23,22,21,20,19,18]);},update:function(){if(this.currentAnim==this.anims.spawn){this.currentAnim.update();if(this.currentAnim.loopCount){this.currentAnim=this.anims.idle.rewind();}
-else{return;}}
-if(this.currentAnim==this.anims.die){this.currentAnim.update();if(this.currentAnim.loopCount){this.kill();}
-return;}
-this.moved=false;this.friction.x=this.standing?this.frictionDef.ground:this.frictionDef.air;if(ig.input.state('left')){this.accel.x=-(this.standing?this.accelDef.ground:this.accelDef.air);this.flip=true;this.moved=true;}
-else if(ig.input.state('right')){this.accel.x=(this.standing?this.accelDef.ground:this.accelDef.air);this.flip=false;this.moved=true;}
-else{this.accel.x=0;}
-if(ig.input.pressed('shoot')){var x=this.pos.x+(this.flip?-3:5);var y=this.pos.y+6;ig.game.spawnEntity(EntityProjectile,x,y,{flip:this.flip});this.sfxPlasma.play();}
-this.wantsJump=this.wantsJump||ig.input.pressed('jump');if(this.standing&&(ig.input.pressed('jump')||(!this.wasStanding&&this.wantsJump&&ig.input.state('jump')))){ig.mark('jump');this.wantsJump=false;this.canHighJump=true;this.highJumpTimer.set(0.14);this.vel.y=-this.jump/4;}
-else if(this.canHighJump){var d=this.highJumpTimer.delta();if(ig.input.state('jump')){var f=Math.max(0,d>0?ig.system.tick-d:ig.system.tick);this.vel.y-=this.jump*f*6.5;}
-else{this.canHighJump=false;}
-if(d>0){this.canHighJump=false;}}
-this.wasStanding=this.standing;this.parent();this.setAnimation();},setAnimation:function(){if((!this.wasStanding&&this.standing)){this.currentAnim=this.anims.land.rewind();}
-else if(this.standing&&(this.currentAnim!=this.anims.land||this.currentAnim.loopCount>0)){if(this.moved){if(this.standing){this.currentAnim=this.anims.run;}
-this.idle=false;}
-else{if(!this.idle||this.currentAnim.stop&&this.currentAnim.loopCount>0){this.idle=true;this.idleTimer.set(Math.random()*4+3);this.currentAnim=this.anims.idle;}
-if(this.idleTimer.delta()>0){this.idleTimer.reset();this.currentAnim=[this.anims.scratch,this.anims.shrug].random().rewind();}}}
-else if(!this.standing){if(this.vel.y<0){this.currentAnim=this.anims.jump;}else{if(this.currentAnim!=this.anims.fall){this.anims.fall.rewind();}
-this.currentAnim=this.anims.fall;}
-this.idle=false;}
-this.currentAnim.flip.x=this.flip;if(this.flip){this.currentAnim.tile+=this.flippedAnimOffset;}},collideWith:function(other,axis){if(axis=='y'&&this.standing&&this.currentAnim!=this.anims.die){this.currentAnim.update();this.setAnimation();}},receiveDamage:function(amount,from){if(this.currentAnim!=this.anims.die){this.currentAnim=this.anims.die.rewind();for(var i=0;i<3;i++){ig.game.spawnEntity(EntityPlayerGib,this.pos.x,this.pos.y);}
-ig.game.spawnEntity(EntityPlayerGibGun,this.pos.x,this.pos.y);this.sfxDie.play();}},kill:function(){this.parent();ig.game.respawnPlayerAtLastCheckpoint(this.pos.x,this.pos.y);}});EntityPlayerGib=EntityParticle.extend({lifetime:0.8,fadetime:0.4,friction:{x:0,y:0},vel:{x:30,y:80},gravityFactor:0,animSheet:new ig.AnimationSheet('media/sprites/player.png',8,8),init:function(x,y,settings){this.addAnim('idle',7,[82,94]);this.parent(x,y,settings);}});EntityPlayerGibGun=EntityParticle.extend({lifetime:2,fadetime:0.4,size:{x:8,y:8},friction:{x:30,y:0},vel:{x:60,y:50},animSheet:new ig.AnimationSheet('media/sprites/player.png',8,8),init:function(x,y,settings){this.addAnim('idle',0.5,[11]);this.parent(x,y,settings);this.currentAnim.flip.y=false;}});EntityProjectile=ig.Entity.extend({size:{x:6,y:3},offset:{x:1,y:2},maxVel:{x:200,y:0},gravityFactor:0,type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.B,collides:ig.Entity.COLLIDES.NEVER,flip:false,hasHit:false,animSheet:new ig.AnimationSheet('media/sprites/projectile.png',8,8),init:function(x,y,settings){this.parent(x,y,settings);this.vel.x=(settings.flip?-this.maxVel.x:this.maxVel.x);this.addAnim('idle',1,[0]);this.addAnim('hit',0.1,[0,1,2,3,4,5],true);},update:function(){if(this.hasHit&&this.currentAnim.loopCount>0){this.kill();}
-this.parent();this.currentAnim.flip.x=this.flip;},handleMovementTrace:function(res){this.parent(res);if(res.collision.x||res.collision.y){this.currentAnim=this.anims.hit;this.hasHit=true;}},check:function(other){if(!this.hasHit){other.receiveDamage(10,this);this.hasHit=true;this.currentAnim=this.anims.hit;this.vel.x=0;}}});});
-
+ig.baked = true;
+ig.module('biolab.entities.player').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityPlayer = ig.Entity.extend({
+        size: {
+            x: 8,
+            y: 14
+        },
+        offset: {
+            x: 4,
+            y: 2
+        },
+        maxVel: {
+            x: 60,
+            y: 240
+        },
+        accelDef: {
+            ground: 400,
+            air: 200
+        },
+        frictionDef: {
+            ground: 400,
+            air: 100
+        },
+        jump: 120,
+        bounciness: 0,
+        health: 10,
+        type: ig.Entity.TYPE.A,
+        checkAgainst: ig.Entity.TYPE.NONE,
+        collides: ig.Entity.COLLIDES.PASSIVE,
+        flip: false,
+        flippedAnimOffset: 24,
+        idle: false,
+        moved: false,
+        wasStanding: false,
+        canHighJump: false,
+        highJumpTimer: null,
+        idleTimer: null,
+        sfxPlasma: new ig.Sound('media/sounds/plasma.ogg'),
+        sfxDie: new ig.Sound('media/sounds/die-respawn.ogg', false),
+        animSheet: new ig.AnimationSheet('media/sprites/player.png', 16, 16),
+        init: function (x, y, settings) {
+            this.friction.y = 0;
+            this.parent(x, y, settings);
+            this.idleTimer = new ig.Timer();
+            this.highJumpTimer = new ig.Timer();
+            this.addAnim('idle', 1, [0]);
+            this.addAnim('scratch', 0.3, [2, 1, 2, 1, 2], true);
+            this.addAnim('shrug', 0.3, [3, 3, 3, 3, 3, 3, 4, 3, 3], true);
+            this.addAnim('run', 0.07, [6, 7, 8, 9, 10, 11]);
+            this.addAnim('jump', 1, [15]);
+            this.addAnim('fall', 0.4, [12, 13]);
+            this.addAnim('land', 0.15, [14]);
+            this.addAnim('die', 0.07, [18, 19, 20, 21, 22, 23, 16, 16, 16]);
+            this.addAnim('spawn', 0.07, [16, 16, 16, 23, 22, 21, 20, 19, 18]);
+        },
+        update: function () {
+            if (this.currentAnim == this.anims.spawn) {
+                this.currentAnim.update();
+                if (this.currentAnim.loopCount) {
+                    this.currentAnim = this.anims.idle.rewind();
+                } else {
+                    return;
+                }
+            }
+            if (this.currentAnim == this.anims.die) {
+                this.currentAnim.update();
+                if (this.currentAnim.loopCount) {
+                    this.kill();
+                }
+                return;
+            }
+            this.moved = false;
+            this.friction.x = this.standing ? this.frictionDef.ground : this.frictionDef.air;
+            if (ig.input.state('left')) {
+                this.accel.x = -(this.standing ? this.accelDef.ground : this.accelDef.air);
+                this.flip = true;
+                this.moved = true;
+            } else if (ig.input.state('right')) {
+                this.accel.x = (this.standing ? this.accelDef.ground : this.accelDef.air);
+                this.flip = false;
+                this.moved = true;
+            } else {
+                this.accel.x = 0;
+            }
+            if (ig.input.pressed('shoot')) {
+                var x = this.pos.x + (this.flip ? -3 : 5);
+                var y = this.pos.y + 6;
+                ig.game.spawnEntity(EntityProjectile, x, y, {
+                    flip: this.flip
+                });
+                this.sfxPlasma.play();
+            }
+            this.wantsJump = this.wantsJump || ig.input.pressed('jump');
+            if (this.standing && (ig.input.pressed('jump') || (!this.wasStanding && this.wantsJump && ig.input.state('jump')))) {
+                ig.mark('jump');
+                this.wantsJump = false;
+                this.canHighJump = true;
+                this.highJumpTimer.set(0.14);
+                this.vel.y = -this.jump / 4;
+            } else if (this.canHighJump) {
+                var d = this.highJumpTimer.delta();
+                if (ig.input.state('jump')) {
+                    var f = Math.max(0, d > 0 ? ig.system.tick - d : ig.system.tick);
+                    this.vel.y -= this.jump * f * 6.5;
+                } else {
+                    this.canHighJump = false;
+                }
+                if (d > 0) {
+                    this.canHighJump = false;
+                }
+            }
+            this.wasStanding = this.standing;
+            this.parent();
+            this.setAnimation();
+        },
+        setAnimation: function () {
+            if ((!this.wasStanding && this.standing)) {
+                this.currentAnim = this.anims.land.rewind();
+            } else if (this.standing && (this.currentAnim != this.anims.land || this.currentAnim.loopCount > 0)) {
+                if (this.moved) {
+                    if (this.standing) {
+                        this.currentAnim = this.anims.run;
+                    }
+                    this.idle = false;
+                } else {
+                    if (!this.idle || this.currentAnim.stop && this.currentAnim.loopCount > 0) {
+                        this.idle = true;
+                        this.idleTimer.set(Math.random() * 4 + 3);
+                        this.currentAnim = this.anims.idle;
+                    }
+                    if (this.idleTimer.delta() > 0) {
+                        this.idleTimer.reset();
+                        this.currentAnim = [this.anims.scratch, this.anims.shrug].random().rewind();
+                    }
+                }
+            } else if (!this.standing) {
+                if (this.vel.y < 0) {
+                    this.currentAnim = this.anims.jump;
+                } else {
+                    if (this.currentAnim != this.anims.fall) {
+                        this.anims.fall.rewind();
+                    }
+                    this.currentAnim = this.anims.fall;
+                }
+                this.idle = false;
+            }
+            this.currentAnim.flip.x = this.flip;
+            if (this.flip) {
+                this.currentAnim.tile += this.flippedAnimOffset;
+            }
+        },
+        collideWith: function (other, axis) {
+            if (axis == 'y' && this.standing && this.currentAnim != this.anims.die) {
+                this.currentAnim.update();
+                this.setAnimation();
+            }
+        },
+        receiveDamage: function (amount, from) {
+            if (this.currentAnim != this.anims.die) {
+                this.currentAnim = this.anims.die.rewind();
+                for (var i = 0; i < 3; i++) {
+                    ig.game.spawnEntity(EntityPlayerGib, this.pos.x, this.pos.y);
+                }
+                ig.game.spawnEntity(EntityPlayerGibGun, this.pos.x, this.pos.y);
+                this.sfxDie.play();
+            }
+        },
+        kill: function () {
+            this.parent();
+            ig.game.respawnPlayerAtLastCheckpoint(this.pos.x, this.pos.y);
+        }
+    });
+    EntityPlayerGib = EntityParticle.extend({
+        lifetime: 0.8,
+        fadetime: 0.4,
+        friction: {
+            x: 0,
+            y: 0
+        },
+        vel: {
+            x: 30,
+            y: 80
+        },
+        gravityFactor: 0,
+        animSheet: new ig.AnimationSheet('media/sprites/player.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 7, [82, 94]);
+            this.parent(x, y, settings);
+        }
+    });
+    EntityPlayerGibGun = EntityParticle.extend({
+        lifetime: 2,
+        fadetime: 0.4,
+        size: {
+            x: 8,
+            y: 8
+        },
+        friction: {
+            x: 30,
+            y: 0
+        },
+        vel: {
+            x: 60,
+            y: 50
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/player.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.5, [11]);
+            this.parent(x, y, settings);
+            this.currentAnim.flip.y = false;
+        }
+    });
+    EntityProjectile = ig.Entity.extend({
+        size: {
+            x: 6,
+            y: 3
+        },
+        offset: {
+            x: 1,
+            y: 2
+        },
+        maxVel: {
+            x: 200,
+            y: 0
+        },
+        gravityFactor: 0,
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.B,
+        collides: ig.Entity.COLLIDES.NEVER,
+        flip: false,
+        hasHit: false,
+        animSheet: new ig.AnimationSheet('media/sprites/projectile.png', 8, 8),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.vel.x = (settings.flip ? -this.maxVel.x : this.maxVel.x);
+            this.addAnim('idle', 1, [0]);
+            this.addAnim('hit', 0.1, [0, 1, 2, 3, 4, 5], true);
+        },
+        update: function () {
+            if (this.hasHit && this.currentAnim.loopCount > 0) {
+                this.kill();
+            }
+            this.parent();
+            this.currentAnim.flip.x = this.flip;
+        },
+        handleMovementTrace: function (res) {
+            this.parent(res);
+            if (res.collision.x || res.collision.y) {
+                this.currentAnim = this.anims.hit;
+                this.hasHit = true;
+            }
+        },
+        check: function (other) {
+            if (!this.hasHit) {
+                other.receiveDamage(10, this);
+                this.hasHit = true;
+                this.currentAnim = this.anims.hit;
+                this.vel.x = 0;
+            }
+        }
+    });
+});
 // biolab/entities/blob.js
-ig.baked=true;ig.module('biolab.entities.blob').requires('impact.entity','biolab.entities.particle').defines(function(){EntityBlob=ig.Entity.extend({size:{x:10,y:13},offset:{x:3,y:3},maxVel:{x:100,y:100},seenPlayer:false,inJump:false,type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.PASSIVE,jumpTimer:null,health:20,sfxGib:new ig.Sound('media/sounds/wetgib.ogg'),animSheet:new ig.AnimationSheet('media/sprites/blob.png',16,16),init:function(x,y,settings){this.parent(x,y,settings);this.jumpTimer=new ig.Timer();this.addAnim('idle',0.5,[1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2]);this.addAnim('crawl',0.1,[0,1]);this.addAnim('jump',0.2,[2,3,4]);this.addAnim('hit',0.1,[5]);this.currentAnim.gotoRandomFrame();this.currentAnim.flip.x=(Math.random()>0.5);},update:function(){var ydist=Math.abs(ig.game.player.pos.y-this.pos.y);var xdist=Math.abs(ig.game.player.pos.x-this.pos.x);var xdir=ig.game.player.pos.x-this.pos.x<0?-1:1;var wasStanding=this.standing;if(!this.seenPlayer){if(xdist<64&&ydist<20){this.seenPlayer=true;}}
-else if(this.standing&&this.currentAnim!=this.anims.hit){if(this.currentAnim!=this.anims.jump&&this.jumpTimer.delta()>0.5&&((xdist<40&&xdist>20)||ig.game.collisionMap.getTile(this.pos.x+this.size.x*xdir,this.pos.y+this.size.y)==1)){this.currentAnim=this.anims.jump.rewind();this.currentAnim.flip.x=(xdir<0);this.vel.x=0;}
-else if(this.currentAnim==this.anims.jump&&this.currentAnim.loopCount){this.vel.y=-70;this.vel.x=60*(this.currentAnim.flip.x?-1:1);this.inJump=true;}
-else if(this.currentAnim!=this.anims.jump&&this.jumpTimer.delta()>0.2){this.currentAnim=this.anims.crawl;this.currentAnim.flip.x=(xdir<0);this.vel.x=20*xdir;}}
-if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle;}
-if(this.inJump&&this.vel.x==0&&this.currentAnim!=this.anims.hit){this.vel.x=30*(this.currentAnim.flip.x?-1:1);}
-this.parent();if(this.standing&&!wasStanding&&this.currentAnim!=this.anims.hit){this.inJump=false;this.jumpTimer.reset();this.anims.idle.flip.x=this.currentAnim.flip.x;this.currentAnim=this.anims.idle;this.vel.x=0;}},kill:function(){var gibs=ig.ua.mobile?5:30;for(var i=0;i<gibs;i++){ig.game.spawnEntity(EntityBlobGib,this.pos.x,this.pos.y);}
-this.parent();},receiveDamage:function(amount,from){this.anims.hit.flip.x=this.currentAnim.flip.x;this.currentAnim=this.anims.hit.rewind();this.seenPlayer=true;this.inJump=false;this.vel.x=from.vel.x>0?50:-50;var gibs=ig.ua.mobile?2:5;for(var i=0;i<gibs;i++){ig.game.spawnEntity(EntityBlobGib,this.pos.x,this.pos.y);}
-this.sfxGib.play();this.parent(amount);},check:function(other){other.receiveDamage(10,this);}});EntityBlobGib=EntityParticle.extend({lifetime:3,fadetime:6,friction:{x:0,y:0},vel:{x:60,y:150},animSheet:new ig.AnimationSheet('media/sprites/blob-gibs.png',4,4),init:function(x,y,settings){this.addAnim('idle',0.1,[0,1,2]);this.parent(x,y,settings);}});});
-
+ig.baked = true;
+ig.module('biolab.entities.blob').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityBlob = ig.Entity.extend({
+        size: {
+            x: 10,
+            y: 13
+        },
+        offset: {
+            x: 3,
+            y: 3
+        },
+        maxVel: {
+            x: 100,
+            y: 100
+        },
+        seenPlayer: false,
+        inJump: false,
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.PASSIVE,
+        jumpTimer: null,
+        health: 20,
+        sfxGib: new ig.Sound('media/sounds/wetgib.ogg'),
+        animSheet: new ig.AnimationSheet('media/sprites/blob.png', 16, 16),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.jumpTimer = new ig.Timer();
+            this.addAnim('idle', 0.5, [1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
+            this.addAnim('crawl', 0.1, [0, 1]);
+            this.addAnim('jump', 0.2, [2, 3, 4]);
+            this.addAnim('hit', 0.1, [5]);
+            this.currentAnim.gotoRandomFrame();
+            this.currentAnim.flip.x = (Math.random() > 0.5);
+        },
+        update: function () {
+            var ydist = Math.abs(ig.game.player.pos.y - this.pos.y);
+            var xdist = Math.abs(ig.game.player.pos.x - this.pos.x);
+            var xdir = ig.game.player.pos.x - this.pos.x < 0 ? -1 : 1;
+            var wasStanding = this.standing;
+            if (!this.seenPlayer) {
+                if (xdist < 64 && ydist < 20) {
+                    this.seenPlayer = true;
+                }
+            } else if (this.standing && this.currentAnim != this.anims.hit) {
+                if (this.currentAnim != this.anims.jump && this.jumpTimer.delta() > 0.5 && ((xdist < 40 && xdist > 20) || ig.game.collisionMap.getTile(this.pos.x + this.size.x * xdir, this.pos.y + this.size.y) == 1)) {
+                    this.currentAnim = this.anims.jump.rewind();
+                    this.currentAnim.flip.x = (xdir < 0);
+                    this.vel.x = 0;
+                } else if (this.currentAnim == this.anims.jump && this.currentAnim.loopCount) {
+                    this.vel.y = -70;
+                    this.vel.x = 60 * (this.currentAnim.flip.x ? -1 : 1);
+                    this.inJump = true;
+                } else if (this.currentAnim != this.anims.jump && this.jumpTimer.delta() > 0.2) {
+                    this.currentAnim = this.anims.crawl;
+                    this.currentAnim.flip.x = (xdir < 0);
+                    this.vel.x = 20 * xdir;
+                }
+            }
+            if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.idle;
+            }
+            if (this.inJump && this.vel.x == 0 && this.currentAnim != this.anims.hit) {
+                this.vel.x = 30 * (this.currentAnim.flip.x ? -1 : 1);
+            }
+            this.parent();
+            if (this.standing && !wasStanding && this.currentAnim != this.anims.hit) {
+                this.inJump = false;
+                this.jumpTimer.reset();
+                this.anims.idle.flip.x = this.currentAnim.flip.x;
+                this.currentAnim = this.anims.idle;
+                this.vel.x = 0;
+            }
+        },
+        kill: function () {
+            var gibs = ig.ua.mobile ? 5 : 30;
+            for (var i = 0; i < gibs; i++) {
+                ig.game.spawnEntity(EntityBlobGib, this.pos.x, this.pos.y);
+            }
+            this.parent();
+        },
+        receiveDamage: function (amount, from) {
+            this.anims.hit.flip.x = this.currentAnim.flip.x;
+            this.currentAnim = this.anims.hit.rewind();
+            this.seenPlayer = true;
+            this.inJump = false;
+            this.vel.x = from.vel.x > 0 ? 50 : -50;
+            var gibs = ig.ua.mobile ? 2 : 5;
+            for (var i = 0; i < gibs; i++) {
+                ig.game.spawnEntity(EntityBlobGib, this.pos.x, this.pos.y);
+            }
+            this.sfxGib.play();
+            this.parent(amount);
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+        }
+    });
+    EntityBlobGib = EntityParticle.extend({
+        lifetime: 3,
+        fadetime: 6,
+        friction: {
+            x: 0,
+            y: 0
+        },
+        vel: {
+            x: 60,
+            y: 150
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/blob-gibs.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.1, [0, 1, 2]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 // biolab/entities/grunt.js
 ig.baked=true;ig.module('biolab.entities.grunt').requires('impact.entity','biolab.entities.player','biolab.entities.particle').defines(function(){EntityGrunt=ig.Entity.extend({size:{x:10,y:13},offset:{x:3,y:3},maxVel:{x:100,y:100},friction:{x:400,y:0},seenPlayer:false,inJump:false,type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.PASSIVE,jumpTimer:null,health:20,flippedAnimOffset:12,flip:false,shootTimer:null,sfxHit:new ig.Sound('media/sounds/drygib.ogg'),sfxPlasma:new ig.Sound('media/sounds/grunt-plasma.ogg'),animSheet:new ig.AnimationSheet('media/sprites/grunt.png',16,16),init:function(x,y,settings){this.parent(x,y,settings);this.jumpTimer=new ig.Timer();this.addAnim('idle',0.5,[0,0,0,0,1,0,0,0,1,1,1]);this.addAnim('walk',0.1,[6,7,8,9,10,11]);this.addAnim('shoot',1,[2]);this.addAnim('hit',0.1,[3]);this.currentAnim.gotoRandomFrame();this.flip=(Math.random()>0.5);this.shootTimer=new ig.Timer();},update:function(){var ydist=Math.abs(ig.game.player.pos.y-this.pos.y);var xdist=Math.abs(ig.game.player.pos.x-this.pos.x);var xdir=ig.game.player.pos.x-this.pos.x<0?-1:1;if(!this.seenPlayer){if(xdist<160&&ydist<32){this.seenPlayer=true;this.shootTimer.set(1.5);}}
 else if(this.standing&&this.currentAnim!=this.anims.hit){if((xdist>160||(xdist>96&&this.currentAnim==this.anims.walk))&&this.shootTimer.delta()>0){this.currentAnim=this.anims.walk;this.vel.x=30*xdir;}
@@ -2367,9 +2644,58 @@ ig.baked=true;ig.module('biolab.entities.crate').requires('impact.entity','biola
 this.parent();}});EntityCrateDebris=EntityParticle.extend({lifetime:2,fadetime:1,bounciness:0.6,vel:{x:60,y:120},animSheet:new ig.AnimationSheet('media/sprites/crate.png',4,4),init:function(x,y,settings){this.addAnim('idle',5,[2,3,6,7]);this.parent(x,y,settings);}});});
 
 // biolab/entities/mine.js
-ig.baked=true;ig.module('biolab.entities.mine').requires('impact.entity','biolab.entities.particle').defines(function(){EntityMine=ig.Entity.extend({size:{x:8,y:5},offset:{x:4,y:3},type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.NEVER,health:10,animSheet:new ig.AnimationSheet('media/sprites/mine.png',16,8),sfxExplode:new ig.Sound('media/sounds/mine.ogg',false),init:function(x,y,settings){this.addAnim('idle',0.17,[1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,3]);this.currentAnim.gotoRandomFrame();this.parent(x,y,settings);},kill:function(){for(var i=0;i<10;i++){ig.game.spawnEntity(EntityMineGib,this.pos.x,this.pos.y);}
-this.sfxExplode.play();this.parent();},check:function(other){this.kill();other.receiveDamage(10,this);}});EntityMineGib=EntityParticle.extend({lifetime:3,fadetime:4,friction:{x:0,y:0},vel:{x:60,y:150},animSheet:new ig.AnimationSheet('media/sprites/mine.png',4,4),init:function(x,y,settings){this.addAnim('idle',0.1,[0]);this.parent(x,y,settings);}});});
-
+ig.baked = true;
+ig.module('biolab.entities.mine').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityMine = ig.Entity.extend({
+        size: {
+            x: 8,
+            y: 5
+        },
+        offset: {
+            x: 4,
+            y: 3
+        },
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.NEVER,
+        health: 10,
+        animSheet: new ig.AnimationSheet('media/sprites/mine.png', 16, 8),
+        sfxExplode: new ig.Sound('media/sounds/mine.ogg', false),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.17, [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3]);
+            this.currentAnim.gotoRandomFrame();
+            this.parent(x, y, settings);
+        },
+        kill: function () {
+            for (var i = 0; i < 10; i++) {
+                ig.game.spawnEntity(EntityMineGib, this.pos.x, this.pos.y);
+            }
+            this.sfxExplode.play();
+            this.parent();
+        },
+        check: function (other) {
+            this.kill();
+            other.receiveDamage(10, this);
+        }
+    });
+    EntityMineGib = EntityParticle.extend({
+        lifetime: 3,
+        fadetime: 4,
+        friction: {
+            x: 0,
+            y: 0
+        },
+        vel: {
+            x: 60,
+            y: 150
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/mine.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.1, [0]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 // biolab/entities/spewer.js
 ig.baked=true;ig.module('biolab.entities.spewer').requires('impact.entity','biolab.entities.particle').defines(function(){EntitySpewer=ig.Entity.extend({size:{x:16,y:8},offset:{x:0,y:0},type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.NEVER,health:20,shootTimer:null,shootWaitTimer:null,canShoot:false,animSheet:new ig.AnimationSheet('media/sprites/spewer.png',16,8),sfxHit:new ig.Sound('media/sounds/drygib.ogg'),init:function(x,y,settings){this.parent(x,y,settings);this.shootWaitTimer=new ig.Timer(1);this.shootTimer=new ig.Timer(10);this.addAnim('idle',0.5,[0,0,0,0,0,0,0,0,1]);this.addAnim('shoot',0.15,[1,2,2,1,1]);this.addAnim('hit',0.1,[3]);},update:function(){if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle;this.shootWaitTimer.set(0.5);}
 else if(this.currentAnim==this.anims.idle&&this.shootWaitTimer.delta()>0&&this.distanceTo(ig.game.player)<80){this.currentAnim=this.anims.shoot.rewind();this.shootTimer.set(0.45);this.canShoot=true;}
@@ -2384,51 +2710,523 @@ if(this.delay==-1){this.canFire=false;}
 else{this.delayTimer.set(this.delay);}}},update:function(){}});});
 
 // biolab/entities/earthquake.js
-ig.baked=true;ig.module('biolab.entities.earthquake').requires('biolab.entities.trigger').defines(function(){EntityEarthquake=ig.Entity.extend({_wmDrawBox:true,_wmBoxColor:'rgba(80, 130, 170, 0.7)',size:{x:8,y:8},duration:1,strength:8,screen:{x:0,y:0},sound:new ig.Sound('media/sounds/earthquake.ogg',false),quakeTimer:null,init:function(x,y,settings){this.quakeTimer=new ig.Timer();this.parent(x,y,settings);},triggeredBy:function(entity,trigger){this.quakeTimer.set(this.duration);if(this.sound){this.sound.play();}},update:function(){var delta=this.quakeTimer.delta();if(delta<-0.1){var s=this.strength*Math.pow(-delta/this.duration,2);if(s>0.5){ig.game.screen.x+=Math.random().map(0,1,-s,s);ig.game.screen.y+=Math.random().map(0,1,-s,s);}}}});});
-
+ig.baked = true;
+ig.module('biolab.entities.earthquake').requires('biolab.entities.trigger').defines(function () {
+    EntityEarthquake = ig.Entity.extend({
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(80, 130, 170, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        duration: 1,
+        strength: 8,
+        screen: {
+            x: 0,
+            y: 0
+        },
+        sound: new ig.Sound('media/sounds/earthquake.ogg', false),
+        quakeTimer: null,
+        init: function (x, y, settings) {
+            this.quakeTimer = new ig.Timer();
+            this.parent(x, y, settings);
+        },
+        triggeredBy: function (entity, trigger) {
+            this.quakeTimer.set(this.duration);
+            if (this.sound) {
+                this.sound.play();
+            }
+        },
+        update: function () {
+            var delta = this.quakeTimer.delta();
+            if (delta < -0.1) {
+                var s = this.strength * Math.pow(-delta / this.duration, 2);
+                if (s > 0.5) {
+                    ig.game.screen.x += Math.random().map(0, 1, -s, s);
+                    ig.game.screen.y += Math.random().map(0, 1, -s, s);
+                }
+            }
+        }
+    });
+});
 // biolab/entities/mover.js
-ig.baked=true;ig.module('biolab.entities.mover').requires('impact.entity').defines(function(){EntityMover=ig.Entity.extend({size:{x:24,y:8},maxVel:{x:100,y:100},type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.NONE,collides:ig.Entity.COLLIDES.FIXED,target:null,targets:[],currentTarget:0,speed:20,gravityFactor:0,animSheet:new ig.AnimationSheet('media/sprites/elevator.png',24,8),init:function(x,y,settings){this.addAnim('idle',1,[0]);this.parent(x,y,settings);this.targets=ig.ksort(this.target);},update:function(){var oldDistance=0;var target=ig.game.getEntityByName(this.targets[this.currentTarget]);if(target){oldDistance=this.distanceTo(target);var angle=this.angleTo(target);this.vel.x=Math.cos(angle)*this.speed;this.vel.y=Math.sin(angle)*this.speed;}
-else{this.vel.x=0;this.vel.y=0;}
-this.parent();var newDistance=this.distanceTo(target);if(target&&(newDistance>oldDistance||newDistance<0.5)){this.pos.x=target.pos.x+target.size.x/2-this.size.x/2;this.pos.y=target.pos.y+target.size.y/2-this.size.y/2;this.currentTarget++;if(this.currentTarget>=this.targets.length&&this.targets.length>1){this.currentTarget=0;}}},receiveDamage:function(amount,from){}});});
+ig.baked = true;
+ig.module('biolab.entities.mover').requires('impact.entity').defines(function () {
+    EntityMover = ig.Entity.extend({
+        size: {
+            x: 24,
+            y: 8
+        },
+        maxVel: {
+            x: 100,
+            y: 100
+        },
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.NONE,
+        collides: ig.Entity.COLLIDES.FIXED,
+        target: null,
+        targets: [],
+        currentTarget: 0,
+        speed: 20,
+        gravityFactor: 0,
+        animSheet: new ig.AnimationSheet('media/sprites/elevator.png', 24, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 1, [0]);
+            this.parent(x, y, settings);
+            this.targets = ig.ksort(this.target);
+        },
+        update: function () {
+            var oldDistance = 0;
+            var target = ig.game.getEntityByName(this.targets[this.currentTarget]);
+            if (target) {
+                oldDistance = this.distanceTo(target);
+                var angle = this.angleTo(target);
+                this.vel.x = Math.cos(angle) * this.speed;
+                this.vel.y = Math.sin(angle) * this.speed;
+            } else {
+                this.vel.x = 0;
+                this.vel.y = 0;
+            }
+            this.parent();
+            var newDistance = this.distanceTo(target);
+            if (target && (newDistance > oldDistance || newDistance < 0.5)) {
+                this.pos.x = target.pos.x + target.size.x / 2 - this.size.x / 2;
+                this.pos.y = target.pos.y + target.size.y / 2 - this.size.y / 2;
+                this.currentTarget++;
+                if (this.currentTarget >= this.targets.length && this.targets.length > 1) {
+                    this.currentTarget = 0;
+                }
+            }
+        },
+        receiveDamage: function (amount, from) {}
+    });
+});
 
 // biolab/entities/debris.js
-ig.baked=true;ig.module('biolab.entities.debris').requires('impact.entity','biolab.entities.particle').defines(function(){EntityDebris=ig.Entity.extend({_wmScalable:true,_wmDrawBox:true,_wmBoxColor:'rgba(255, 170, 66, 0.7)',size:{x:8,y:8},duration:5,count:5,durationTimer:null,nextEmit:null,init:function(x,y,settings){this.parent(x,y,settings);this.durationTimer=new ig.Timer();this.nextEmit=new ig.Timer();},triggeredBy:function(entity,trigger){this.durationTimer.set(this.duration);this.nextEmit.set(0);},update:function(){if(this.durationTimer.delta()<0&&this.nextEmit.delta()>=0){this.nextEmit.set(this.duration/this.count);var x=Math.random().map(0,1,this.pos.x,this.pos.x+this.size.x);var y=Math.random().map(0,1,this.pos.y,this.pos.y+this.size.y);ig.game.spawnEntity(EntityDebrisParticle,x,y);}}});EntityDebrisParticle=EntityParticle.extend({lifetime:2,fadetime:1,bounciness:0.6,vel:{x:60,y:0},animSheet:new ig.AnimationSheet('media/sprites/debris.png',4,4),init:function(x,y,settings){this.addAnim('idle',5,[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]);this.parent(x,y,settings);}});});
-
+ig.baked = true;
+ig.module('biolab.entities.debris').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityDebris = ig.Entity.extend({
+        _wmScalable: true,
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(255, 170, 66, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        duration: 5,
+        count: 5,
+        durationTimer: null,
+        nextEmit: null,
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.durationTimer = new ig.Timer();
+            this.nextEmit = new ig.Timer();
+        },
+        triggeredBy: function (entity, trigger) {
+            this.durationTimer.set(this.duration);
+            this.nextEmit.set(0);
+        },
+        update: function () {
+            if (this.durationTimer.delta() < 0 && this.nextEmit.delta() >= 0) {
+                this.nextEmit.set(this.duration / this.count);
+                var x = Math.random().map(0, 1, this.pos.x, this.pos.x + this.size.x);
+                var y = Math.random().map(0, 1, this.pos.y, this.pos.y + this.size.y);
+                ig.game.spawnEntity(EntityDebrisParticle, x, y);
+            }
+        }
+    });
+    EntityDebrisParticle = EntityParticle.extend({
+        lifetime: 2,
+        fadetime: 1,
+        bounciness: 0.6,
+        vel: {
+            x: 60,
+            y: 0
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/debris.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 5, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 // biolab/entities/delay.js
-ig.baked=true;ig.module('biolab.entities.delay').requires('impact.entity').defines(function(){EntityDelay=ig.Entity.extend({_wmDrawBox:true,_wmBoxColor:'rgba(255, 100, 0, 0.7)',size:{x:8,y:8},delay:1,delayTimer:null,triggerEntity:null,init:function(x,y,settings){this.parent(x,y,settings);this.delayTimer=new ig.Timer();},triggeredBy:function(entity,trigger){this.fire=true;this.delayTimer.set(this.delay);this.triggerEntity=entity;},update:function(){if(this.fire&&this.delayTimer.delta()>0){this.fire=false;for(var t in this.target){var ent=ig.game.getEntityByName(this.target[t]);if(ent&&typeof(ent.triggeredBy)=='function'){ent.triggeredBy(this.triggerEntity,this);}}}}});});
+ig.baked = true;
+ig.module('biolab.entities.delay').requires('impact.entity').defines(function () {
+    EntityDelay = ig.Entity.extend({
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(255, 100, 0, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        delay: 1,
+        delayTimer: null,
+        triggerEntity: null,
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.delayTimer = new ig.Timer();
+        },
+        triggeredBy: function (entity, trigger) {
+            this.fire = true;
+            this.delayTimer.set(this.delay);
+            this.triggerEntity = entity;
+        },
+        update: function () {
+            if (this.fire && this.delayTimer.delta() > 0) {
+                this.fire = false;
+                for (var t in this.target) {
+                    var ent = ig.game.getEntityByName(this.target[t]);
+                    if (ent && typeof (ent.triggeredBy) == 'function') {
+                        ent.triggeredBy(this.triggerEntity, this);
+                    }
+                }
+            }
+        }
+    });
+});
 
 // biolab/entities/void.js
-ig.baked=true;ig.module('biolab.entities.void').requires('impact.entity').defines(function(){EntityVoid=ig.Entity.extend({_wmDrawBox:true,_wmBoxColor:'rgba(128, 28, 230, 0.7)',size:{x:8,y:8},update:function(){}});});
+ig.baked = true;
+ig.module('biolab.entities.void').requires('impact.entity').defines(function () {
+    EntityVoid = ig.Entity.extend({
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(128, 28, 230, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        update: function () {}
+    });
+});
+
 
 // biolab/entities/hurt.js
-ig.baked=true;ig.module('biolab.entities.hurt').requires('impact.entity').defines(function(){EntityHurt=ig.Entity.extend({_wmDrawBox:true,_wmBoxColor:'rgba(255, 0, 0, 0.7)',size:{x:8,y:8},damage:10,triggeredBy:function(entity,trigger){entity.receiveDamage(this.damage,this);},update:function(){}});});
+ig.baked = true;
+ig.module('biolab.entities.hurt').requires('impact.entity').defines(function () {
+    EntityHurt = ig.Entity.extend({
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(255, 0, 0, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        damage: 10,
+        triggeredBy: function (entity, trigger) {
+            entity.receiveDamage(this.damage, this);
+        },
+        update: function () {}
+    });
+});
+
 
 // biolab/entities/levelchange.js
-ig.baked=true;ig.module('biolab.entities.levelchange').requires('impact.entity').defines(function(){EntityLevelchange=ig.Entity.extend({_wmDrawBox:true,_wmBoxColor:'rgba(0, 0, 255, 0.7)',size:{x:8,y:8},level:null,triggeredBy:function(entity,trigger){if(this.level){var levelName=this.level.replace(/^(Level)?(\w)(\w*)/,function(m,l,a,b){return a.toUpperCase()+b;});ig.game.endLevel(ig.global['Level'+levelName]);}},update:function(){}});});
+ig.baked = true;
+ig.module('biolab.entities.levelchange').requires('impact.entity').defines(function () {
+    EntityLevelchange = ig.Entity.extend({
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(0, 0, 255, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        level: null,
+        triggeredBy: function (entity, trigger) {
+            if (this.level) {
+                var levelName = this.level.replace(/^(Level)?(\w)(\w*)/, function (m, l, a, b) {
+                    return a.toUpperCase() + b;
+                });
+                ig.game.endLevel(ig.global['Level' + levelName]);
+            }
+        },
+        update: function () {}
+    });
+});
 
 // biolab/entities/respawn-pod.js
-ig.baked=true;ig.module('biolab.entities.respawn-pod').requires('impact.entity').defines(function(){EntityRespawnPod=ig.Entity.extend({size:{x:18,y:16},zIndex:-1,type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.NEVER,sound:new ig.Sound('media/sounds/respawn-activate.ogg',false),animSheet:new ig.AnimationSheet('media/sprites/respawn-pod.png',18,16),init:function(x,y,settings){this.parent(x,y,settings);this.addAnim('idle',0.5,[0,1]);this.addAnim('activated',0.5,[2,3]);this.addAnim('respawn',0.1,[0,4]);},update:function(){if(this.currentAnim==this.anims.respawn&&this.currentAnim.loopCount>4){this.currentAnim=this.anims.activated;}
-this.currentAnim.update();},getSpawnPos:function(){return{x:(this.pos.x+11),y:this.pos.y};},activate:function(){this.sound.play();this.active=true;this.currentAnim=this.anims.activated;ig.game.lastCheckpoint=this;},check:function(other){if(!this.active){this.activate();}}});});
+ig.baked = true;
+ig.module('biolab.entities.respawn-pod').requires('impact.entity').defines(function () {
+    EntityRespawnPod = ig.Entity.extend({
+        size: {
+            x: 18,
+            y: 16
+        },
+        zIndex: -1,
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.NEVER,
+        sound: new ig.Sound('media/sounds/respawn-activate.ogg', false),
+        animSheet: new ig.AnimationSheet('media/sprites/respawn-pod.png', 18, 16),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.addAnim('idle', 0.5, [0, 1]);
+            this.addAnim('activated', 0.5, [2, 3]);
+            this.addAnim('respawn', 0.1, [0, 4]);
+        },
+        update: function () {
+            if (this.currentAnim == this.anims.respawn && this.currentAnim.loopCount > 4) {
+                this.currentAnim = this.anims.activated;
+            }
+            this.currentAnim.update();
+        },
+        getSpawnPos: function () {
+            return {
+                x: (this.pos.x + 11),
+                y: this.pos.y
+            };
+        },
+        activate: function () {
+            this.sound.play();
+            this.active = true;
+            this.currentAnim = this.anims.activated;
+            ig.game.lastCheckpoint = this;
+        },
+        check: function (other) {
+            if (!this.active) {
+                this.activate();
+            }
+        }
+    });
+});
 
 // biolab/entities/test-tube.js
-ig.baked=true;ig.module('biolab.entities.test-tube').requires('impact.entity').defines(function(){EntityTestTube=ig.Entity.extend({size:{x:8,y:10},checkAgainst:ig.Entity.TYPE.A,animSheet:new ig.AnimationSheet('media/sprites/test-tube.png',8,10),collect:new ig.Sound('media/sounds/collect.ogg'),init:function(x,y,settings){this.parent(x,y,settings);this.addAnim('idle',0.1,[0,0,0,1,2,3,0,0,0,2,0,0,1,0,0]);this.currentAnim.gotoRandomFrame();},check:function(other){this.kill();this.collect.play();ig.game.tubeCount++;},update:function(){this.currentAnim.update();}});});
-
+ig.baked = true;
+ig.module('biolab.entities.test-tube').requires('impact.entity').defines(function () {
+    EntityTestTube = ig.Entity.extend({
+        size: {
+            x: 8,
+            y: 10
+        },
+        checkAgainst: ig.Entity.TYPE.A,
+        animSheet: new ig.AnimationSheet('media/sprites/test-tube.png', 8, 10),
+        collect: new ig.Sound('media/sounds/collect.ogg'),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.addAnim('idle', 0.1, [0, 0, 0, 1, 2, 3, 0, 0, 0, 2, 0, 0, 1, 0, 0]);
+            this.currentAnim.gotoRandomFrame();
+        },
+        check: function (other) {
+            this.kill();
+            this.collect.play();
+            ig.game.tubeCount++;
+        },
+        update: function () {
+            this.currentAnim.update();
+        }
+    });
+});
 // biolab/entities/glass-dome.js
-ig.baked=true;ig.module('biolab.entities.glass-dome').requires('impact.entity','biolab.entities.particle').defines(function(){EntityGlassDome=ig.Entity.extend({size:{x:40,y:32},offset:{x:0,y:0},health:80,type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.NONE,collides:ig.Entity.COLLIDES.FIXED,sfxHit:new ig.Sound('media/sounds/glass-impact.ogg'),sfxBreak:new ig.Sound('media/sounds/glass-shatter.ogg'),animSheet:new ig.AnimationSheet('media/sprites/glass-dome.png',40,32),init:function(x,y,settings){this.addAnim('idle',1,[0]);this.parent(x,y,settings);},receiveDamage:function(amount,from){if(this.distanceTo(ig.game.player)>160){return;}
-this.parent(amount,from);this.sfxHit.play();for(var i=0;i<3;i++){ig.game.spawnEntity(EntityGlassShards,from.pos.x,from.pos.y);}},kill:function(){this.sfxBreak.play();var shards=ig.ua.mobile?20:100;for(var i=0;i<shards;i++){var x=Math.random().map(0,1,this.pos.x,this.pos.x+this.size.x);var y=Math.random().map(0,1,this.pos.y,this.pos.y+this.size.y);ig.game.spawnEntity(EntityGlassShards,x,y);}
-this.parent();}});EntityGlassShards=EntityParticle.extend({lifetime:3,fadetime:1,bounciness:0.5,vel:{x:60,y:120},collides:ig.Entity.COLLIDES.NEVER,animSheet:new ig.AnimationSheet('media/sprites/glass-shards.png',4,4),init:function(x,y,settings){this.lifetime=Math.random()*3+1;this.addAnim('idle',5,[0,1,2,3]);this.parent(x,y,settings);}});});
-
+ig.baked = true;
+ig.module('biolab.entities.glass-dome').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityGlassDome = ig.Entity.extend({
+        size: {
+            x: 40,
+            y: 32
+        },
+        offset: {
+            x: 0,
+            y: 0
+        },
+        health: 80,
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.NONE,
+        collides: ig.Entity.COLLIDES.FIXED,
+        sfxHit: new ig.Sound('media/sounds/glass-impact.ogg'),
+        sfxBreak: new ig.Sound('media/sounds/glass-shatter.ogg'),
+        animSheet: new ig.AnimationSheet('media/sprites/glass-dome.png', 40, 32),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 1, [0]);
+            this.parent(x, y, settings);
+        },
+        receiveDamage: function (amount, from) {
+            if (this.distanceTo(ig.game.player) > 160) {
+                return;
+            }
+            this.parent(amount, from);
+            this.sfxHit.play();
+            for (var i = 0; i < 3; i++) {
+                ig.game.spawnEntity(EntityGlassShards, from.pos.x, from.pos.y);
+            }
+        },
+        kill: function () {
+            this.sfxBreak.play();
+            var shards = ig.ua.mobile ? 20 : 100;
+            for (var i = 0; i < shards; i++) {
+                var x = Math.random().map(0, 1, this.pos.x, this.pos.x + this.size.x);
+                var y = Math.random().map(0, 1, this.pos.y, this.pos.y + this.size.y);
+                ig.game.spawnEntity(EntityGlassShards, x, y);
+            }
+            this.parent();
+        }
+    });
+    EntityGlassShards = EntityParticle.extend({
+        lifetime: 3,
+        fadetime: 1,
+        bounciness: 0.5,
+        vel: {
+            x: 60,
+            y: 120
+        },
+        collides: ig.Entity.COLLIDES.NEVER,
+        animSheet: new ig.AnimationSheet('media/sprites/glass-shards.png', 4, 4),
+        init: function (x, y, settings) {
+            this.lifetime = Math.random() * 3 + 1;
+            this.addAnim('idle', 5, [0, 1, 2, 3]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 // biolab/perlin-noise.js
-ig.baked=true;ig.module('biolab.perlin-noise').defines(function(){PerlinNoise=ig.Class.extend({gx:[],gy:[],p:[],size:256,init:function(size){this.size=size||256;for(var i=0;i<this.size;i++){this.gx.push(Math.random()*2-1);this.gy.push(Math.random()*2-1);}
-for(var j=0;j<this.size;j++){this.p.push(j);}
-this.p.sort(function(){return 0.5-Math.random()});},noise2:function(x,y){var qx0=x|0;var qx1=qx0+1;var tx0=x-qx0;var tx1=tx0-1;var qy0=y|0;var qy1=qy0+1;var ty0=y-qy0;var ty1=ty0-1;qx0=qx0%this.size;qx1=qx1%this.size;qy0=qy0%this.size;qy1=qy1%this.size;var q00=this.p[(qy0+this.p[qx0])%this.size];var q01=this.p[(qy0+this.p[qx1])%this.size];var q10=this.p[(qy1+this.p[qx0])%this.size];var q11=this.p[(qy1+this.p[qx1])%this.size];var v00=this.gx[q00]*tx0+this.gy[q00]*ty0;var v01=this.gx[q01]*tx1+this.gy[q01]*ty0;var v10=this.gx[q10]*tx0+this.gy[q10]*ty1;var v11=this.gx[q11]*tx1+this.gy[q11]*ty1;var wx=(3-2*tx0)*tx0*tx0;var v0=v00-wx*(v00-v01);var v1=v10-wx*(v10-v11);var wy=(3-2*ty0)*ty0*ty0;var v=v0-wy*(v0-v1);return v;}});});
-
+ig.baked = true;
+ig.module('biolab.perlin-noise').defines(function () {
+    PerlinNoise = ig.Class.extend({
+        gx: [],
+        gy: [],
+        p: [],
+        size: 256,
+        init: function (size) {
+            this.size = size || 256;
+            for (var i = 0; i < this.size; i++) {
+                this.gx.push(Math.random() * 2 - 1);
+                this.gy.push(Math.random() * 2 - 1);
+            }
+            for (var j = 0; j < this.size; j++) {
+                this.p.push(j);
+            }
+            this.p.sort(function () {
+                return 0.5 - Math.random()
+            });
+        },
+        noise2: function (x, y) {
+            var qx0 = x | 0;
+            var qx1 = qx0 + 1;
+            var tx0 = x - qx0;
+            var tx1 = tx0 - 1;
+            var qy0 = y | 0;
+            var qy1 = qy0 + 1;
+            var ty0 = y - qy0;
+            var ty1 = ty0 - 1;
+            qx0 = qx0 % this.size;
+            qx1 = qx1 % this.size;
+            qy0 = qy0 % this.size;
+            qy1 = qy1 % this.size;
+            var q00 = this.p[(qy0 + this.p[qx0]) % this.size];
+            var q01 = this.p[(qy0 + this.p[qx1]) % this.size];
+            var q10 = this.p[(qy1 + this.p[qx0]) % this.size];
+            var q11 = this.p[(qy1 + this.p[qx1]) % this.size];
+            var v00 = this.gx[q00] * tx0 + this.gy[q00] * ty0;
+            var v01 = this.gx[q01] * tx1 + this.gy[q01] * ty0;
+            var v10 = this.gx[q10] * tx0 + this.gy[q10] * ty1;
+            var v11 = this.gx[q11] * tx1 + this.gy[q11] * ty1;
+            var wx = (3 - 2 * tx0) * tx0 * tx0;
+            var v0 = v00 - wx * (v00 - v01);
+            var v1 = v10 - wx * (v10 - v11);
+            var wy = (3 - 2 * ty0) * ty0 * ty0;
+            var v = v0 - wy * (v0 - v1);
+            return v;
+        }
+    });
+});
 // biolab/entities/endhub.js
-ig.baked=true;ig.module('biolab.entities.endhub').requires('impact.entity','biolab.perlin-noise').defines(function(){EntityEndhub=ig.Entity.extend({size:{x:24,y:24},zIndex:-1,sound:new ig.Sound('media/sounds/respawn-activate.ogg',false),soundEnd:new ig.Sound('media/sounds/theend.ogg',false),animSheet:new ig.AnimationSheet('media/sprites/endhub.png',24,24),stage:0,stageTimer:null,init:function(x,y,settings){this.parent(x,y,settings);this.addAnim('idle',0.5,[0,1]);this.addAnim('activated',0.5,[2,3]);this.stageTimer=new ig.Timer(0);},update:function(){this.currentAnim.update();},triggeredBy:function(entity,trigger){this.stage++;this.stageTimer.set(0);if(this.stage==1){this.sound.play();this.currentAnim=this.anims.activated;ig.music.fadeOut(4);}
-else if(this.stage==2){this.soundEnd.play();var pn=new PerlinNoise();var sx=this.pos.x;var sy=this.pos.y-24;var particles=ig.ua.mobile?30:100;for(var i=0;i<particles;i++){ig.game.spawnEntity(EntityPlasma,sx,sy,{noise:pn,index:i*10});}}
-else if(this.stage==3){ig.game.spawnEntity(EntityFadeScreen,sx,sy);}
-else if(this.stage==4){ig.game.end();}}});EntityFadeScreen=ig.Entity.extend({duration:1,color:'#fff',alpha:0,init:function(x,y,settings){this.fadeTimer=new ig.Timer(this.duration);},update:function(){this.alpha=this.fadeTimer.delta().map(-this.duration,0,0,1).limit(0,1);},draw:function(){ig.system.context.globalAlpha=this.alpha;ig.system.clear(this.color);ig.system.context.globalAlpha=1;}});EntityPlasma=ig.Entity.extend({noise:null,index:0,animSheet:new ig.AnimationSheet('media/sprites/plasma.png',20,20),init:function(x,y,settings){this.parent(x,y,settings);this.center={x:x,y:y};this.timer=new ig.Timer();this.addAnim('idle',5,[0]);this.update();},update:function(){var d=this.timer.delta();var t=d*100+16000;var i=this.index;var xn1=this.noise.noise2(i/97,t/883);var xn2=this.noise.noise2(i/41,t/311)*2;var xn3=this.noise.noise2(i/13,t/89)*0.5;var yn1=this.noise.noise2(i/97,t/701);var yn2=this.noise.noise2(i/41,t/373)*2;var yn3=this.noise.noise2(i/13,t/97)*0.5;var scale=(80/(d*d*0.7)).limit(0,1000);this.pos.x=this.center.x+(xn1+xn2+xn3)*40*scale;this.pos.y=this.center.y+(yn1+yn2+yn3)*30*scale;},draw:function(){ig.system.context.globalCompositeOperation='lighter';this.parent();ig.system.context.globalCompositeOperation='source-over';}});});
-
+ig.baked = true;
+ig.module('biolab.entities.endhub').requires('impact.entity', 'biolab.perlin-noise').defines(function () {
+    EntityEndhub = ig.Entity.extend({
+        size: {
+            x: 24,
+            y: 24
+        },
+        zIndex: -1,
+        sound: new ig.Sound('media/sounds/respawn-activate.ogg', false),
+        soundEnd: new ig.Sound('media/sounds/theend.ogg', false),
+        animSheet: new ig.AnimationSheet('media/sprites/endhub.png', 24, 24),
+        stage: 0,
+        stageTimer: null,
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.addAnim('idle', 0.5, [0, 1]);
+            this.addAnim('activated', 0.5, [2, 3]);
+            this.stageTimer = new ig.Timer(0);
+        },
+        update: function () {
+            this.currentAnim.update();
+        },
+        triggeredBy: function (entity, trigger) {
+            this.stage++;
+            this.stageTimer.set(0);
+            if (this.stage == 1) {
+                this.sound.play();
+                this.currentAnim = this.anims.activated;
+                ig.music.fadeOut(4);
+            } else if (this.stage == 2) {
+                this.soundEnd.play();
+                var pn = new PerlinNoise();
+                var sx = this.pos.x;
+                var sy = this.pos.y - 24;
+                var particles = ig.ua.mobile ? 30 : 100;
+                for (var i = 0; i < particles; i++) {
+                    ig.game.spawnEntity(EntityPlasma, sx, sy, {
+                        noise: pn,
+                        index: i * 10
+                    });
+                }
+            } else if (this.stage == 3) {
+                ig.game.spawnEntity(EntityFadeScreen, sx, sy);
+            } else if (this.stage == 4) {
+                ig.game.end();
+            }
+        }
+    });
+    EntityFadeScreen = ig.Entity.extend({
+        duration: 1,
+        color: '#fff',
+        alpha: 0,
+        init: function (x, y, settings) {
+            this.fadeTimer = new ig.Timer(this.duration);
+        },
+        update: function () {
+            this.alpha = this.fadeTimer.delta().map(-this.duration, 0, 0, 1).limit(0, 1);
+        },
+        draw: function () {
+            ig.system.context.globalAlpha = this.alpha;
+            ig.system.clear(this.color);
+            ig.system.context.globalAlpha = 1;
+        }
+    });
+    EntityPlasma = ig.Entity.extend({
+        noise: null,
+        index: 0,
+        animSheet: new ig.AnimationSheet('media/sprites/plasma.png', 20, 20),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.center = {
+                x: x,
+                y: y
+            };
+            this.timer = new ig.Timer();
+            this.addAnim('idle', 5, [0]);
+            this.update();
+        },
+        update: function () {
+            var d = this.timer.delta();
+            var t = d * 100 + 16000;
+            var i = this.index;
+            var xn1 = this.noise.noise2(i / 97, t / 883);
+            var xn2 = this.noise.noise2(i / 41, t / 311) * 2;
+            var xn3 = this.noise.noise2(i / 13, t / 89) * 0.5;
+            var yn1 = this.noise.noise2(i / 97, t / 701);
+            var yn2 = this.noise.noise2(i / 41, t / 373) * 2;
+            var yn3 = this.noise.noise2(i / 13, t / 97) * 0.5;
+            var scale = (80 / (d * d * 0.7)).limit(0, 1000);
+            this.pos.x = this.center.x + (xn1 + xn2 + xn3) * 40 * scale;
+            this.pos.y = this.center.y + (yn1 + yn2 + yn3) * 30 * scale;
+        },
+        draw: function () {
+            ig.system.context.globalCompositeOperation = 'lighter';
+            this.parent();
+            ig.system.context.globalCompositeOperation = 'source-over';
+        }
+    });
+});
 // biolab/levels/biolab1.js
 ig.baked=true;ig.module('biolab.levels.biolab1').requires('impact.image').defines(function(){LevelBiolab1={"
                                                             type);
@@ -2682,302 +3480,269 @@ ig.baked=true;ig.module('.defines(function () {
                                         });
 
                                         // biolab/entities/player.js
-                                        ig.baked = true; ig.module('biolab.entities.player'
-                                        iolab.entities.player ').requires('.requires('impact.entity'
-                                        mpact.entity ',''biolab.entities.particle'
-                                        iolab.entities.particle ').defines(function(){EntityPlayer=ig.Entity.extend({size:{x:8,y:14},offset:{x:4,y:2},maxVel:{x:60,y:240},accelDef:{ground:400,air:200},frictionDef:{ground:400,air:100},jump:120,bounciness:0,health:10,type:ig.Entity.TYPE.A,checkAgainst:ig.Entity.TYPE.NONE,collides:ig.Entity.COLLIDES.PASSIVE,flip:false,flippedAnimOffset:24,idle:false,moved:false,wasStanding:false,canHighJump:false,highJumpTimer:null,idleTimer:null,sfxPlasma:new ig.Sound('.defines(function () {
-                                            EntityPlayer = ig.Entity.extend({
-                                                size: {
-                                                    x: 8,
-                                                    y: 14
-                                                },
-                                                offset: {
-                                                    x: 4,
-                                                    y: 2
-                                                },
-                                                maxVel: {
-                                                    x: 60,
-                                                    y: 240
-                                                },
-                                                accelDef: {
-                                                    ground: 400,
-                                                    air: 200
-                                                },
-                                                frictionDef: {
-                                                    ground: 400,
-                                                    air: 100
-                                                },
-                                                jump: 120,
-                                                bounciness: 0,
-                                                health: 10,
-                                                type: ig.Entity.TYPE.A,
-                                                checkAgainst: ig.Entity.TYPE.NONE,
-                                                collides: ig.Entity.COLLIDES.PASSIVE,
-                                                flip: false,
-                                                flippedAnimOffset: 24,
-                                                idle: false,
-                                                moved: false,
-                                                wasStanding: false,
-                                                canHighJump: false,
-                                                highJumpTimer: null,
-                                                idleTimer: null,
-                                                sfxPlasma: new ig.Sound('media/sounds/plasma.ogg'
-                                                edia / sounds / plasma.ogg '),sfxDie:new ig.Sound(', sfxDie: new ig.Sound('media/sounds/die-respawn.ogg'
-                                                edia / sounds / die - respawn.ogg ',false),animSheet:new ig.AnimationSheet('
-                                                false),
-                                                animSheet: new ig.AnimationSheet('media/sprites/player.png'
-                                                edia / sprites / player.png ',16,16),init:function(x,y,settings){this.friction.y=0;this.parent(x,y,settings);this.idleTimer=new ig.Timer();this.highJumpTimer=new ig.Timer();this.addAnim('
-                                                16, 16),
-                                                init: function (x, y, settings) {
-                                                    this.friction.y = 0;
-                                                    this.parent(x, y, settings);
-                                                    this.idleTimer = new ig.Timer();
-                                                    this.highJumpTimer = new ig.Timer();
-                                                    this.addAnim('idle'
-                                                    dle ',1,[0]);this.addAnim('
-                                                    1, [0]);
-                                                    this.addAnim('scratch'
-                                                    cratch ',0.3,[2,1,2,1,2],true);this.addAnim('
-                                                    0.3, [2, 1, 2, 1, 2], true);
-                                                    this.addAnim('shrug'
-                                                    hrug ',0.3,[3,3,3,3,3,3,4,3,3],true);this.addAnim('
-                                                    0.3, [3, 3, 3, 3, 3, 3, 4, 3, 3], true);
-                                                    this.addAnim('run'
-                                                    un ',0.07,[6,7,8,9,10,11]);this.addAnim('
-                                                    0.07, [6, 7, 8, 9, 10, 11]);
-                                                    this.addAnim('jump'
-                                                    ump ',1,[15]);this.addAnim('
-                                                    1, [15]);
-                                                    this.addAnim('fall'
-                                                    all ',0.4,[12,13]);this.addAnim('
-                                                    0.4, [12, 13]);
-                                                    this.addAnim('land'
-                                                    and ',0.15,[14]);this.addAnim('
-                                                    0.15, [14]);
-                                                    this.addAnim('die'
-                                                    ie ',0.07,[18,19,20,21,22,23,16,16,16]);this.addAnim('
-                                                    0.07, [18, 19, 20, 21, 22, 23, 16, 16, 16]);
-                                                    this.addAnim('spawn'
-                                                    pawn ',0.07,[16,16,16,23,22,21,20,19,18]);},update:function(){if(this.currentAnim==this.anims.spawn){this.currentAnim.update();if(this.currentAnim.loopCount){this.currentAnim=this.anims.idle.rewind();}
-else{return;}}
-if(this.currentAnim==this.anims.die){this.currentAnim.update();if(this.currentAnim.loopCount){this.kill();}
-return;}
-this.moved=false;this.friction.x=this.standing?this.frictionDef.ground:this.frictionDef.air;if(ig.input.state('
-                                                    0.07, [16, 16, 16, 23, 22, 21, 20, 19, 18]);
-                                                },
-                                                update: function () {
-                                                    if (this.currentAnim == this.anims.spawn) {
-                                                        this.currentAnim.update();
-                                                        if (this.currentAnim.loopCount) {
-                                                            this.currentAnim = this.anims.idle.rewind();
-                                                        } else {
-                                                            return;
-                                                        }
-                                                    }
-                                                    if (this.currentAnim == this.anims.die) {
-                                                        this.currentAnim.update();
-                                                        if (this.currentAnim.loopCount) {
-                                                            this.kill();
-                                                        }
-                                                        return;
-                                                    }
-                                                    this.moved = false;
-                                                    this.friction.x = this.standing ? this.frictionDef.ground : this.frictionDef.air;
-                                                    if (ig.input.state('left'
-                                                    eft ')){this.accel.x=-(this.standing?this.accelDef.ground:this.accelDef.air);this.flip=true;this.moved=true;}
-else if(ig.input.state(') {
-                                                        this.accel.x = -(this.standing ? this.accelDef.ground : this.accelDef.air);
-                                                        this.flip = true;
-                                                        this.moved = true;
-                                                    } else if (ig.input.state('right'
-                                                    ight ')){this.accel.x=(this.standing?this.accelDef.ground:this.accelDef.air);this.flip=false;this.moved=true;}
-else{this.accel.x=0;}
-if(ig.input.pressed(') {
-                                                        this.accel.x = (this.standing ? this.accelDef.ground : this.accelDef.air);
-                                                        this.flip = false;
-                                                        this.moved = true;
-                                                    } else {
-                                                        this.accel.x = 0;
-                                                    }
-                                                    if (ig.input.pressed('shoot'
-                                                    hoot ')){var x=this.pos.x+(this.flip?-3:5);var y=this.pos.y+6;ig.game.spawnEntity(EntityProjectile,x,y,{flip:this.flip});this.sfxPlasma.play();}
-this.wantsJump=this.wantsJump||ig.input.pressed(') {
-                                                        var x = this.pos.x + (this.flip ? -3 : 5);
-                                                        var y = this.pos.y + 6;
-                                                        ig.game.spawnEntity(EntityProjectile, x, y, {
-                                                            flip: this.flip
-                                                        });
-                                                        this.sfxPlasma.play();
-                                                    }
-                                                    this.wantsJump = this.wantsJump || ig.input.pressed('jump'
-                                                    ump ');if(this.standing&&(ig.input.pressed(';
-                                                    if (this.standing && (ig.input.pressed('jump'
-                                                    ump ')||(!this.wasStanding&&this.wantsJump&&ig.input.state(' || (!this.wasStanding && this.wantsJump && ig.input.state('jump'
-                                                    ump ')))){ig.mark('))) {
-                                                        ig.mark('jump'
-                                                        ump ');this.wantsJump=false;this.canHighJump=true;this.highJumpTimer.set(0.14);this.vel.y=-this.jump/4;}
-else if(this.canHighJump){var d=this.highJumpTimer.delta();if(ig.input.state('; this.wantsJump = false; this.canHighJump = true; this.highJumpTimer.set(0.14); this.vel.y = -this.jump / 4;
-                                                        } else if (this.canHighJump) {
-                                                            var d = this.highJumpTimer.delta();
-                                                            if (ig.input.state('jump'
-                                                            ump ')){var f=Math.max(0,d>0?ig.system.tick-d:ig.system.tick);this.vel.y-=this.jump*f*6.5;}
-else{this.canHighJump=false;}
-if(d>0){this.canHighJump=false;}}
-this.wasStanding=this.standing;this.parent();this.setAnimation();},setAnimation:function(){if((!this.wasStanding&&this.standing)){this.currentAnim=this.anims.land.rewind();}
-else if(this.standing&&(this.currentAnim!=this.anims.land||this.currentAnim.loopCount>0)){if(this.moved){if(this.standing){this.currentAnim=this.anims.run;}
-this.idle=false;}
-else{if(!this.idle||this.currentAnim.stop&&this.currentAnim.loopCount>0){this.idle=true;this.idleTimer.set(Math.random()*4+3);this.currentAnim=this.anims.idle;}
-if(this.idleTimer.delta()>0){this.idleTimer.reset();this.currentAnim=[this.anims.scratch,this.anims.shrug].random().rewind();}}}
-else if(!this.standing){if(this.vel.y<0){this.currentAnim=this.anims.jump;}else{if(this.currentAnim!=this.anims.fall){this.anims.fall.rewind();}
-this.currentAnim=this.anims.fall;}
-this.idle=false;}
-this.currentAnim.flip.x=this.flip;if(this.flip){this.currentAnim.tile+=this.flippedAnimOffset;}},collideWith:function(other,axis){if(axis==') {
-                                                                var f = Math.max(0, d > 0 ? ig.system.tick - d : ig.system.tick);
-                                                                this.vel.y -= this.jump * f * 6.5;
-                                                            } else {
-                                                                this.canHighJump = false;
-                                                            }
-                                                            if (d > 0) {
-                                                                this.canHighJump = false;
-                                                            }
-                                                            }
-                                                            this.wasStanding = this.standing;
-                                                            this.parent();
-                                                            this.setAnimation();
-                                                        }, setAnimation: function () {
-                                                            if ((!this.wasStanding && this.standing)) {
-                                                                this.currentAnim = this.anims.land.rewind();
-                                                            } else if (this.standing && (this.currentAnim != this.anims.land || this.currentAnim.loopCount > 0)) {
-                                                                if (this.moved) {
-                                                                    if (this.standing) {
-                                                                        this.currentAnim = this.anims.run;
-                                                                    }
-                                                                    this.idle = false;
-                                                                } else {
-                                                                    if (!this.idle || this.currentAnim.stop && this.currentAnim.loopCount > 0) {
-                                                                        this.idle = true;
-                                                                        this.idleTimer.set(Math.random() * 4 + 3);
-                                                                        this.currentAnim = this.anims.idle;
-                                                                    }
-                                                                    if (this.idleTimer.delta() > 0) {
-                                                                        this.idleTimer.reset();
-                                                                        this.currentAnim = [this.anims.scratch, this.anims.shrug].random().rewind();
-                                                                    }
-                                                                }
-                                                            } else if (!this.standing) {
-                                                                if (this.vel.y < 0) {
-                                                                    this.currentAnim = this.anims.jump;
-                                                                } else {
-                                                                    if (this.currentAnim != this.anims.fall) {
-                                                                        this.anims.fall.rewind();
-                                                                    }
-                                                                    this.currentAnim = this.anims.fall;
-                                                                }
-                                                                this.idle = false;
-                                                            }
-                                                            this.currentAnim.flip.x = this.flip;
-                                                            if (this.flip) {
-                                                                this.currentAnim.tile += this.flippedAnimOffset;
-                                                            }
-                                                        },
-                                                        collideWith: function (other, axis) {
-                                                            if (axis == 'y''&&this.standing&&this.currentAnim!=this.anims.die){this.currentAnim.update();this.setAnimation();}},receiveDamage:function(amount,from){if(this.currentAnim!=this.anims.die){this.currentAnim=this.anims.die.rewind();for(var i=0;i<3;i++){ig.game.spawnEntity(EntityPlayerGib,this.pos.x,this.pos.y);}
-ig.game.spawnEntity(EntityPlayerGibGun,this.pos.x,this.pos.y);this.sfxDie.play();}},kill:function(){this.parent();ig.game.respawnPlayerAtLastCheckpoint(this.pos.x,this.pos.y);}});EntityPlayerGib=EntityParticle.extend({lifetime:0.8,fadetime:0.4,friction:{x:0,y:0},vel:{x:30,y:80},gravityFactor:0,animSheet:new ig.AnimationSheet(' & this.standing && this.currentAnim != this.anims.die) {
-                                                                this.currentAnim.update();
-                                                                this.setAnimation();
-                                                            }
-                                                        },
-                                                        receiveDamage: function (amount, from) {
-                                                            if (this.currentAnim != this.anims.die) {
-                                                                this.currentAnim = this.anims.die.rewind();
-                                                                for (var i = 0; i < 3; i++) {
-                                                                    ig.game.spawnEntity(EntityPlayerGib, this.pos.x, this.pos.y);
-                                                                }
-                                                                ig.game.spawnEntity(EntityPlayerGibGun, this.pos.x, this.pos.y);
-                                                                this.sfxDie.play();
-                                                            }
-                                                        },
-                                                        kill: function () {
-                                                            this.parent();
-                                                            ig.game.respawnPlayerAtLastCheckpoint(this.pos.x, this.pos.y);
-                                                        }
-                                                    }); EntityPlayerGib = EntityParticle.extend({
-                                                        lifetime: 0.8,
-                                                        fadetime: 0.4,
-                                                        friction: {
-                                                            x: 0,
-                                                            y: 0
-                                                        },
-                                                        vel: {
-                                                            x: 30,
-                                                            y: 80
-                                                        },
-                                                        gravityFactor: 0,
-                                                        animSheet: new ig.AnimationSheet('media/sprites/player.png'
-                                                        edia / sprites / player.png ',8,8),init:function(x,y,settings){this.addAnim('
-                                                        8, 8),
-                                                        init: function (x, y, settings) {
-                                                            this.addAnim('idle'
-                                                            dle ',7,[82,94]);this.parent(x,y,settings);}});EntityPlayerGibGun=EntityParticle.extend({lifetime:2,fadetime:0.4,size:{x:8,y:8},friction:{x:30,y:0},vel:{x:60,y:50},animSheet:new ig.AnimationSheet('
-                                                            7, [82, 94]);
-                                                            this.parent(x, y, settings);
-                                                        }
-                                                    }); EntityPlayerGibGun = EntityParticle.extend({
-                                                        lifetime: 2,
-                                                        fadetime: 0.4,
-                                                        size: {
-                                                            x: 8,
-                                                            y: 8
-                                                        },
-                                                        friction: {
-                                                            x: 30,
-                                                            y: 0
-                                                        },
-                                                        vel: {
-                                                            x: 60,
-                                                            y: 50
-                                                        },
-                                                        animSheet: new ig.AnimationSheet('media/sprites/player.png'
-                                                        edia / sprites / player.png ',8,8),init:function(x,y,settings){this.addAnim('
-                                                        8, 8),
-                                                        init: function (x, y, settings) {
-                                                            this.addAnim('idle'
-                                                            dle ',0.5,[11]);this.parent(x,y,settings);this.currentAnim.flip.y=false;}});EntityProjectile=ig.Entity.extend({size:{x:6,y:3},offset:{x:1,y:2},maxVel:{x:200,y:0},gravityFactor:0,type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.B,collides:ig.Entity.COLLIDES.NEVER,flip:false,hasHit:false,animSheet:new ig.AnimationSheet('
-                                                            0.5, [11]);
-                                                            this.parent(x, y, settings);
-                                                            this.currentAnim.flip.y = false;
-                                                        }
-                                                    }); EntityProjectile = ig.Entity.extend({
-                                                        size: {
-                                                            x: 6,
-                                                            y: 3
-                                                        },
-                                                        offset: {
-                                                            x: 1,
-                                                            y: 2
-                                                        },
-                                                        maxVel: {
-                                                            x: 200,
-                                                            y: 0
-                                                        },
-                                                        gravityFactor: 0,
-                                                        type: ig.Entity.TYPE.NONE,
-                                                        checkAgainst: ig.Entity.TYPE.B,
-                                                        collides: ig.Entity.COLLIDES.NEVER,
-                                                        flip: false,
-                                                        hasHit: false,
-                                                        animSheet: new ig.AnimationSheet('media/sprites/projectile.png'
-                                                        edia / sprites / projectile.png ',8,8),init:function(x,y,settings){this.parent(x,y,settings);this.vel.x=(settings.flip?-this.maxVel.x:this.maxVel.x);this.addAnim('
-                                                        8, 8),
-                                                        init: function (x, y, settings) {
-                                                            this.parent(x, y, settings);
-                                                            this.vel.x = (settings.flip ? -this.maxVel.x : this.maxVel.x);
-                                                            this.addAnim('idle'
-                                                            dle ',1,[0]);this.addAnim('
-                                                            1, [0]);
-                                                            this.addAnim('hit'
-                                                            it ',0.1,[0,1,2,3,4,5],true);},update:function(){if(this.hasHit&&this.currentAnim.loopCount>0){this.kill();}
-this.parent();this.currentAnim.flip.x=this.flip;},handleMovementTrace:function(res){this.parent(res);if(res.collision.x||res.collision.y){this.currentAnim=this.anims.hit;this.hasHit=true;}},check:function(other){if(!this.hasHit){other.receiveDamage(10,this);this.hasHit=true;this.currentAnim=this.anims.hit;this.vel.x=0;}}});});
+ig.baked = true;
+ig.module('biolab.entities.player').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityPlayer = ig.Entity.extend({
+        size: {
+            x: 8,
+            y: 14
+        },
+        offset: {
+            x: 4,
+            y: 2
+        },
+        maxVel: {
+            x: 60,
+            y: 240
+        },
+        accelDef: {
+            ground: 400,
+            air: 200
+        },
+        frictionDef: {
+            ground: 400,
+            air: 100
+        },
+        jump: 120,
+        bounciness: 0,
+        health: 10,
+        type: ig.Entity.TYPE.A,
+        checkAgainst: ig.Entity.TYPE.NONE,
+        collides: ig.Entity.COLLIDES.PASSIVE,
+        flip: false,
+        flippedAnimOffset: 24,
+        idle: false,
+        moved: false,
+        wasStanding: false,
+        canHighJump: false,
+        highJumpTimer: null,
+        idleTimer: null,
+        sfxPlasma: new ig.Sound('media/sounds/plasma.ogg'),
+        sfxDie: new ig.Sound('media/sounds/die-respawn.ogg', false),
+        animSheet: new ig.AnimationSheet('media/sprites/player.png', 16, 16),
+        init: function (x, y, settings) {
+            this.friction.y = 0;
+            this.parent(x, y, settings);
+            this.idleTimer = new ig.Timer();
+            this.highJumpTimer = new ig.Timer();
+            this.addAnim('idle', 1, [0]);
+            this.addAnim('scratch', 0.3, [2, 1, 2, 1, 2], true);
+            this.addAnim('shrug', 0.3, [3, 3, 3, 3, 3, 3, 4, 3, 3], true);
+            this.addAnim('run', 0.07, [6, 7, 8, 9, 10, 11]);
+            this.addAnim('jump', 1, [15]);
+            this.addAnim('fall', 0.4, [12, 13]);
+            this.addAnim('land', 0.15, [14]);
+            this.addAnim('die', 0.07, [18, 19, 20, 21, 22, 23, 16, 16, 16]);
+            this.addAnim('spawn', 0.07, [16, 16, 16, 23, 22, 21, 20, 19, 18]);
+        },
+        update: function () {
+            if (this.currentAnim == this.anims.spawn) {
+                this.currentAnim.update();
+                if (this.currentAnim.loopCount) {
+                    this.currentAnim = this.anims.idle.rewind();
+                } else {
+                    return;
+                }
+            }
+            if (this.currentAnim == this.anims.die) {
+                this.currentAnim.update();
+                if (this.currentAnim.loopCount) {
+                    this.kill();
+                }
+                return;
+            }
+            this.moved = false;
+            this.friction.x = this.standing ? this.frictionDef.ground : this.frictionDef.air;
+            if (ig.input.state('left')) {
+                this.accel.x = -(this.standing ? this.accelDef.ground : this.accelDef.air);
+                this.flip = true;
+                this.moved = true;
+            } else if (ig.input.state('right')) {
+                this.accel.x = (this.standing ? this.accelDef.ground : this.accelDef.air);
+                this.flip = false;
+                this.moved = true;
+            } else {
+                this.accel.x = 0;
+            }
+            if (ig.input.pressed('shoot')) {
+                var x = this.pos.x + (this.flip ? -3 : 5);
+                var y = this.pos.y + 6;
+                ig.game.spawnEntity(EntityProjectile, x, y, {
+                    flip: this.flip
+                });
+                this.sfxPlasma.play();
+            }
+            this.wantsJump = this.wantsJump || ig.input.pressed('jump');
+            if (this.standing && (ig.input.pressed('jump') || (!this.wasStanding && this.wantsJump && ig.input.state('jump')))) {
+                ig.mark('jump');
+                this.wantsJump = false;
+                this.canHighJump = true;
+                this.highJumpTimer.set(0.14);
+                this.vel.y = -this.jump / 4;
+            } else if (this.canHighJump) {
+                var d = this.highJumpTimer.delta();
+                if (ig.input.state('jump')) {
+                    var f = Math.max(0, d > 0 ? ig.system.tick - d : ig.system.tick);
+                    this.vel.y -= this.jump * f * 6.5;
+                } else {
+                    this.canHighJump = false;
+                }
+                if (d > 0) {
+                    this.canHighJump = false;
+                }
+            }
+            this.wasStanding = this.standing;
+            this.parent();
+            this.setAnimation();
+        },
+        setAnimation: function () {
+            if ((!this.wasStanding && this.standing)) {
+                this.currentAnim = this.anims.land.rewind();
+            } else if (this.standing && (this.currentAnim != this.anims.land || this.currentAnim.loopCount > 0)) {
+                if (this.moved) {
+                    if (this.standing) {
+                        this.currentAnim = this.anims.run;
+                    }
+                    this.idle = false;
+                } else {
+                    if (!this.idle || this.currentAnim.stop && this.currentAnim.loopCount > 0) {
+                        this.idle = true;
+                        this.idleTimer.set(Math.random() * 4 + 3);
+                        this.currentAnim = this.anims.idle;
+                    }
+                    if (this.idleTimer.delta() > 0) {
+                        this.idleTimer.reset();
+                        this.currentAnim = [this.anims.scratch, this.anims.shrug].random().rewind();
+                    }
+                }
+            } else if (!this.standing) {
+                if (this.vel.y < 0) {
+                    this.currentAnim = this.anims.jump;
+                } else {
+                    if (this.currentAnim != this.anims.fall) {
+                        this.anims.fall.rewind();
+                    }
+                    this.currentAnim = this.anims.fall;
+                }
+                this.idle = false;
+            }
+            this.currentAnim.flip.x = this.flip;
+            if (this.flip) {
+                this.currentAnim.tile += this.flippedAnimOffset;
+            }
+        },
+        collideWith: function (other, axis) {
+            if (axis == 'y' && this.standing && this.currentAnim != this.anims.die) {
+                this.currentAnim.update();
+                this.setAnimation();
+            }
+        },
+        receiveDamage: function (amount, from) {
+            if (this.currentAnim != this.anims.die) {
+                this.currentAnim = this.anims.die.rewind();
+                for (var i = 0; i < 3; i++) {
+                    ig.game.spawnEntity(EntityPlayerGib, this.pos.x, this.pos.y);
+                }
+                ig.game.spawnEntity(EntityPlayerGibGun, this.pos.x, this.pos.y);
+                this.sfxDie.play();
+            }
+        },
+        kill: function () {
+            this.parent();
+            ig.game.respawnPlayerAtLastCheckpoint(this.pos.x, this.pos.y);
+        }
+    });
+    EntityPlayerGib = EntityParticle.extend({
+        lifetime: 0.8,
+        fadetime: 0.4,
+        friction: {
+            x: 0,
+            y: 0
+        },
+        vel: {
+            x: 30,
+            y: 80
+        },
+        gravityFactor: 0,
+        animSheet: new ig.AnimationSheet('media/sprites/player.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 7, [82, 94]);
+            this.parent(x, y, settings);
+        }
+    });
+    EntityPlayerGibGun = EntityParticle.extend({
+        lifetime: 2,
+        fadetime: 0.4,
+        size: {
+            x: 8,
+            y: 8
+        },
+        friction: {
+            x: 30,
+            y: 0
+        },
+        vel: {
+            x: 60,
+            y: 50
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/player.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.5, [11]);
+            this.parent(x, y, settings);
+            this.currentAnim.flip.y = false;
+        }
+    });
+    EntityProjectile = ig.Entity.extend({
+        size: {
+            x: 6,
+            y: 3
+        },
+        offset: {
+            x: 1,
+            y: 2
+        },
+        maxVel: {
+            x: 200,
+            y: 0
+        },
+        gravityFactor: 0,
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.B,
+        collides: ig.Entity.COLLIDES.NEVER,
+        flip: false,
+        hasHit: false,
+        animSheet: new ig.AnimationSheet('media/sprites/projectile.png', 8, 8),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.vel.x = (settings.flip ? -this.maxVel.x : this.maxVel.x);
+            this.addAnim('idle', 1, [0]);
+            this.addAnim('hit', 0.1, [0, 1, 2, 3, 4, 5], true);
+        },
+        update: function () {
+            if (this.hasHit && this.currentAnim.loopCount > 0) {
+                this.kill();
+            }
+            this.parent();
+            this.currentAnim.flip.x = this.flip;
+        },
+        handleMovementTrace: function (res) {
+            this.parent(res);
+            if (res.collision.x || res.collision.y) {
+                this.currentAnim = this.anims.hit;
+                this.hasHit = true;
+            }
+        },
+        check: function (other) {
+            if (!this.hasHit) {
+                other.receiveDamage(10, this);
+                this.hasHit = true;
+                this.currentAnim = this.anims.hit;
+                this.vel.x = 0;
+            }
+        }
+    });
+});
+
 
 // biolab/entities/blob.js
 ig.baked=true;ig.module('
@@ -3009,769 +3774,647 @@ ig.baked=true;ig.module('
                                                     });
 
                                                     // biolab/entities/blob.js
-                                                    ig.baked = true; ig.module('biolab.entities.blob'
-                                                    iolab.entities.blob ').requires('.requires('impact.entity'
-                                                    mpact.entity ',''biolab.entities.particle'
-                                                    iolab.entities.particle ').defines(function(){EntityBlob=ig.Entity.extend({size:{x:10,y:13},offset:{x:3,y:3},maxVel:{x:100,y:100},seenPlayer:false,inJump:false,type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.PASSIVE,jumpTimer:null,health:20,sfxGib:new ig.Sound('.defines(function () {
-                                                        EntityBlob = ig.Entity.extend({
-                                                            size: {
-                                                                x: 10,
-                                                                y: 13
-                                                            },
-                                                            offset: {
-                                                                x: 3,
-                                                                y: 3
-                                                            },
-                                                            maxVel: {
-                                                                x: 100,
-                                                                y: 100
-                                                            },
-                                                            seenPlayer: false,
-                                                            inJump: false,
-                                                            type: ig.Entity.TYPE.B,
-                                                            checkAgainst: ig.Entity.TYPE.A,
-                                                            collides: ig.Entity.COLLIDES.PASSIVE,
-                                                            jumpTimer: null,
-                                                            health: 20,
-                                                            sfxGib: new ig.Sound('media/sounds/wetgib.ogg'
-                                                            edia / sounds / wetgib.ogg '),animSheet:new ig.AnimationSheet(', animSheet: new ig.AnimationSheet('media/sprites/blob.png'
-                                                            edia / sprites / blob.png ',16,16),init:function(x,y,settings){this.parent(x,y,settings);this.jumpTimer=new ig.Timer();this.addAnim('
-                                                            16, 16),
-                                                            init: function (x, y, settings) {
-                                                                this.parent(x, y, settings);
-                                                                this.jumpTimer = new ig.Timer();
-                                                                this.addAnim('idle'
-                                                                dle ',0.5,[1,2,2,2,2,2,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2]);this.addAnim('
-                                                                0.5, [1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
-                                                                this.addAnim('crawl'
-                                                                rawl ',0.1,[0,1]);this.addAnim('
-                                                                0.1, [0, 1]);
-                                                                this.addAnim('jump'
-                                                                ump ',0.2,[2,3,4]);this.addAnim('
-                                                                0.2, [2, 3, 4]);
-                                                                this.addAnim('hit'
-                                                                it ',0.1,[5]);this.currentAnim.gotoRandomFrame();this.currentAnim.flip.x=(Math.random()>0.5);},update:function(){var ydist=Math.abs(ig.game.player.pos.y-this.pos.y);var xdist=Math.abs(ig.game.player.pos.x-this.pos.x);var xdir=ig.game.player.pos.x-this.pos.x<0?-1:1;var wasStanding=this.standing;if(!this.seenPlayer){if(xdist<64&&ydist<20){this.seenPlayer=true;}}
-else if(this.standing&&this.currentAnim!=this.anims.hit){if(this.currentAnim!=this.anims.jump&&this.jumpTimer.delta()>0.5&&((xdist<40&&xdist>20)||ig.game.collisionMap.getTile(this.pos.x+this.size.x*xdir,this.pos.y+this.size.y)==1)){this.currentAnim=this.anims.jump.rewind();this.currentAnim.flip.x=(xdir<0);this.vel.x=0;}
-else if(this.currentAnim==this.anims.jump&&this.currentAnim.loopCount){this.vel.y=-70;this.vel.x=60*(this.currentAnim.flip.x?-1:1);this.inJump=true;}
-else if(this.currentAnim!=this.anims.jump&&this.jumpTimer.delta()>0.2){this.currentAnim=this.anims.crawl;this.currentAnim.flip.x=(xdir<0);this.vel.x=20*xdir;}}
-if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle;}
-if(this.inJump&&this.vel.x==0&&this.currentAnim!=this.anims.hit){this.vel.x=30*(this.currentAnim.flip.x?-1:1);}
-this.parent();if(this.standing&&!wasStanding&&this.currentAnim!=this.anims.hit){this.inJump=false;this.jumpTimer.reset();this.anims.idle.flip.x=this.currentAnim.flip.x;this.currentAnim=this.anims.idle;this.vel.x=0;}},kill:function(){var gibs=ig.ua.mobile?5:30;for(var i=0;i<gibs;i++){ig.game.spawnEntity(EntityBlobGib,this.pos.x,this.pos.y);}
-this.parent();},receiveDamage:function(amount,from){this.anims.hit.flip.x=this.currentAnim.flip.x;this.currentAnim=this.anims.hit.rewind();this.seenPlayer=true;this.inJump=false;this.vel.x=from.vel.x>0?50:-50;var gibs=ig.ua.mobile?2:5;for(var i=0;i<gibs;i++){ig.game.spawnEntity(EntityBlobGib,this.pos.x,this.pos.y);}
-this.sfxGib.play();this.parent(amount);},check:function(other){other.receiveDamage(10,this);}});EntityBlobGib=EntityParticle.extend({lifetime:3,fadetime:6,friction:{x:0,y:0},vel:{x:60,y:150},animSheet:new ig.AnimationSheet('
-                                                                0.1, [5]);
-                                                                this.currentAnim.gotoRandomFrame();
-                                                                this.currentAnim.flip.x = (Math.random() > 0.5);
-                                                            },
-                                                            update: function () {
-                                                                var ydist = Math.abs(ig.game.player.pos.y - this.pos.y);
-                                                                var xdist = Math.abs(ig.game.player.pos.x - this.pos.x);
-                                                                var xdir = ig.game.player.pos.x - this.pos.x < 0 ? -1 : 1;
-                                                                var wasStanding = this.standing;
-                                                                if (!this.seenPlayer) {
-                                                                    if (xdist < 64 && ydist < 20) {
-                                                                        this.seenPlayer = true;
-                                                                    }
-                                                                } else if (this.standing && this.currentAnim != this.anims.hit) {
-                                                                    if (this.currentAnim != this.anims.jump && this.jumpTimer.delta() > 0.5 && ((xdist < 40 && xdist > 20) || ig.game.collisionMap.getTile(this.pos.x + this.size.x * xdir, this.pos.y + this.size.y) == 1)) {
-                                                                        this.currentAnim = this.anims.jump.rewind();
-                                                                        this.currentAnim.flip.x = (xdir < 0);
-                                                                        this.vel.x = 0;
-                                                                    } else if (this.currentAnim == this.anims.jump && this.currentAnim.loopCount) {
-                                                                        this.vel.y = -70;
-                                                                        this.vel.x = 60 * (this.currentAnim.flip.x ? -1 : 1);
-                                                                        this.inJump = true;
-                                                                    } else if (this.currentAnim != this.anims.jump && this.jumpTimer.delta() > 0.2) {
-                                                                        this.currentAnim = this.anims.crawl;
-                                                                        this.currentAnim.flip.x = (xdir < 0);
-                                                                        this.vel.x = 20 * xdir;
-                                                                    }
-                                                                }
-                                                                if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
-                                                                    this.currentAnim = this.anims.idle;
-                                                                }
-                                                                if (this.inJump && this.vel.x == 0 && this.currentAnim != this.anims.hit) {
-                                                                    this.vel.x = 30 * (this.currentAnim.flip.x ? -1 : 1);
-                                                                }
-                                                                this.parent();
-                                                                if (this.standing && !wasStanding && this.currentAnim != this.anims.hit) {
-                                                                    this.inJump = false;
-                                                                    this.jumpTimer.reset();
-                                                                    this.anims.idle.flip.x = this.currentAnim.flip.x;
-                                                                    this.currentAnim = this.anims.idle;
-                                                                    this.vel.x = 0;
-                                                                }
-                                                            },
-                                                            kill: function () {
-                                                                var gibs = ig.ua.mobile ? 5 : 30;
-                                                                for (var i = 0; i < gibs; i++) {
-                                                                    ig.game.spawnEntity(EntityBlobGib, this.pos.x, this.pos.y);
-                                                                }
-                                                                this.parent();
-                                                            },
-                                                            receiveDamage: function (amount, from) {
-                                                                this.anims.hit.flip.x = this.currentAnim.flip.x;
-                                                                this.currentAnim = this.anims.hit.rewind();
-                                                                this.seenPlayer = true;
-                                                                this.inJump = false;
-                                                                this.vel.x = from.vel.x > 0 ? 50 : -50;
-                                                                var gibs = ig.ua.mobile ? 2 : 5;
-                                                                for (var i = 0; i < gibs; i++) {
-                                                                    ig.game.spawnEntity(EntityBlobGib, this.pos.x, this.pos.y);
-                                                                }
-                                                                this.sfxGib.play();
-                                                                this.parent(amount);
-                                                            },
-                                                            check: function (other) {
-                                                                other.receiveDamage(10, this);
-                                                            }
-                                                            }); EntityBlobGib = EntityParticle.extend({
-                                                            lifetime: 3,
-                                                            fadetime: 6,
-                                                            friction: {
-                                                                x: 0,
-                                                                y: 0
-                                                            },
-                                                            vel: {
-                                                                x: 60,
-                                                                y: 150
-                                                            },
-                                                            animSheet: new ig.AnimationSheet('media/sprites/blob-gibs.png'
-                                                            edia / sprites / blob - gibs.png ',4,4),init:function(x,y,settings){this.addAnim('
-                                                            4, 4),
-                                                            init: function (x, y, settings) {
-                                                                this.addAnim('idle'
-                                                                dle ',0.1,[0,1,2]);this.parent(x,y,settings);}});});
+                         ig.baked = true;
+ig.module('biolab.entities.blob').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityBlob = ig.Entity.extend({
+        size: {
+            x: 10,
+            y: 13
+        },
+        offset: {
+            x: 3,
+            y: 3
+        },
+        maxVel: {
+            x: 100,
+            y: 100
+        },
+        seenPlayer: false,
+        inJump: false,
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.PASSIVE,
+        jumpTimer: null,
+        health: 20,
+        sfxGib: new ig.Sound('media/sounds/wetgib.ogg'),
+        animSheet: new ig.AnimationSheet('media/sprites/blob.png', 16, 16),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.jumpTimer = new ig.Timer();
+            this.addAnim('idle', 0.5, [1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
+            this.addAnim('crawl', 0.1, [0, 1]);
+            this.addAnim('jump', 0.2, [2, 3, 4]);
+            this.addAnim('hit', 0.1, [5]);
+            this.currentAnim.gotoRandomFrame();
+            this.currentAnim.flip.x = (Math.random() > 0.5);
+        },
+        update: function () {
+            var ydist = Math.abs(ig.game.player.pos.y - this.pos.y);
+            var xdist = Math.abs(ig.game.player.pos.x - this.pos.x);
+            var xdir = ig.game.player.pos.x - this.pos.x < 0 ? -1 : 1;
+            var wasStanding = this.standing;
+            if (!this.seenPlayer) {
+                if (xdist < 64 && ydist < 20) {
+                    this.seenPlayer = true;
+                }
+            } else if (this.standing && this.currentAnim != this.anims.hit) {
+                if (this.currentAnim != this.anims.jump && this.jumpTimer.delta() > 0.5 && ((xdist < 40 && xdist > 20) || ig.game.collisionMap.getTile(this.pos.x + this.size.x * xdir, this.pos.y + this.size.y) == 1)) {
+                    this.currentAnim = this.anims.jump.rewind();
+                    this.currentAnim.flip.x = (xdir < 0);
+                    this.vel.x = 0;
+                } else if (this.currentAnim == this.anims.jump && this.currentAnim.loopCount) {
+                    this.vel.y = -70;
+                    this.vel.x = 60 * (this.currentAnim.flip.x ? -1 : 1);
+                    this.inJump = true;
+                } else if (this.currentAnim != this.anims.jump && this.jumpTimer.delta() > 0.2) {
+                    this.currentAnim = this.anims.crawl;
+                    this.currentAnim.flip.x = (xdir < 0);
+                    this.vel.x = 20 * xdir;
+                }
+            }
+            if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.idle;
+            }
+            if (this.inJump && this.vel.x == 0 && this.currentAnim != this.anims.hit) {
+                this.vel.x = 30 * (this.currentAnim.flip.x ? -1 : 1);
+            }
+            this.parent();
+            if (this.standing && !wasStanding && this.currentAnim != this.anims.hit) {
+                this.inJump = false;
+                this.jumpTimer.reset();
+                this.anims.idle.flip.x = this.currentAnim.flip.x;
+                this.currentAnim = this.anims.idle;
+                this.vel.x = 0;
+            }
+        },
+        kill: function () {
+            var gibs = ig.ua.mobile ? 5 : 30;
+            for (var i = 0; i < gibs; i++) {
+                ig.game.spawnEntity(EntityBlobGib, this.pos.x, this.pos.y);
+            }
+            this.parent();
+        },
+        receiveDamage: function (amount, from) {
+            this.anims.hit.flip.x = this.currentAnim.flip.x;
+            this.currentAnim = this.anims.hit.rewind();
+            this.seenPlayer = true;
+            this.inJump = false;
+            this.vel.x = from.vel.x > 0 ? 50 : -50;
+            var gibs = ig.ua.mobile ? 2 : 5;
+            for (var i = 0; i < gibs; i++) {
+                ig.game.spawnEntity(EntityBlobGib, this.pos.x, this.pos.y);
+            }
+            this.sfxGib.play();
+            this.parent(amount);
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+        }
+    });
+    EntityBlobGib = EntityParticle.extend({
+        lifetime: 3,
+        fadetime: 6,
+        friction: {
+            x: 0,
+            y: 0
+        },
+        vel: {
+            x: 60,
+            y: 150
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/blob-gibs.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.1, [0, 1, 2]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 
 // biolab/entities/grunt.js
-ig.baked=true;ig.module('
-                                                                0.1, [0, 1, 2]);
-                                                                this.parent(x, y, settings);
-                                                            }
-                                                        });
-                                                        });
-
-                                                    // biolab/entities/grunt.js
-                                                    ig.baked = true; ig.module('biolab.entities.grunt'
-                                                    iolab.entities.grunt ').requires('.requires('impact.entity'
-                                                    mpact.entity ',''biolab.entities.player'
-                                                    iolab.entities.player ',''biolab.entities.particle'
-                                                    iolab.entities.particle ').defines(function(){EntityGrunt=ig.Entity.extend({size:{x:10,y:13},offset:{x:3,y:3},maxVel:{x:100,y:100},friction:{x:400,y:0},seenPlayer:false,inJump:false,type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.PASSIVE,jumpTimer:null,health:20,flippedAnimOffset:12,flip:false,shootTimer:null,sfxHit:new ig.Sound('.defines(function () {
-                                                        EntityGrunt = ig.Entity.extend({
-                                                            size: {
-                                                                x: 10,
-                                                                y: 13
-                                                            },
-                                                            offset: {
-                                                                x: 3,
-                                                                y: 3
-                                                            },
-                                                            maxVel: {
-                                                                x: 100,
-                                                                y: 100
-                                                            },
-                                                            friction: {
-                                                                x: 400,
-                                                                y: 0
-                                                            },
-                                                            seenPlayer: false,
-                                                            inJump: false,
-                                                            type: ig.Entity.TYPE.B,
-                                                            checkAgainst: ig.Entity.TYPE.A,
-                                                            collides: ig.Entity.COLLIDES.PASSIVE,
-                                                            jumpTimer: null,
-                                                            health: 20,
-                                                            flippedAnimOffset: 12,
-                                                            flip: false,
-                                                            shootTimer: null,
-                                                            sfxHit: new ig.Sound('media/sounds/drygib.ogg'
-                                                            edia / sounds / drygib.ogg '),sfxPlasma:new ig.Sound(', sfxPlasma: new ig.Sound('media/sounds/grunt-plasma.ogg'
-                                                            edia / sounds / grunt - plasma.ogg '),animSheet:new ig.AnimationSheet(', animSheet: new ig.AnimationSheet('media/sprites/grunt.png'
-                                                            edia / sprites / grunt.png ',16,16),init:function(x,y,settings){this.parent(x,y,settings);this.jumpTimer=new ig.Timer();this.addAnim('
-                                                            16, 16),
-                                                            init: function (x, y, settings) {
-                                                                this.parent(x, y, settings);
-                                                                this.jumpTimer = new ig.Timer();
-                                                                this.addAnim('idle'
-                                                                dle ',0.5,[0,0,0,0,1,0,0,0,1,1,1]);this.addAnim('
-                                                                0.5, [0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1]);
-                                                                this.addAnim('walk'
-                                                                alk ',0.1,[6,7,8,9,10,11]);this.addAnim('
-                                                                0.1, [6, 7, 8, 9, 10, 11]);
-                                                                this.addAnim('shoot'
-                                                                hoot ',1,[2]);this.addAnim('
-                                                                1, [2]);
-                                                                this.addAnim('hit'
-                                                                it ',0.1,[3]);this.currentAnim.gotoRandomFrame();this.flip=(Math.random()>0.5);this.shootTimer=new ig.Timer();},update:function(){var ydist=Math.abs(ig.game.player.pos.y-this.pos.y);var xdist=Math.abs(ig.game.player.pos.x-this.pos.x);var xdir=ig.game.player.pos.x-this.pos.x<0?-1:1;if(!this.seenPlayer){if(xdist<160&&ydist<32){this.seenPlayer=true;this.shootTimer.set(1.5);}}
-else if(this.standing&&this.currentAnim!=this.anims.hit){if((xdist>160||(xdist>96&&this.currentAnim==this.anims.walk))&&this.shootTimer.delta()>0){this.currentAnim=this.anims.walk;this.vel.x=30*xdir;}
-else if(this.currentAnim==this.anims.walk){this.currentAnim=this.anims.idle;this.vel.x=0;this.shootTimer.set(1);}
-else if(ydist<64&&this.shootTimer.delta()>0){var x=this.pos.x+(this.flip?-3:5);var y=this.pos.y+6;ig.game.spawnEntity(EntityGruntProjectile,x,y,{flip:this.flip});this.sfxPlasma.play();this.shootTimer.set(2);this.currentAnim=this.anims.idle;}
-if(this.currentAnim==this.anims.idle&&this.shootTimer.delta()>-0.5){this.currentAnim=this.anims.shoot;}
-this.flip=(xdir<0);}
-if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle.rewind();}
-this.parent();this.currentAnim.flip.x=this.flip;if(this.flip){this.currentAnim.tile+=this.flippedAnimOffset;}},kill:function(){this.parent();this.spawnGibs(10);},receiveDamage:function(amount,from){this.currentAnim=this.anims.hit.rewind();this.vel.x=from.vel.x>0?60:-60;this.parent(amount);this.spawnGibs(3);this.sfxHit.play();this.seenPlayer=true;if(this.shootTimer.delta()>-0.3){this.shootTimer.set(0.7);}},spawnGibs:function(amount){var cx=this.pos.x+this.size.x/2;var cy=this.pos.y+this.size.y/2;for(var i=0;i<amount;i++){ig.game.spawnEntity(EntityGruntGib,cx,cy);}},check:function(other){other.receiveDamage(10,this);}});EntityGruntGibGun=EntityParticle.extend({lifetime:2,fadetime:0.4,size:{x:8,y:8},friction:{x:30,y:0},vel:{x:60,y:50},animSheet:new ig.AnimationSheet('
-                                                                0.1, [3]);
-                                                                this.currentAnim.gotoRandomFrame();
-                                                                this.flip = (Math.random() > 0.5);
-                                                                this.shootTimer = new ig.Timer();
-                                                            },
-                                                            update: function () {
-                                                                var ydist = Math.abs(ig.game.player.pos.y - this.pos.y);
-                                                                var xdist = Math.abs(ig.game.player.pos.x - this.pos.x);
-                                                                var xdir = ig.game.player.pos.x - this.pos.x < 0 ? -1 : 1;
-                                                                if (!this.seenPlayer) {
-                                                                    if (xdist < 160 && ydist < 32) {
-                                                                        this.seenPlayer = true;
-                                                                        this.shootTimer.set(1.5);
-                                                                    }
-                                                                } else if (this.standing && this.currentAnim != this.anims.hit) {
-                                                                    if ((xdist > 160 || (xdist > 96 && this.currentAnim == this.anims.walk)) && this.shootTimer.delta() > 0) {
-                                                                        this.currentAnim = this.anims.walk;
-                                                                        this.vel.x = 30 * xdir;
-                                                                    } else if (this.currentAnim == this.anims.walk) {
-                                                                        this.currentAnim = this.anims.idle;
-                                                                        this.vel.x = 0;
-                                                                        this.shootTimer.set(1);
-                                                                    } else if (ydist < 64 && this.shootTimer.delta() > 0) {
-                                                                        var x = this.pos.x + (this.flip ? -3 : 5);
-                                                                        var y = this.pos.y + 6;
-                                                                        ig.game.spawnEntity(EntityGruntProjectile, x, y, {
-                                                                            flip: this.flip
-                                                                        });
-                                                                        this.sfxPlasma.play();
-                                                                        this.shootTimer.set(2);
-                                                                        this.currentAnim = this.anims.idle;
-                                                                    }
-                                                                    if (this.currentAnim == this.anims.idle && this.shootTimer.delta() > -0.5) {
-                                                                        this.currentAnim = this.anims.shoot;
-                                                                    }
-                                                                    this.flip = (xdir < 0);
-                                                                }
-                                                                if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
-                                                                    this.currentAnim = this.anims.idle.rewind();
-                                                                }
-                                                                this.parent();
-                                                                this.currentAnim.flip.x = this.flip;
-                                                                if (this.flip) {
-                                                                    this.currentAnim.tile += this.flippedAnimOffset;
-                                                                }
-                                                            },
-                                                            kill: function () {
-                                                                this.parent();
-                                                                this.spawnGibs(10);
-                                                            },
-                                                            receiveDamage: function (amount, from) {
-                                                                this.currentAnim = this.anims.hit.rewind();
-                                                                this.vel.x = from.vel.x > 0 ? 60 : -60;
-                                                                this.parent(amount);
-                                                                this.spawnGibs(3);
-                                                                this.sfxHit.play();
-                                                                this.seenPlayer = true;
-                                                                if (this.shootTimer.delta() > -0.3) {
-                                                                    this.shootTimer.set(0.7);
-                                                                }
-                                                            },
-                                                            spawnGibs: function (amount) {
-                                                                var cx = this.pos.x + this.size.x / 2;
-                                                                var cy = this.pos.y + this.size.y / 2;
-                                                                for (var i = 0; i < amount; i++) {
-                                                                    ig.game.spawnEntity(EntityGruntGib, cx, cy);
-                                                                }
-                                                            },
-                                                            check: function (other) {
-                                                                other.receiveDamage(10, this);
-                                                            }
-                                                            });
-                                                            EntityGruntGibGun = EntityParticle.extend({
-                                                                lifetime: 2,
-                                                                fadetime: 0.4,
-                                                                size: {
-                                                                    x: 8,
-                                                                    y: 8
-                                                                },
-                                                                friction: {
-                                                                    x: 30,
-                                                                    y: 0
-                                                                },
-                                                                vel: {
-                                                                    x: 60,
-                                                                    y: 50
-                                                                },
-                                                                animSheet: new ig.AnimationSheet('media/sprites/grunt.png'
-                                                                edia / sprites / grunt.png ',8,8),init:function(x,y,settings){this.addAnim('
-                                                                8, 8),
-                                                                init: function (x, y, settings) {
-                                                                    this.addAnim('idle'
-                                                                    dle ',0.5,[11]);this.parent(x,y,settings);this.currentAnim.flip.y=false;}});EntityGruntGib=EntityParticle.extend({lifetime:1,fadetime:0.5,bounciness:0.6,vel:{x:50,y:150},size:{x:4,y:4},animSheet:new ig.AnimationSheet('
-                                                                    0.5, [11]);
-                                                                    this.parent(x, y, settings);
-                                                                    this.currentAnim.flip.y = false;
-                                                                }
-                                                            });
-                                                            EntityGruntGib = EntityParticle.extend({
-                                                                lifetime: 1,
-                                                                fadetime: 0.5,
-                                                                bounciness: 0.6,
-                                                                vel: {
-                                                                    x: 50,
-                                                                    y: 150
-                                                                },
-                                                                size: {
-                                                                    x: 4,
-                                                                    y: 4
-                                                                },
-                                                                animSheet: new ig.AnimationSheet('media/sprites/grunt.png'
-                                                                edia / sprites / grunt.png ',4,4),init:function(x,y,settings){this.addAnim('
-                                                                4, 4),
-                                                                init: function (x, y, settings) {
-                                                                    this.addAnim('idle'
-                                                                    dle ',5,[16,17,40,41]);this.parent(x,y,settings);}});EntityGruntProjectile=EntityProjectile.extend({maxVel:{x:120,y:0},checkAgainst:ig.Entity.TYPE.A,animSheet:new ig.AnimationSheet('
-                                                                    5, [16, 17, 40, 41]);
-                                                                    this.parent(x, y, settings);
-                                                                }
-                                                            });
-                                                            EntityGruntProjectile = EntityProjectile.extend({
-                                                                maxVel: {
-                                                                    x: 120,
-                                                                    y: 0
-                                                                },
-                                                                checkAgainst: ig.Entity.TYPE.A,
-                                                                animSheet: new ig.AnimationSheet('media/sprites/grunt-projectile.png'
-                                                                edia / sprites / grunt - projectile.png ',8,8)});});
+ig.baked = true;
+ig.module('biolab.entities.grunt').requires('impact.entity', 'biolab.entities.player', 'biolab.entities.particle').defines(function () {
+    EntityGrunt = ig.Entity.extend({
+        size: {
+            x: 10,
+            y: 13
+        },
+        offset: {
+            x: 3,
+            y: 3
+        },
+        maxVel: {
+            x: 100,
+            y: 100
+        },
+        friction: {
+            x: 400,
+            y: 0
+        },
+        seenPlayer: false,
+        inJump: false,
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.PASSIVE,
+        jumpTimer: null,
+        health: 20,
+        flippedAnimOffset: 12,
+        flip: false,
+        shootTimer: null,
+        sfxHit: new ig.Sound('media/sounds/drygib.ogg'),
+        sfxPlasma: new ig.Sound('media/sounds/grunt-plasma.ogg'),
+        animSheet: new ig.AnimationSheet('media/sprites/grunt.png', 16, 16),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.jumpTimer = new ig.Timer();
+            this.addAnim('idle', 0.5, [0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1]);
+            this.addAnim('walk', 0.1, [6, 7, 8, 9, 10, 11]);
+            this.addAnim('shoot', 1, [2]);
+            this.addAnim('hit', 0.1, [3]);
+            this.currentAnim.gotoRandomFrame();
+            this.flip = (Math.random() > 0.5);
+            this.shootTimer = new ig.Timer();
+        },
+        update: function () {
+            var ydist = Math.abs(ig.game.player.pos.y - this.pos.y);
+            var xdist = Math.abs(ig.game.player.pos.x - this.pos.x);
+            var xdir = ig.game.player.pos.x - this.pos.x < 0 ? -1 : 1;
+            if (!this.seenPlayer) {
+                if (xdist < 160 && ydist < 32) {
+                    this.seenPlayer = true;
+                    this.shootTimer.set(1.5);
+                }
+            } else if (this.standing && this.currentAnim != this.anims.hit) {
+                if ((xdist > 160 || (xdist > 96 && this.currentAnim == this.anims.walk)) && this.shootTimer.delta() > 0) {
+                    this.currentAnim = this.anims.walk;
+                    this.vel.x = 30 * xdir;
+                } else if (this.currentAnim == this.anims.walk) {
+                    this.currentAnim = this.anims.idle;
+                    this.vel.x = 0;
+                    this.shootTimer.set(1);
+                } else if (ydist < 64 && this.shootTimer.delta() > 0) {
+                    var x = this.pos.x + (this.flip ? -3 : 5);
+                    var y = this.pos.y + 6;
+                    ig.game.spawnEntity(EntityGruntProjectile, x, y, {
+                        flip: this.flip
+                    });
+                    this.sfxPlasma.play();
+                    this.shootTimer.set(2);
+                    this.currentAnim = this.anims.idle;
+                }
+                if (this.currentAnim == this.anims.idle && this.shootTimer.delta() > -0.5) {
+                    this.currentAnim = this.anims.shoot;
+                }
+                this.flip = (xdir < 0);
+            }
+            if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.idle.rewind();
+            }
+            this.parent();
+            this.currentAnim.flip.x = this.flip;
+            if (this.flip) {
+                this.currentAnim.tile += this.flippedAnimOffset;
+            }
+        },
+        kill: function () {
+            this.parent();
+            this.spawnGibs(10);
+        },
+        receiveDamage: function (amount, from) {
+            this.currentAnim = this.anims.hit.rewind();
+            this.vel.x = from.vel.x > 0 ? 60 : -60;
+            this.parent(amount);
+            this.spawnGibs(3);
+            this.sfxHit.play();
+            this.seenPlayer = true;
+            if (this.shootTimer.delta() > -0.3) {
+                this.shootTimer.set(0.7);
+            }
+        },
+        spawnGibs: function (amount) {
+            var cx = this.pos.x + this.size.x / 2;
+            var cy = this.pos.y + this.size.y / 2;
+            for (var i = 0; i < amount; i++) {
+                ig.game.spawnEntity(EntityGruntGib, cx, cy);
+            }
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+        }
+    });
+    EntityGruntGibGun = EntityParticle.extend({
+        lifetime: 2,
+        fadetime: 0.4,
+        size: {
+            x: 8,
+            y: 8
+        },
+        friction: {
+            x: 30,
+            y: 0
+        },
+        vel: {
+            x: 60,
+            y: 50
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/grunt.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.5, [11]);
+            this.parent(x, y, settings);
+            this.currentAnim.flip.y = false;
+        }
+    });
+    EntityGruntGib = EntityParticle.extend({
+        lifetime: 1,
+        fadetime: 0.5,
+        bounciness: 0.6,
+        vel: {
+            x: 50,
+            y: 150
+        },
+        size: {
+            x: 4,
+            y: 4
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/grunt.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 5, [16, 17, 40, 41]);
+            this.parent(x, y, settings);
+        }
+    });
+    EntityGruntProjectile = EntityProjectile.extend({
+        maxVel: {
+            x: 120,
+            y: 0
+        },
+        checkAgainst: ig.Entity.TYPE.A,
+        animSheet: new ig.AnimationSheet('media/sprites/grunt-projectile.png', 8, 8)
+    });
+});
 
 // biolab/entities/dropper.js
-ig.baked=true;ig.module('
-                                                                8, 8)
-                                                            });
-                                                        });
-
-                                                        // biolab/entities/dropper.js
-                                                        ig.baked = true;
-                                                        ig.module('biolab.entities.dropper'
-                                                        iolab.entities.dropper ').requires('.requires('impact.entity'
-                                                        mpact.entity ',''biolab.entities.particle'
-                                                        iolab.entities.particle ',''biolab.entities.blob'
-                                                        iolab.entities.blob ').defines(function(){EntityDropper=ig.Entity.extend({size:{x:14,y:8},offset:{x:1,y:0},type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.NEVER,health:80,shootTimer:null,shootWaitTimer:null,canShoot:false,animSheet:new ig.AnimationSheet('.defines(function () {
-                                                            EntityDropper = ig.Entity.extend({
-                                                                size: {
-                                                                    x: 14,
-                                                                    y: 8
-                                                                },
-                                                                offset: {
-                                                                    x: 1,
-                                                                    y: 0
-                                                                },
-                                                                type: ig.Entity.TYPE.B,
-                                                                checkAgainst: ig.Entity.TYPE.A,
-                                                                collides: ig.Entity.COLLIDES.NEVER,
-                                                                health: 80,
-                                                                shootTimer: null,
-                                                                shootWaitTimer: null,
-                                                                canShoot: false,
-                                                                animSheet: new ig.AnimationSheet('media/sprites/dropper.png'
-                                                                edia / sprites / dropper.png ',16,8),sfxHit:new ig.Sound('
-                                                                16, 8),
-                                                                sfxHit: new ig.Sound('media/sounds/wetgib.ogg'
-                                                                edia / sounds / wetgib.ogg '),init:function(x,y,settings){this.parent(x,y,settings);this.shootWaitTimer=new ig.Timer(1);this.shootTimer=new ig.Timer(10);this.addAnim(', init: function (x, y, settings) {
-                                                                    this.parent(x, y, settings);
-                                                                    this.shootWaitTimer = new ig.Timer(1);
-                                                                    this.shootTimer = new ig.Timer(10);
-                                                                    this.addAnim('idle'
-                                                                    dle ',1,[0]);this.addAnim('
-                                                                    1, [0]);
-                                                                    this.addAnim('shoot'
-                                                                    hoot ',0.2,[1,2,2,1]);this.addAnim('
-                                                                    0.2, [1, 2, 2, 1]);
-                                                                    this.addAnim('hit'
-                                                                    it ',0.2,[3]);},update:function(){if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle;this.shootWaitTimer.set(0.5);}
-else if(this.currentAnim==this.anims.idle&&this.shootWaitTimer.delta()>0&&this.distanceTo(ig.game.player)<128){this.currentAnim=this.anims.shoot.rewind();this.shootTimer.set(0.8);this.canShoot=true;}
-else if(this.currentAnim==this.anims.shoot&&this.canShoot&&this.shootTimer.delta()>0){this.canShoot=false;ig.game.spawnEntity(EntityDropperShot,this.pos.x+5,this.pos.y+6);}
-if(this.currentAnim==this.anims.shoot&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle.rewind();this.shootWaitTimer.set(0.5);}
-this.currentAnim.update();},kill:function(){this.spawnGibs(20);this.parent();},check:function(other){other.receiveDamage(10,this);},receiveDamage:function(amount,from){this.currentAnim=this.anims.hit.rewind();this.parent(amount);this.spawnGibs(3);this.sfxHit.play();},spawnGibs:function(amount){var cx=this.pos.x+this.size.x/2;var cy=this.pos.y+this.size.y/2;for(var i=0;i<amount;i++){ig.game.spawnEntity(EntityDropperGib,cx,cy);}}});EntityDropperShot=ig.Entity.extend({size:{x:4,y:4},offset:{x:2,y:4},vel:{x:0,y:0},type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.LITE,animSheet:new ig.AnimationSheet('
-                                                                    0.2, [3]);
-                                                                },
-                                                                update: function () {
-                                                                    if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
-                                                                        this.currentAnim = this.anims.idle;
-                                                                        this.shootWaitTimer.set(0.5);
-                                                                    } else if (this.currentAnim == this.anims.idle && this.shootWaitTimer.delta() > 0 && this.distanceTo(ig.game.player) < 128) {
-                                                                        this.currentAnim = this.anims.shoot.rewind();
-                                                                        this.shootTimer.set(0.8);
-                                                                        this.canShoot = true;
-                                                                    } else if (this.currentAnim == this.anims.shoot && this.canShoot && this.shootTimer.delta() > 0) {
-                                                                        this.canShoot = false;
-                                                                        ig.game.spawnEntity(EntityDropperShot, this.pos.x + 5, this.pos.y + 6);
-                                                                    }
-                                                                    if (this.currentAnim == this.anims.shoot && this.currentAnim.loopCount) {
-                                                                        this.currentAnim = this.anims.idle.rewind();
-                                                                        this.shootWaitTimer.set(0.5);
-                                                                    }
-                                                                    this.currentAnim.update();
-                                                                },
-                                                                kill: function () {
-                                                                    this.spawnGibs(20);
-                                                                    this.parent();
-                                                                },
-                                                                check: function (other) {
-                                                                    other.receiveDamage(10, this);
-                                                                },
-                                                                receiveDamage: function (amount, from) {
-                                                                    this.currentAnim = this.anims.hit.rewind();
-                                                                    this.parent(amount);
-                                                                    this.spawnGibs(3);
-                                                                    this.sfxHit.play();
-                                                                },
-                                                                spawnGibs: function (amount) {
-                                                                    var cx = this.pos.x + this.size.x / 2;
-                                                                    var cy = this.pos.y + this.size.y / 2;
-                                                                    for (var i = 0; i < amount; i++) {
-                                                                        ig.game.spawnEntity(EntityDropperGib, cx, cy);
-                                                                    }
-                                                                }
-                                                                }); EntityDropperShot = ig.Entity.extend({
-                                                                size: {
-                                                                    x: 4,
-                                                                    y: 4
-                                                                },
-                                                                offset: {
-                                                                    x: 2,
-                                                                    y: 4
-                                                                },
-                                                                vel: {
-                                                                    x: 0,
-                                                                    y: 0
-                                                                },
-                                                                type: ig.Entity.TYPE.NONE,
-                                                                checkAgainst: ig.Entity.TYPE.A,
-                                                                collides: ig.Entity.COLLIDES.LITE,
-                                                                animSheet: new ig.AnimationSheet('media/sprites/dropper.png'
-                                                                edia / sprites / dropper.png ',8,8),init:function(x,y,settings){this.addAnim('
-                                                                8, 8),
-                                                                init: function (x, y, settings) {
-                                                                    this.addAnim('idle'
-                                                                    dle ',0.1,[8]);this.addAnim('
-                                                                    0.1, [8]);
-                                                                    this.addAnim('drop'
-                                                                    rop ',0.1,[9,10,11],true);this.parent(x,y,settings);},update:function(){if(this.currentAnim==this.anims.drop&&this.currentAnim.loopCount){this.kill();}
-this.parent();},handleMovementTrace:function(res){this.parent(res);if((res.collision.x||res.collision.y)&&this.currentAnim!=this.anims.drop){this.currentAnim=this.anims.drop.rewind();}},check:function(other){if(this.currentAnim!=this.anims.drop){other.receiveDamage(10,this);this.kill();}}});EntityDropperGib=EntityParticle.extend({lifetime:3,fadetime:6,friction:{x:0,y:0},vel:{x:60,y:150},animSheet:new ig.AnimationSheet('
-                                                                    0.1, [9, 10, 11], true);
-                                                                    this.parent(x, y, settings);
-                                                                },
-                                                                update: function () {
-                                                                    if (this.currentAnim == this.anims.drop && this.currentAnim.loopCount) {
-                                                                        this.kill();
-                                                                    }
-                                                                    this.parent();
-                                                                },
-                                                                handleMovementTrace: function (res) {
-                                                                    this.parent(res);
-                                                                    if ((res.collision.x || res.collision.y) && this.currentAnim != this.anims.drop) {
-                                                                        this.currentAnim = this.anims.drop.rewind();
-                                                                    }
-                                                                },
-                                                                check: function (other) {
-                                                                    if (this.currentAnim != this.anims.drop) {
-                                                                        other.receiveDamage(10, this);
-                                                                        this.kill();
-                                                                    }
-                                                                }
-                                                            }); EntityDropperGib = EntityParticle.extend({
-                                                                lifetime: 3,
-                                                                fadetime: 6,
-                                                                friction: {
-                                                                    x: 0,
-                                                                    y: 0
-                                                                },
-                                                                vel: {
-                                                                    x: 60,
-                                                                    y: 150
-                                                                },
-                                                                animSheet: new ig.AnimationSheet('media/sprites/blob-gibs.png'
-                                                                edia / sprites / blob - gibs.png ',4,4),init:function(x,y,settings){this.addAnim('
-                                                                4, 4),
-                                                                init: function (x, y, settings) {
-                                                                    this.addAnim('idle'
-                                                                    dle ',0.1,[0,1,2]);this.parent(x,y,settings);}});});
+ig.baked = true;
+ig.module('biolab.entities.dropper').requires('impact.entity', 'biolab.entities.particle', 'biolab.entities.blob').defines(function () {
+    EntityDropper = ig.Entity.extend({
+        size: {
+            x: 14,
+            y: 8
+        },
+        offset: {
+            x: 1,
+            y: 0
+        },
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.NEVER,
+        health: 80,
+        shootTimer: null,
+        shootWaitTimer: null,
+        canShoot: false,
+        animSheet: new ig.AnimationSheet('media/sprites/dropper.png', 16, 8),
+        sfxHit: new ig.Sound('media/sounds/wetgib.ogg'),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.shootWaitTimer = new ig.Timer(1);
+            this.shootTimer = new ig.Timer(10);
+            this.addAnim('idle', 1, [0]);
+            this.addAnim('shoot', 0.2, [1, 2, 2, 1]);
+            this.addAnim('hit', 0.2, [3]);
+        },
+        update: function () {
+            if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.idle;
+                this.shootWaitTimer.set(0.5);
+            } else if (this.currentAnim == this.anims.idle && this.shootWaitTimer.delta() > 0 && this.distanceTo(ig.game.player) < 128) {
+                this.currentAnim = this.anims.shoot.rewind();
+                this.shootTimer.set(0.8);
+                this.canShoot = true;
+            } else if (this.currentAnim == this.anims.shoot && this.canShoot && this.shootTimer.delta() > 0) {
+                this.canShoot = false;
+                ig.game.spawnEntity(EntityDropperShot, this.pos.x + 5, this.pos.y + 6);
+            }
+            if (this.currentAnim == this.anims.shoot && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.idle.rewind();
+                this.shootWaitTimer.set(0.5);
+            }
+            this.currentAnim.update();
+        },
+        kill: function () {
+            this.spawnGibs(20);
+            this.parent();
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+        },
+        receiveDamage: function (amount, from) {
+            this.currentAnim = this.anims.hit.rewind();
+            this.parent(amount);
+            this.spawnGibs(3);
+            this.sfxHit.play();
+        },
+        spawnGibs: function (amount) {
+            var cx = this.pos.x + this.size.x / 2;
+            var cy = this.pos.y + this.size.y / 2;
+            for (var i = 0; i < amount; i++) {
+                ig.game.spawnEntity(EntityDropperGib, cx, cy);
+            }
+        }
+    });
+    EntityDropperShot = ig.Entity.extend({
+        size: {
+            x: 4,
+            y: 4
+        },
+        offset: {
+            x: 2,
+            y: 4
+        },
+        vel: {
+            x: 0,
+            y: 0
+        },
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.LITE,
+        animSheet: new ig.AnimationSheet('media/sprites/dropper.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.1, [8]);
+            this.addAnim('drop', 0.1, [9, 10, 11], true);
+            this.parent(x, y, settings);
+        },
+        update: function () {
+            if (this.currentAnim == this.anims.drop && this.currentAnim.loopCount) {
+                this.kill();
+            }
+            this.parent();
+        },
+        handleMovementTrace: function (res) {
+            this.parent(res);
+            if ((res.collision.x || res.collision.y) && this.currentAnim != this.anims.drop) {
+                this.currentAnim = this.anims.drop.rewind();
+            }
+        },
+        check: function (other) {
+            if (this.currentAnim != this.anims.drop) {
+                other.receiveDamage(10, this);
+                this.kill();
+            }
+        }
+    });
+    EntityDropperGib = EntityParticle.extend({
+        lifetime: 3,
+        fadetime: 6,
+        friction: {
+            x: 0,
+            y: 0
+        },
+        vel: {
+            x: 60,
+            y: 150
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/blob-gibs.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 0.1, [0, 1, 2]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 
 // biolab/entities/spike.js
-ig.baked=true;ig.module('
-                                                                    0.1, [0, 1, 2]);
-                                                                    this.parent(x, y, settings);
-                                                                }
-                                                            });
-                                                            });
-
-                                                        // biolab/entities/spike.js
-                                                        ig.baked = true; ig.module('biolab.entities.spike'
-                                                        iolab.entities.spike ').requires('.requires('impact.entity'
-                                                        mpact.entity ',''biolab.entities.particle'
-                                                        iolab.entities.particle ').defines(function(){EntitySpike=ig.Entity.extend({size:{x:16,y:9},offset:{x:0,y:7},maxVel:{x:100,y:100},friction:{x:150,y:0},type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.PASSIVE,health:30,flip:false,shootTimer:null,shootWaitTimer:null,canShoot:false,animSheet:new ig.AnimationSheet('.defines(function () {
-                                                            EntitySpike = ig.Entity.extend({
-                                                                size: {
-                                                                    x: 16,
-                                                                    y: 9
-                                                                },
-                                                                offset: {
-                                                                    x: 0,
-                                                                    y: 7
-                                                                },
-                                                                maxVel: {
-                                                                    x: 100,
-                                                                    y: 100
-                                                                },
-                                                                friction: {
-                                                                    x: 150,
-                                                                    y: 0
-                                                                },
-                                                                type: ig.Entity.TYPE.B,
-                                                                checkAgainst: ig.Entity.TYPE.A,
-                                                                collides: ig.Entity.COLLIDES.PASSIVE,
-                                                                health: 30,
-                                                                flip: false,
-                                                                shootTimer: null,
-                                                                shootWaitTimer: null,
-                                                                canShoot: false,
-                                                                animSheet: new ig.AnimationSheet('media/sprites/spike.png'
-                                                                edia / sprites / spike.png ',16,16),sfxHit:new ig.Sound('
-                                                                16, 16),
-                                                                sfxHit: new ig.Sound('media/sounds/drygib.ogg'
-                                                                edia / sounds / drygib.ogg '),init:function(x,y,settings){this.parent(x,y,settings);this.shootTimer=new ig.Timer(10);this.shootWaitTimer=new ig.Timer(10);this.addAnim(', init: function (x, y, settings) {
-                                                                    this.parent(x, y, settings);
-                                                                    this.shootTimer = new ig.Timer(10);
-                                                                    this.shootWaitTimer = new ig.Timer(10);
-                                                                    this.addAnim('crawl'
-                                                                    rawl ',0.08,[5,6,7]);this.addAnim('
-                                                                    0.08, [5, 6, 7]);
-                                                                    this.addAnim('shoot'
-                                                                    hoot ',0.15,[3,3,0,1,2,2,2,1,3,3,3]);this.addAnim('
-                                                                    0.15, [3, 3, 0, 1, 2, 2, 2, 1, 3, 3, 3]);
-                                                                    this.addAnim('hit'
-                                                                    it ',0.1,[8]);},update:function(){if(this.currentAnim==this.anims.shoot){if(this.currentAnim.loopCount){this.currentAnim=this.anims.crawl.rewind();}
-if(this.canShoot&&this.shootTimer.delta()>0){this.canShoot=false;ig.game.spawnEntity(EntitySpikeShot,this.pos.x+6,this.pos.y-4,{dir:'
-                                                                    0.1, [8]);
-                                                                },
-                                                                update: function () {
-                                                                    if (this.currentAnim == this.anims.shoot) {
-                                                                        if (this.currentAnim.loopCount) {
-                                                                            this.currentAnim = this.anims.crawl.rewind();
-                                                                        }
-                                                                        if (this.canShoot && this.shootTimer.delta() > 0) {
-                                                                            this.canShoot = false;
-                                                                            ig.game.spawnEntity(EntitySpikeShot, this.pos.x + 6, this.pos.y - 4, {
-                                                                                dir: 'up'
-                                                                                p '});ig.game.spawnEntity(EntitySpikeShot,this.pos.x+1,this.pos.y-2,{dir:'); ig.game.spawnEntity(EntitySpikeShot, this.pos.x + 1, this.pos.y - 2, {
-                                                                                dir: 'left'
-                                                                                eft '});ig.game.spawnEntity(EntitySpikeShot,this.pos.x+10,this.pos.y-2,{dir:'); ig.game.spawnEntity(EntitySpikeShot, this.pos.x + 10, this.pos.y - 2, {
-                                                                                dir: 'right'
-                                                                                ight '});}}
-else if(this.currentAnim==this.anims.crawl){if(this.shootWaitTimer.delta()>0&&this.distanceTo(ig.game.player)<160){this.currentAnim=this.anims.shoot.rewind();this.shootWaitTimer.set(5);this.shootTimer.set(1.2);this.canShoot=true;this.vel.x=0;}
-else{if(!ig.game.collisionMap.getTile(this.pos.x+(this.flip?+4:this.size.x-4),this.pos.y+this.size.y+1)){this.flip=!this.flip;}
-var xdir=this.flip?-1:1;this.vel.x=14*xdir;}}
-else if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount){this.currentAnim=this.anims.crawl.rewind();}
-this.parent();},handleMovementTrace:function(res){this.parent(res);if(res.collision.x){this.flip=!this.flip;}},kill:function(){this.parent();this.spawnGibs(10);},receiveDamage:function(amount,from){this.currentAnim=this.anims.hit.rewind();this.vel.x=from.vel.x>0?50:-50;this.parent(amount);this.spawnGibs(3);this.sfxHit.play();},spawnGibs:function(amount){var cx=this.pos.x+this.size.x/2;var cy=this.pos.y+this.size.y/2;for(var i=0;i<amount;i++){ig.game.spawnEntity(EntitySpikeGib,cx,cy);}},check:function(other){other.receiveDamage(10,this);}});EntitySpikeShot=ig.Entity.extend({size:{x:4,y:4},offset:{x:2,y:0},maxVel:{x:60,y:60},lastPos:{x:0,y:0},type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.LITE,gravityFactor:0,animSheet:new ig.AnimationSheet(');
-                                                                            }
-                                                                            } else if (this.currentAnim == this.anims.crawl) {
-                                                                                if (this.shootWaitTimer.delta() > 0 && this.distanceTo(ig.game.player) < 160) {
-                                                                                    this.currentAnim = this.anims.shoot.rewind();
-                                                                                    this.shootWaitTimer.set(5);
-                                                                                    this.shootTimer.set(1.2);
-                                                                                    this.canShoot = true;
-                                                                                    this.vel.x = 0;
-                                                                                } else {
-                                                                                    if (!ig.game.collisionMap.getTile(this.pos.x + (this.flip ? +4 : this.size.x - 4), this.pos.y + this.size.y + 1)) {
-                                                                                        this.flip = !this.flip;
-                                                                                    }
-                                                                                    var xdir = this.flip ? -1 : 1;
-                                                                                    this.vel.x = 14 * xdir;
-                                                                                }
-                                                                            } else if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
-                                                                                this.currentAnim = this.anims.crawl.rewind();
-                                                                            }
-                                                                            this.parent();
-                                                                            }, handleMovementTrace: function (res) {
-                                                                                this.parent(res);
-                                                                                if (res.collision.x) {
-                                                                                    this.flip = !this.flip;
-                                                                                }
-                                                                            },
-                                                                            kill: function () {
-                                                                                this.parent();
-                                                                                this.spawnGibs(10);
-                                                                            },
-                                                                            receiveDamage: function (amount, from) {
-                                                                                this.currentAnim = this.anims.hit.rewind();
-                                                                                this.vel.x = from.vel.x > 0 ? 50 : -50;
-                                                                                this.parent(amount);
-                                                                                this.spawnGibs(3);
-                                                                                this.sfxHit.play();
-                                                                            },
-                                                                            spawnGibs: function (amount) {
-                                                                                var cx = this.pos.x + this.size.x / 2;
-                                                                                var cy = this.pos.y + this.size.y / 2;
-                                                                                for (var i = 0; i < amount; i++) {
-                                                                                    ig.game.spawnEntity(EntitySpikeGib, cx, cy);
-                                                                                }
-                                                                            },
-                                                                            check: function (other) {
-                                                                                other.receiveDamage(10, this);
-                                                                            }
-                                                                        });
-                                                                    EntitySpikeShot = ig.Entity.extend({
-                                                                        size: {
-                                                                            x: 4,
-                                                                            y: 4
-                                                                        },
-                                                                        offset: {
-                                                                            x: 2,
-                                                                            y: 0
-                                                                        },
-                                                                        maxVel: {
-                                                                            x: 60,
-                                                                            y: 60
-                                                                        },
-                                                                        lastPos: {
-                                                                            x: 0,
-                                                                            y: 0
-                                                                        },
-                                                                        type: ig.Entity.TYPE.NONE,
-                                                                        checkAgainst: ig.Entity.TYPE.A,
-                                                                        collides: ig.Entity.COLLIDES.LITE,
-                                                                        gravityFactor: 0,
-                                                                        animSheet: new ig.AnimationSheet('media/sprites/spike.png'
-                                                                        edia / sprites / spike.png ',8,8),init:function(x,y,settings){if(settings.dir=='
-                                                                        8, 8),
-                                                                        init: function (x, y, settings) {
-                                                                            if (settings.dir == 'up'
-                                                                            p '){this.vel.y=-this.maxVel.y;}
-else if(settings.dir==' {
-                                                                                this.vel.y = -this.maxVel.y;
-                                                                            } else if (settings.dir == 'left'
-                                                                            eft '){this.vel.x=-this.maxVel.x;}
-else if(settings.dir==' {
-                                                                                this.vel.x = -this.maxVel.x;
-                                                                            } else if (settings.dir == 'right'
-                                                                            ight '){this.vel.x=this.maxVel.x;}
-this.addAnim(' {
-                                                                                this.vel.x = this.maxVel.x;
-                                                                            }
-                                                                            this.addAnim('idle'
-                                                                            dle ',0.1,[8,9]);this.addAnim('
-                                                                            0.1, [8, 9]); this.addAnim('hit'
-                                                                            it ',0.1,[18,19]);this.parent(x,y,settings);},handleMovementTrace:function(res){this.parent(res);if(res.collision.x||res.collision.y){this.currentAnim=this.anims.hit.rewind();}},collideWith:function(other,axis){this.currentAnim=this.anims.hit;this.hasHit=true;},update:function(){this.parent();if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount>0){this.kill();}},check:function(other){other.receiveDamage(10,this);this.currentAnim=this.anims.hit;}});EntitySpikeGib=EntityParticle.extend({lifetime:4,fadetime:1,bounciness:0.6,vel:{x:30,y:80},size:{x:4,y:4},offset:{x:2,y:2},animSheet:new ig.AnimationSheet('
-                                                                            0.1, [18, 19]); this.parent(x, y, settings);
-                                                                            }, handleMovementTrace: function (res) {
-                                                                                this.parent(res);
-                                                                                if (res.collision.x || res.collision.y) {
-                                                                                    this.currentAnim = this.anims.hit.rewind();
-                                                                                }
-                                                                            },
-                                                                            collideWith: function (other, axis) {
-                                                                                this.currentAnim = this.anims.hit;
-                                                                                this.hasHit = true;
-                                                                            },
-                                                                            update: function () {
-                                                                                this.parent();
-                                                                                if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount > 0) {
-                                                                                    this.kill();
-                                                                                }
-                                                                            },
-                                                                            check: function (other) {
-                                                                                other.receiveDamage(10, this);
-                                                                                this.currentAnim = this.anims.hit;
-                                                                            }
-                                                                            });
-                                                                            EntitySpikeGib = EntityParticle.extend({
-                                                                                lifetime: 4,
-                                                                                fadetime: 1,
-                                                                                bounciness: 0.6,
-                                                                                vel: {
-                                                                                    x: 30,
-                                                                                    y: 80
-                                                                                },
-                                                                                size: {
-                                                                                    x: 4,
-                                                                                    y: 4
-                                                                                },
-                                                                                offset: {
-                                                                                    x: 2,
-                                                                                    y: 2
-                                                                                },
-                                                                                animSheet: new ig.AnimationSheet('media/sprites/spike.png'
-                                                                                edia / sprites / spike.png ',8,8),init:function(x,y,settings){this.addAnim('
-                                                                                8, 8),
-                                                                                init: function (x, y, settings) {
-                                                                                    this.addAnim('idle'
-                                                                                    dle ',5,[28,29,38,39]);this.parent(x,y,settings);}});});
+ig.baked = true;
+ig.module('biolab.entities.spike').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntitySpike = ig.Entity.extend({
+        size: {
+            x: 16,
+            y: 9
+        },
+        offset: {
+            x: 0,
+            y: 7
+        },
+        maxVel: {
+            x: 100,
+            y: 100
+        },
+        friction: {
+            x: 150,
+            y: 0
+        },
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.PASSIVE,
+        health: 30,
+        flip: false,
+        shootTimer: null,
+        shootWaitTimer: null,
+        canShoot: false,
+        animSheet: new ig.AnimationSheet('media/sprites/spike.png', 16, 16),
+        sfxHit: new ig.Sound('media/sounds/drygib.ogg'),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.shootTimer = new ig.Timer(10);
+            this.shootWaitTimer = new ig.Timer(10);
+            this.addAnim('crawl', 0.08, [5, 6, 7]);
+            this.addAnim('shoot', 0.15, [3, 3, 0, 1, 2, 2, 2, 1, 3, 3, 3]);
+            this.addAnim('hit', 0.1, [8]);
+        },
+        update: function () {
+            if (this.currentAnim == this.anims.shoot) {
+                if (this.currentAnim.loopCount) {
+                    this.currentAnim = this.anims.crawl.rewind();
+                }
+                if (this.canShoot && this.shootTimer.delta() > 0) {
+                    this.canShoot = false;
+                    ig.game.spawnEntity(EntitySpikeShot, this.pos.x + 6, this.pos.y - 4, {
+                        dir: 'up'
+                    });
+                    ig.game.spawnEntity(EntitySpikeShot, this.pos.x + 1, this.pos.y - 2, {
+                        dir: 'left'
+                    });
+                    ig.game.spawnEntity(EntitySpikeShot, this.pos.x + 10, this.pos.y - 2, {
+                        dir: 'right'
+                    });
+                }
+            } else if (this.currentAnim == this.anims.crawl) {
+                if (this.shootWaitTimer.delta() > 0 && this.distanceTo(ig.game.player) < 160) {
+                    this.currentAnim = this.anims.shoot.rewind();
+                    this.shootWaitTimer.set(5);
+                    this.shootTimer.set(1.2);
+                    this.canShoot = true;
+                    this.vel.x = 0;
+                } else {
+                    if (!ig.game.collisionMap.getTile(this.pos.x + (this.flip ? +4 : this.size.x - 4), this.pos.y + this.size.y + 1)) {
+                        this.flip = !this.flip;
+                    }
+                    var xdir = this.flip ? -1 : 1;
+                    this.vel.x = 14 * xdir;
+                }
+            } else if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.crawl.rewind();
+            }
+            this.parent();
+        },
+        handleMovementTrace: function (res) {
+            this.parent(res);
+            if (res.collision.x) {
+                this.flip = !this.flip;
+            }
+        },
+        kill: function () {
+            this.parent();
+            this.spawnGibs(10);
+        },
+        receiveDamage: function (amount, from) {
+            this.currentAnim = this.anims.hit.rewind();
+            this.vel.x = from.vel.x > 0 ? 50 : -50;
+            this.parent(amount);
+            this.spawnGibs(3);
+            this.sfxHit.play();
+        },
+        spawnGibs: function (amount) {
+            var cx = this.pos.x + this.size.x / 2;
+            var cy = this.pos.y + this.size.y / 2;
+            for (var i = 0; i < amount; i++) {
+                ig.game.spawnEntity(EntitySpikeGib, cx, cy);
+            }
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+        }
+    });
+    EntitySpikeShot = ig.Entity.extend({
+        size: {
+            x: 4,
+            y: 4
+        },
+        offset: {
+            x: 2,
+            y: 0
+        },
+        maxVel: {
+            x: 60,
+            y: 60
+        },
+        lastPos: {
+            x: 0,
+            y: 0
+        },
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.LITE,
+        gravityFactor: 0,
+        animSheet: new ig.AnimationSheet('media/sprites/spike.png', 8, 8),
+        init: function (x, y, settings) {
+            if (settings.dir == 'up') {
+                this.vel.y = -this.maxVel.y;
+            } else if (settings.dir == 'left') {
+                this.vel.x = -this.maxVel.x;
+            } else if (settings.dir == 'right') {
+                this.vel.x = this.maxVel.x;
+            }
+            this.addAnim('idle', 0.1, [8, 9]);
+            this.addAnim('hit', 0.1, [18, 19]);
+            this.parent(x, y, settings);
+        },
+        handleMovementTrace: function (res) {
+            this.parent(res);
+            if (res.collision.x || res.collision.y) {
+                this.currentAnim = this.anims.hit.rewind();
+            }
+        },
+        collideWith: function (other, axis) {
+            this.currentAnim = this.anims.hit;
+            this.hasHit = true;
+        },
+        update: function () {
+            this.parent();
+            if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount > 0) {
+                this.kill();
+            }
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+            this.currentAnim = this.anims.hit;
+        }
+    });
+    EntitySpikeGib = EntityParticle.extend({
+        lifetime: 4,
+        fadetime: 1,
+        bounciness: 0.6,
+        vel: {
+            x: 30,
+            y: 80
+        },
+        size: {
+            x: 4,
+            y: 4
+        },
+        offset: {
+            x: 2,
+            y: 2
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/spike.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 5, [28, 29, 38, 39]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 
 // biolab/entities/crate.js
-ig.baked=true;ig.module('
-                                                                                    5, [28, 29, 38, 39]);
-                                                                                    this.parent(x, y, settings);
-                                                                                }
-                                                                            });
-                                                                        });
-
-                                                                    // biolab/entities/crate.js
-                                                                    ig.baked = true; ig.module('biolab.entities.crate'
-                                                                    iolab.entities.crate ').requires('.requires('impact.entity'
-                                                                    mpact.entity ',''biolab.entities.particle'
-                                                                    iolab.entities.particle ').defines(function(){EntityCrate=ig.Entity.extend({size:{x:8,y:8},offset:{x:0,y:0},maxVel:{x:60,y:150},friction:{x:100,y:0},health:5,bounciness:0.4,type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.NONE,collides:ig.Entity.COLLIDES.ACTIVE,sfxCrack:new ig.Sound('.defines(function () {
-                                                                        EntityCrate = ig.Entity.extend({
-                                                                            size: {
-                                                                                x: 8,
-                                                                                y: 8
-                                                                            },
-                                                                            offset: {
-                                                                                x: 0,
-                                                                                y: 0
-                                                                            },
-                                                                            maxVel: {
-                                                                                x: 60,
-                                                                                y: 150
-                                                                            },
-                                                                            friction: {
-                                                                                x: 100,
-                                                                                y: 0
-                                                                            },
-                                                                            health: 5,
-                                                                            bounciness: 0.4,
-                                                                            type: ig.Entity.TYPE.B,
-                                                                            checkAgainst: ig.Entity.TYPE.NONE,
-                                                                            collides: ig.Entity.COLLIDES.ACTIVE,
-                                                                            sfxCrack: new ig.Sound('media/sounds/crack.ogg'
-                                                                            edia / sounds / crack.ogg '),animSheet:new ig.AnimationSheet(', animSheet: new ig.AnimationSheet('media/sprites/crate.png'
-                                                                            edia / sprites / crate.png ',8,8),init:function(x,y,settings){this.addAnim('
-                                                                            8, 8),
-                                                                            init: function (x, y, settings) {
-                                                                                this.addAnim('idle'
-                                                                                dle ',1,[0]);this.parent(x,y,settings);},kill:function(){this.sfxCrack.play();var gibs=ig.ua.mobile?3:10;for(var i=0;i<gibs;i++){ig.game.spawnEntity(EntityCrateDebris,this.pos.x,this.pos.y);}
-this.parent();}});EntityCrateDebris=EntityParticle.extend({lifetime:2,fadetime:1,bounciness:0.6,vel:{x:60,y:120},animSheet:new ig.AnimationSheet('
-                                                                                1, [0]);
-                                                                                this.parent(x, y, settings);
-                                                                            },
-                                                                            kill: function () {
-                                                                                this.sfxCrack.play();
-                                                                                var gibs = ig.ua.mobile ? 3 : 10;
-                                                                                for (var i = 0; i < gibs; i++) {
-                                                                                    ig.game.spawnEntity(EntityCrateDebris, this.pos.x, this.pos.y);
-                                                                                }
-                                                                                this.parent();
-                                                                            }
-                                                                            }); EntityCrateDebris = EntityParticle.extend({
-                                                                            lifetime: 2,
-                                                                            fadetime: 1,
-                                                                            bounciness: 0.6,
-                                                                            vel: {
-                                                                                x: 60,
-                                                                                y: 120
-                                                                            },
-                                                                            animSheet: new ig.AnimationSheet('media/sprites/crate.png'
-                                                                            edia / sprites / crate.png ',4,4),init:function(x,y,settings){this.addAnim('
-                                                                            4, 4),
-                                                                            init: function (x, y, settings) {
-                                                                                this.addAnim('idle'
-                                                                                dle ',5,[2,3,6,7]);this.parent(x,y,settings);}});});
-
+ig.baked = true;
+ig.module('biolab.entities.crate').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityCrate = ig.Entity.extend({
+        size: {
+            x: 8,
+            y: 8
+        },
+        offset: {
+            x: 0,
+            y: 0
+        },
+        maxVel: {
+            x: 60,
+            y: 150
+        },
+        friction: {
+            x: 100,
+            y: 0
+        },
+        health: 5,
+        bounciness: 0.4,
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.NONE,
+        collides: ig.Entity.COLLIDES.ACTIVE,
+        sfxCrack: new ig.Sound('media/sounds/crack.ogg'),
+        animSheet: new ig.AnimationSheet('media/sprites/crate.png', 8, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 1, [0]);
+            this.parent(x, y, settings);
+        },
+        kill: function () {
+            this.sfxCrack.play();
+            var gibs = ig.ua.mobile ? 3 : 10;
+            for (var i = 0; i < gibs; i++) {
+                ig.game.spawnEntity(EntityCrateDebris, this.pos.x, this.pos.y);
+            }
+            this.parent();
+        }
+    });
+    EntityCrateDebris = EntityParticle.extend({
+        lifetime: 2,
+        fadetime: 1,
+        bounciness: 0.6,
+        vel: {
+            x: 60,
+            y: 120
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/crate.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 5, [2, 3, 6, 7]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 // biolab/entities/mine.js
 ig.baked=true;ig.module('
                                                                                 5, [2, 3, 6, 7]);
@@ -3843,383 +4486,323 @@ this.sfxExplode.play();this.parent();},check:function(other){this.kill();other.r
                                                                                 dle ',0.1,[0]);this.parent(x,y,settings);}});});
 
 // biolab/entities/spewer.js
-ig.baked=true;ig.module('
-                                                                                0.1, [0]);
-                                                                                this.parent(x, y, settings);
-                                                                            }
-                                                                        });
-                                                                    });
-
-                                                                    // biolab/entities/spewer.js
-                                                                    ig.baked = true; ig.module('biolab.entities.spewer'
-                                                                    iolab.entities.spewer ').requires('.requires('impact.entity'
-                                                                    mpact.entity ',''biolab.entities.particle'
-                                                                    iolab.entities.particle ').defines(function(){EntitySpewer=ig.Entity.extend({size:{x:16,y:8},offset:{x:0,y:0},type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.NEVER,health:20,shootTimer:null,shootWaitTimer:null,canShoot:false,animSheet:new ig.AnimationSheet('.defines(function () {
-                                                                        EntitySpewer = ig.Entity.extend({
-                                                                            size: {
-                                                                                x: 16,
-                                                                                y: 8
-                                                                            },
-                                                                            offset: {
-                                                                                x: 0,
-                                                                                y: 0
-                                                                            },
-                                                                            type: ig.Entity.TYPE.B,
-                                                                            checkAgainst: ig.Entity.TYPE.A,
-                                                                            collides: ig.Entity.COLLIDES.NEVER,
-                                                                            health: 20,
-                                                                            shootTimer: null,
-                                                                            shootWaitTimer: null,
-                                                                            canShoot: false,
-                                                                            animSheet: new ig.AnimationSheet('media/sprites/spewer.png'
-                                                                            edia / sprites / spewer.png ',16,8),sfxHit:new ig.Sound('
-                                                                            16, 8),
-                                                                            sfxHit: new ig.Sound('media/sounds/drygib.ogg'
-                                                                            edia / sounds / drygib.ogg '),init:function(x,y,settings){this.parent(x,y,settings);this.shootWaitTimer=new ig.Timer(1);this.shootTimer=new ig.Timer(10);this.addAnim(', init: function (x, y, settings) {
-                                                                                this.parent(x, y, settings);
-                                                                                this.shootWaitTimer = new ig.Timer(1);
-                                                                                this.shootTimer = new ig.Timer(10);
-                                                                                this.addAnim('idle'
-                                                                                dle ',0.5,[0,0,0,0,0,0,0,0,1]);this.addAnim('
-                                                                                0.5, [0, 0, 0, 0, 0, 0, 0, 0, 1]);
-                                                                                this.addAnim('shoot'
-                                                                                hoot ',0.15,[1,2,2,1,1]);this.addAnim('
-                                                                                0.15, [1, 2, 2, 1, 1]);
-                                                                                this.addAnim('hit'
-                                                                                it ',0.1,[3]);},update:function(){if(this.currentAnim==this.anims.hit&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle;this.shootWaitTimer.set(0.5);}
-else if(this.currentAnim==this.anims.idle&&this.shootWaitTimer.delta()>0&&this.distanceTo(ig.game.player)<80){this.currentAnim=this.anims.shoot.rewind();this.shootTimer.set(0.45);this.canShoot=true;}
-else if(this.currentAnim==this.anims.shoot&&this.canShoot&&this.shootTimer.delta()>0){this.canShoot=false;ig.game.spawnEntity(EntitySpewerShot,this.pos.x+4,this.pos.y-4);}
-if(this.currentAnim==this.anims.shoot&&this.currentAnim.loopCount){this.currentAnim=this.anims.idle.rewind();this.shootWaitTimer.set(1.5);}
-this.currentAnim.flip.x=(this.pos.x-ig.game.player.pos.x<0);this.parent();},kill:function(){this.spawnGibs(10);this.parent();},check:function(other){other.receiveDamage(10,this);},receiveDamage:function(amount,from){this.currentAnim=this.anims.hit.rewind();this.parent(amount);this.spawnGibs(3);this.sfxHit.play();},spawnGibs:function(amount){var cx=this.pos.x+this.size.x/2;var cy=this.pos.y+this.size.y/2;for(var i=0;i<amount;i++){ig.game.spawnEntity(EntitySpewerGib,cx,cy);}}});EntitySpewerShot=ig.Entity.extend({friction:{x:20,y:0},bounciness:0.7,size:{x:4,y:4},vel:{x:60,y:150},type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.LITE,bounceCount:0,animSheet:new ig.AnimationSheet('
-                                                                                0.1, [3]);
-                                                                            },
-                                                                            update: function () {
-                                                                                if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
-                                                                                    this.currentAnim = this.anims.idle;
-                                                                                    this.shootWaitTimer.set(0.5);
-                                                                                } else if (this.currentAnim == this.anims.idle && this.shootWaitTimer.delta() > 0 && this.distanceTo(ig.game.player) < 80) {
-                                                                                    this.currentAnim = this.anims.shoot.rewind();
-                                                                                    this.shootTimer.set(0.45);
-                                                                                    this.canShoot = true;
-                                                                                } else if (this.currentAnim == this.anims.shoot && this.canShoot && this.shootTimer.delta() > 0) {
-                                                                                    this.canShoot = false;
-                                                                                    ig.game.spawnEntity(EntitySpewerShot, this.pos.x + 4, this.pos.y - 4);
-                                                                                }
-                                                                                if (this.currentAnim == this.anims.shoot && this.currentAnim.loopCount) {
-                                                                                    this.currentAnim = this.anims.idle.rewind();
-                                                                                    this.shootWaitTimer.set(1.5);
-                                                                                }
-                                                                                this.currentAnim.flip.x = (this.pos.x - ig.game.player.pos.x < 0);
-                                                                                this.parent();
-                                                                            },
-                                                                            kill: function () {
-                                                                                this.spawnGibs(10);
-                                                                                this.parent();
-                                                                            },
-                                                                            check: function (other) {
-                                                                                other.receiveDamage(10, this);
-                                                                            },
-                                                                            receiveDamage: function (amount, from) {
-                                                                                this.currentAnim = this.anims.hit.rewind();
-                                                                                this.parent(amount);
-                                                                                this.spawnGibs(3);
-                                                                                this.sfxHit.play();
-                                                                            },
-                                                                            spawnGibs: function (amount) {
-                                                                                var cx = this.pos.x + this.size.x / 2;
-                                                                                var cy = this.pos.y + this.size.y / 2;
-                                                                                for (var i = 0; i < amount; i++) {
-                                                                                    ig.game.spawnEntity(EntitySpewerGib, cx, cy);
-                                                                                }
-                                                                            }
-                                                                            }); EntitySpewerShot = ig.Entity.extend({
-                                                                            friction: {
-                                                                                x: 20,
-                                                                                y: 0
-                                                                            },
-                                                                            bounciness: 0.7,
-                                                                            size: {
-                                                                                x: 4,
-                                                                                y: 4
-                                                                            },
-                                                                            vel: {
-                                                                                x: 60,
-                                                                                y: 150
-                                                                            },
-                                                                            type: ig.Entity.TYPE.NONE,
-                                                                            checkAgainst: ig.Entity.TYPE.A,
-                                                                            collides: ig.Entity.COLLIDES.LITE,
-                                                                            bounceCount: 0,
-                                                                            animSheet: new ig.AnimationSheet('media/sprites/spewer.png'
-                                                                            edia / sprites / spewer.png ',4,4),init:function(x,y,settings){var xdir=x-ig.game.player.pos.x>0?-1:1;this.vel.x=Math.random().map(0,1,40,120)*xdir;this.vel.y=-100;this.addAnim('
-                                                                            4, 4),
-                                                                            init: function (x, y, settings) {
-                                                                                var xdir = x - ig.game.player.pos.x > 0 ? -1 : 1;
-                                                                                this.vel.x = Math.random().map(0, 1, 40, 120) * xdir;
-                                                                                this.vel.y = -100;
-                                                                                this.addAnim('idle'
-                                                                                dle ',0.1,[16]);this.parent(x,y,settings);},handleMovementTrace:function(res){this.parent(res);if(res.collision.x||res.collision.y){this.bounceCount++;if(this.bounceCount>=3){this.kill();}}},check:function(other){other.receiveDamage(10,this);this.kill();}});EntitySpewerGib=EntityParticle.extend({lifetime:1,fadetime:0.5,bounciness:0.6,vel:{x:50,y:150},size:{x:4,y:4},animSheet:new ig.AnimationSheet('
-                                                                                0.1, [16]);
-                                                                                this.parent(x, y, settings);
-                                                                            },
-                                                                            handleMovementTrace: function (res) {
-                                                                                this.parent(res);
-                                                                                if (res.collision.x || res.collision.y) {
-                                                                                    this.bounceCount++;
-                                                                                    if (this.bounceCount >= 3) {
-                                                                                        this.kill();
-                                                                                    }
-                                                                                }
-                                                                            },
-                                                                            check: function (other) {
-                                                                                other.receiveDamage(10, this);
-                                                                                this.kill();
-                                                                            }
-                                                                        }); EntitySpewerGib = EntityParticle.extend({
-                                                                            lifetime: 1,
-                                                                            fadetime: 0.5,
-                                                                            bounciness: 0.6,
-                                                                            vel: {
-                                                                                x: 50,
-                                                                                y: 150
-                                                                            },
-                                                                            size: {
-                                                                                x: 4,
-                                                                                y: 4
-                                                                            },
-                                                                            animSheet: new ig.AnimationSheet('media/sprites/spewer.png'
-                                                                            edia / sprites / spewer.png ',4,4),init:function(x,y,settings){this.addAnim('
-                                                                            4, 4),
-                                                                            init: function (x, y, settings) {
-                                                                                this.addAnim('idle'
-                                                                                dle ',5,[18,19,38,39]);this.parent(x,y,settings);}});});
+ig.baked = true;
+ig.module('biolab.entities.spewer').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntitySpewer = ig.Entity.extend({
+        size: {
+            x: 16,
+            y: 8
+        },
+        offset: {
+            x: 0,
+            y: 0
+        },
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.NEVER,
+        health: 20,
+        shootTimer: null,
+        shootWaitTimer: null,
+        canShoot: false,
+        animSheet: new ig.AnimationSheet('media/sprites/spewer.png', 16, 8),
+        sfxHit: new ig.Sound('media/sounds/drygib.ogg'),
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.shootWaitTimer = new ig.Timer(1);
+            this.shootTimer = new ig.Timer(10);
+            this.addAnim('idle', 0.5, [0, 0, 0, 0, 0, 0, 0, 0, 1]);
+            this.addAnim('shoot', 0.15, [1, 2, 2, 1, 1]);
+            this.addAnim('hit', 0.1, [3]);
+        },
+        update: function () {
+            if (this.currentAnim == this.anims.hit && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.idle;
+                this.shootWaitTimer.set(0.5);
+            } else if (this.currentAnim == this.anims.idle && this.shootWaitTimer.delta() > 0 && this.distanceTo(ig.game.player) < 80) {
+                this.currentAnim = this.anims.shoot.rewind();
+                this.shootTimer.set(0.45);
+                this.canShoot = true;
+            } else if (this.currentAnim == this.anims.shoot && this.canShoot && this.shootTimer.delta() > 0) {
+                this.canShoot = false;
+                ig.game.spawnEntity(EntitySpewerShot, this.pos.x + 4, this.pos.y - 4);
+            }
+            if (this.currentAnim == this.anims.shoot && this.currentAnim.loopCount) {
+                this.currentAnim = this.anims.idle.rewind();
+                this.shootWaitTimer.set(1.5);
+            }
+            this.currentAnim.flip.x = (this.pos.x - ig.game.player.pos.x < 0);
+            this.parent();
+        },
+        kill: function () {
+            this.spawnGibs(10);
+            this.parent();
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+        },
+        receiveDamage: function (amount, from) {
+            this.currentAnim = this.anims.hit.rewind();
+            this.parent(amount);
+            this.spawnGibs(3);
+            this.sfxHit.play();
+        },
+        spawnGibs: function (amount) {
+            var cx = this.pos.x + this.size.x / 2;
+            var cy = this.pos.y + this.size.y / 2;
+            for (var i = 0; i < amount; i++) {
+                ig.game.spawnEntity(EntitySpewerGib, cx, cy);
+            }
+        }
+    });
+    EntitySpewerShot = ig.Entity.extend({
+        friction: {
+            x: 20,
+            y: 0
+        },
+        bounciness: 0.7,
+        size: {
+            x: 4,
+            y: 4
+        },
+        vel: {
+            x: 60,
+            y: 150
+        },
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.LITE,
+        bounceCount: 0,
+        animSheet: new ig.AnimationSheet('media/sprites/spewer.png', 4, 4),
+        init: function (x, y, settings) {
+            var xdir = x - ig.game.player.pos.x > 0 ? -1 : 1;
+            this.vel.x = Math.random().map(0, 1, 40, 120) * xdir;
+            this.vel.y = -100;
+            this.addAnim('idle', 0.1, [16]);
+            this.parent(x, y, settings);
+        },
+        handleMovementTrace: function (res) {
+            this.parent(res);
+            if (res.collision.x || res.collision.y) {
+                this.bounceCount++;
+                if (this.bounceCount >= 3) {
+                    this.kill();
+                }
+            }
+        },
+        check: function (other) {
+            other.receiveDamage(10, this);
+            this.kill();
+        }
+    });
+    EntitySpewerGib = EntityParticle.extend({
+        lifetime: 1,
+        fadetime: 0.5,
+        bounciness: 0.6,
+        vel: {
+            x: 50,
+            y: 150
+        },
+        size: {
+            x: 4,
+            y: 4
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/spewer.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 5, [18, 19, 38, 39]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 
 // biolab/entities/trigger.js
-ig.baked=true;ig.module('
-                                                                                5, [18, 19, 38, 39]);
-                                                                                this.parent(x, y, settings);
-                                                                            }
-                                                                        });
-                                                                        });
-
-                                                                    // biolab/entities/trigger.js
-                                                                    ig.baked = true; ig.module('biolab.entities.trigger'
-                                                                    iolab.entities.trigger ').requires('.requires('impact.entity'
-                                                                    mpact.entity ').defines(function(){EntityTrigger=ig.Entity.extend({size:{x:16,y:16},_wmScalable:true,_wmDrawBox:true,_wmBoxColor:'.defines(function () {
-                                                                        EntityTrigger = ig.Entity.extend({
-                                                                            size: {
-                                                                                x: 16,
-                                                                                y: 16
-                                                                            },
-                                                                            _wmScalable: true,
-                                                                            _wmDrawBox: true,
-                                                                            _wmBoxColor: 'rgba(196, 255, 0, 0.7)'
-                                                                            gba(196, 255, 0, 0.7)',target:null,delay:-1,delayTimer:null,canFire:true,type:ig.Entity.TYPE.NONE,checkAgainst:ig.Entity.TYPE.A,collides:ig.Entity.COLLIDES.NEVER,init:function(x,y,settings){if(settings.checks){this.checkAgainst=ig.Entity.TYPE[settings.checks.toUpperCase()]||ig.Entity.TYPE.A;delete settings.check;}
-this.parent(x,y,settings);this.delayTimer=new ig.Timer();},check:function(other){if(this.canFire&&this.delayTimer.delta()>=0){if(typeof(this.target)=='
-                                                                            target: null,
-                                                                            delay: -1,
-                                                                            delayTimer: null,
-                                                                            canFire: true,
-                                                                            type: ig.Entity.TYPE.NONE,
-                                                                            checkAgainst: ig.Entity.TYPE.A,
-                                                                            collides: ig.Entity.COLLIDES.NEVER,
-                                                                            init: function (x, y, settings) {
-                                                                                if (settings.checks) {
-                                                                                    this.checkAgainst = ig.Entity.TYPE[settings.checks.toUpperCase()] || ig.Entity.TYPE.A;
-                                                                                    delete settings.check;
-                                                                                }
-                                                                                this.parent(x, y, settings);
-                                                                                this.delayTimer = new ig.Timer();
-                                                                            },
-                                                                            check: function (other) {
-                                                                                if (this.canFire && this.delayTimer.delta() >= 0) {
-                                                                                    if (typeof (this.target) == 'object'
-                                                                                    bject '){for(var t in this.target){var ent=ig.game.getEntityByName(this.target[t]);if(ent&&typeof(ent.triggeredBy)==' {
-                                                                                        for (var t in this.target) {
-                                                                                            var ent = ig.game.getEntityByName(this.target[t]);
-                                                                                            if (ent && typeof (ent.triggeredBy) == 'function'
-                                                                                            unction '){ent.triggeredBy(other,this);}}}
-if(this.delay==-1){this.canFire=false;}
-else{this.delayTimer.set(this.delay);}}},update:function(){}});});
+ig.baked = true;
+ig.module('biolab.entities.trigger').requires('impact.entity').defines(function () {
+    EntityTrigger = ig.Entity.extend({
+        size: {
+            x: 16,
+            y: 16
+        },
+        _wmScalable: true,
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(196, 255, 0, 0.7)',
+        target: null,
+        delay: -1,
+        delayTimer: null,
+        canFire: true,
+        type: ig.Entity.TYPE.NONE,
+        checkAgainst: ig.Entity.TYPE.A,
+        collides: ig.Entity.COLLIDES.NEVER,
+        init: function (x, y, settings) {
+            if (settings.checks) {
+                this.checkAgainst = ig.Entity.TYPE[settings.checks.toUpperCase()] || ig.Entity.TYPE.A;
+                delete settings.check;
+            }
+            this.parent(x, y, settings);
+            this.delayTimer = new ig.Timer();
+        },
+        check: function (other) {
+            if (this.canFire && this.delayTimer.delta() >= 0) {
+                if (typeof (this.target) == 'object') {
+                    for (var t in this.target) {
+                        var ent = ig.game.getEntityByName(this.target[t]);
+                        if (ent && typeof (ent.triggeredBy) == 'function') {
+                            ent.triggeredBy(other, this);
+                        }
+                    }
+                }
+                if (this.delay == -1) {
+                    this.canFire = false;
+                } else {
+                    this.delayTimer.set(this.delay);
+                }
+            }
+        },
+        update: function () {}
+    });
+});
 
 // biolab/entities/earthquake.js
-ig.baked=true;ig.module(' {
-                                                                                                ent.triggeredBy(other, this);
-                                                                                            }
-                                                                                            }
-                                                                                        }
-                                                                                        if (this.delay == -1) {
-                                                                                            this.canFire = false;
-                                                                                        } else {
-                                                                                            this.delayTimer.set(this.delay);
-                                                                                        }
-                                                                                    }
-                                                                                    }, update: function () {}
-                                                                                });
-                                                                        });
-
-                                                                        // biolab/entities/earthquake.js
-                                                                        ig.baked = true;
-                                                                        ig.module('biolab.entities.earthquake'
-                                                                        iolab.entities.earthquake ').requires('.requires('biolab.entities.trigger'
-                                                                        iolab.entities.trigger ').defines(function(){EntityEarthquake=ig.Entity.extend({_wmDrawBox:true,_wmBoxColor:'.defines(function () {
-                                                                            EntityEarthquake = ig.Entity.extend({
-                                                                                _wmDrawBox: true,
-                                                                                _wmBoxColor: 'rgba(80, 130, 170, 0.7)'
-                                                                                gba(80, 130, 170, 0.7)',size:{x:8,y:8},duration:1,strength:8,screen:{x:0,y:0},sound:new ig.Sound('
-                                                                                size: {
-                                                                                    x: 8,
-                                                                                    y: 8
-                                                                                },
-                                                                                duration: 1,
-                                                                                strength: 8,
-                                                                                screen: {
-                                                                                    x: 0,
-                                                                                    y: 0
-                                                                                },
-                                                                                sound: new ig.Sound('media/sounds/earthquake.ogg'
-                                                                                edia / sounds / earthquake.ogg ',false),quakeTimer:null,init:function(x,y,settings){this.quakeTimer=new ig.Timer();this.parent(x,y,settings);},triggeredBy:function(entity,trigger){this.quakeTimer.set(this.duration);if(this.sound){this.sound.play();}},update:function(){var delta=this.quakeTimer.delta();if(delta<-0.1){var s=this.strength*Math.pow(-delta/this.duration,2);if(s>0.5){ig.game.screen.x+=Math.random().map(0,1,-s,s);ig.game.screen.y+=Math.random().map(0,1,-s,s);}}}});});
+ig.baked = true;
+ig.module('biolab.entities.earthquake').requires('biolab.entities.trigger').defines(function () {
+    EntityEarthquake = ig.Entity.extend({
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(80, 130, 170, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        duration: 1,
+        strength: 8,
+        screen: {
+            x: 0,
+            y: 0
+        },
+        sound: new ig.Sound('media/sounds/earthquake.ogg', false),
+        quakeTimer: null,
+        init: function (x, y, settings) {
+            this.quakeTimer = new ig.Timer();
+            this.parent(x, y, settings);
+        },
+        triggeredBy: function (entity, trigger) {
+            this.quakeTimer.set(this.duration);
+            if (this.sound) {
+                this.sound.play();
+            }
+        },
+        update: function () {
+            var delta = this.quakeTimer.delta();
+            if (delta < -0.1) {
+                var s = this.strength * Math.pow(-delta / this.duration, 2);
+                if (s > 0.5) {
+                    ig.game.screen.x += Math.random().map(0, 1, -s, s);
+                    ig.game.screen.y += Math.random().map(0, 1, -s, s);
+                }
+            }
+        }
+    });
+});
 
 // biolab/entities/mover.js
-ig.baked=true;ig.module('
-                                                                                false),
-                                                                                quakeTimer: null,
-                                                                                init: function (x, y, settings) {
-                                                                                    this.quakeTimer = new ig.Timer();
-                                                                                    this.parent(x, y, settings);
-                                                                                },
-                                                                                triggeredBy: function (entity, trigger) {
-                                                                                    this.quakeTimer.set(this.duration);
-                                                                                    if (this.sound) {
-                                                                                        this.sound.play();
-                                                                                    }
-                                                                                },
-                                                                                update: function () {
-                                                                                    var delta = this.quakeTimer.delta();
-                                                                                    if (delta < -0.1) {
-                                                                                        var s = this.strength * Math.pow(-delta / this.duration, 2);
-                                                                                        if (s > 0.5) {
-                                                                                            ig.game.screen.x += Math.random().map(0, 1, -s, s);
-                                                                                            ig.game.screen.y += Math.random().map(0, 1, -s, s);
-                                                                                        }
-                                                                                    }
-                                                                                }
-                                                                            });
-                                                                        });
-
-                                                                        // biolab/entities/mover.js
-                                                                        ig.baked = true; ig.module('biolab.entities.mover'
-                                                                        iolab.entities.mover ').requires('.requires('impact.entity'
-                                                                        mpact.entity ').defines(function(){EntityMover=ig.Entity.extend({size:{x:24,y:8},maxVel:{x:100,y:100},type:ig.Entity.TYPE.B,checkAgainst:ig.Entity.TYPE.NONE,collides:ig.Entity.COLLIDES.FIXED,target:null,targets:[],currentTarget:0,speed:20,gravityFactor:0,animSheet:new ig.AnimationSheet('.defines(function () {
-                                                                            EntityMover = ig.Entity.extend({
-                                                                                size: {
-                                                                                    x: 24,
-                                                                                    y: 8
-                                                                                },
-                                                                                maxVel: {
-                                                                                    x: 100,
-                                                                                    y: 100
-                                                                                },
-                                                                                type: ig.Entity.TYPE.B,
-                                                                                checkAgainst: ig.Entity.TYPE.NONE,
-                                                                                collides: ig.Entity.COLLIDES.FIXED,
-                                                                                target: null,
-                                                                                targets: [],
-                                                                                currentTarget: 0,
-                                                                                speed: 20,
-                                                                                gravityFactor: 0,
-                                                                                animSheet: new ig.AnimationSheet('media/sprites/elevator.png'
-                                                                                edia / sprites / elevator.png ',24,8),init:function(x,y,settings){this.addAnim('
-                                                                                24, 8),
-                                                                                init: function (x, y, settings) {
-                                                                                    this.addAnim('idle'
-                                                                                    dle ',1,[0]);this.parent(x,y,settings);this.targets=ig.ksort(this.target);},update:function(){var oldDistance=0;var target=ig.game.getEntityByName(this.targets[this.currentTarget]);if(target){oldDistance=this.distanceTo(target);var angle=this.angleTo(target);this.vel.x=Math.cos(angle)*this.speed;this.vel.y=Math.sin(angle)*this.speed;}
-else{this.vel.x=0;this.vel.y=0;}
-this.parent();var newDistance=this.distanceTo(target);if(target&&(newDistance>oldDistance||newDistance<0.5)){this.pos.x=target.pos.x+target.size.x/2-this.size.x/2;this.pos.y=target.pos.y+target.size.y/2-this.size.y/2;this.currentTarget++;if(this.currentTarget>=this.targets.length&&this.targets.length>1){this.currentTarget=0;}}},receiveDamage:function(amount,from){}});});
-
+ig.baked = true;
+ig.module('biolab.entities.mover').requires('impact.entity').defines(function () {
+    EntityMover = ig.Entity.extend({
+        size: {
+            x: 24,
+            y: 8
+        },
+        maxVel: {
+            x: 100,
+            y: 100
+        },
+        type: ig.Entity.TYPE.B,
+        checkAgainst: ig.Entity.TYPE.NONE,
+        collides: ig.Entity.COLLIDES.FIXED,
+        target: null,
+        targets: [],
+        currentTarget: 0,
+        speed: 20,
+        gravityFactor: 0,
+        animSheet: new ig.AnimationSheet('media/sprites/elevator.png', 24, 8),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 1, [0]);
+            this.parent(x, y, settings);
+            this.targets = ig.ksort(this.target);
+        },
+        update: function () {
+            var oldDistance = 0;
+            var target = ig.game.getEntityByName(this.targets[this.currentTarget]);
+            if (target) {
+                oldDistance = this.distanceTo(target);
+                var angle = this.angleTo(target);
+                this.vel.x = Math.cos(angle) * this.speed;
+                this.vel.y = Math.sin(angle) * this.speed;
+            } else {
+                this.vel.x = 0;
+                this.vel.y = 0;
+            }
+            this.parent();
+            var newDistance = this.distanceTo(target);
+            if (target && (newDistance > oldDistance || newDistance < 0.5)) {
+                this.pos.x = target.pos.x + target.size.x / 2 - this.size.x / 2;
+                this.pos.y = target.pos.y + target.size.y / 2 - this.size.y / 2;
+                this.currentTarget++;
+                if (this.currentTarget >= this.targets.length && this.targets.length > 1) {
+                    this.currentTarget = 0;
+                }
+            }
+        },
+        receiveDamage: function (amount, from) {}
+    });
+});
 // biolab/entities/debris.js
-ig.baked=true;ig.module('
-                                                                                    1, [0]);
-                                                                                    this.parent(x, y, settings);
-                                                                                    this.targets = ig.ksort(this.target);
-                                                                                },
-                                                                                update: function () {
-                                                                                    var oldDistance = 0;
-                                                                                    var target = ig.game.getEntityByName(this.targets[this.currentTarget]);
-                                                                                    if (target) {
-                                                                                        oldDistance = this.distanceTo(target);
-                                                                                        var angle = this.angleTo(target);
-                                                                                        this.vel.x = Math.cos(angle) * this.speed;
-                                                                                        this.vel.y = Math.sin(angle) * this.speed;
-                                                                                    } else {
-                                                                                        this.vel.x = 0;
-                                                                                        this.vel.y = 0;
-                                                                                    }
-                                                                                    this.parent();
-                                                                                    var newDistance = this.distanceTo(target);
-                                                                                    if (target && (newDistance > oldDistance || newDistance < 0.5)) {
-                                                                                        this.pos.x = target.pos.x + target.size.x / 2 - this.size.x / 2;
-                                                                                        this.pos.y = target.pos.y + target.size.y / 2 - this.size.y / 2;
-                                                                                        this.currentTarget++;
-                                                                                        if (this.currentTarget >= this.targets.length && this.targets.length > 1) {
-                                                                                            this.currentTarget = 0;
-                                                                                        }
-                                                                                    }
-                                                                                },
-                                                                                receiveDamage: function (amount, from) {}
-                                                                            });
-                                                                        });
+ig.baked = true;
+ig.module('biolab.entities.debris').requires('impact.entity', 'biolab.entities.particle').defines(function () {
+    EntityDebris = ig.Entity.extend({
+        _wmScalable: true,
+        _wmDrawBox: true,
+        _wmBoxColor: 'rgba(255, 170, 66, 0.7)',
+        size: {
+            x: 8,
+            y: 8
+        },
+        duration: 5,
+        count: 5,
+        durationTimer: null,
+        nextEmit: null,
+        init: function (x, y, settings) {
+            this.parent(x, y, settings);
+            this.durationTimer = new ig.Timer();
+            this.nextEmit = new ig.Timer();
+        },
+        triggeredBy: function (entity, trigger) {
+            this.durationTimer.set(this.duration);
+            this.nextEmit.set(0);
+        },
+        update: function () {
+            if (this.durationTimer.delta() < 0 && this.nextEmit.delta() >= 0) {
+                this.nextEmit.set(this.duration / this.count);
+                var x = Math.random().map(0, 1, this.pos.x, this.pos.x + this.size.x);
+                var y = Math.random().map(0, 1, this.pos.y, this.pos.y + this.size.y);
+                ig.game.spawnEntity(EntityDebrisParticle, x, y);
+            }
+        }
+    });
+    EntityDebrisParticle = EntityParticle.extend({
+        lifetime: 2,
+        fadetime: 1,
+        bounciness: 0.6,
+        vel: {
+            x: 60,
+            y: 0
+        },
+        animSheet: new ig.AnimationSheet('media/sprites/debris.png', 4, 4),
+        init: function (x, y, settings) {
+            this.addAnim('idle', 5, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]);
+            this.parent(x, y, settings);
+        }
+    });
+});
 
-                                                                        // biolab/entities/debris.js
-                                                                        ig.baked = true; ig.module('biolab.entities.debris'
-                                                                        iolab.entities.debris ').requires('.requires('impact.entity'
-                                                                        mpact.entity ',''biolab.entities.particle'
-                                                                        iolab.entities.particle ').defines(function(){EntityDebris=ig.Entity.extend({_wmScalable:true,_wmDrawBox:true,_wmBoxColor:'.defines(function () {
-                                                                            EntityDebris = ig.Entity.extend({
-                                                                                _wmScalable: true,
-                                                                                _wmDrawBox: true,
-                                                                                _wmBoxColor: 'rgba(255, 170, 66, 0.7)'
-                                                                                gba(255, 170, 66, 0.7)',size:{x:8,y:8},duration:5,count:5,durationTimer:null,nextEmit:null,init:function(x,y,settings){this.parent(x,y,settings);this.durationTimer=new ig.Timer();this.nextEmit=new ig.Timer();},triggeredBy:function(entity,trigger){this.durationTimer.set(this.duration);this.nextEmit.set(0);},update:function(){if(this.durationTimer.delta()<0&&this.nextEmit.delta()>=0){this.nextEmit.set(this.duration/this.count);var x=Math.random().map(0,1,this.pos.x,this.pos.x+this.size.x);var y=Math.random().map(0,1,this.pos.y,this.pos.y+this.size.y);ig.game.spawnEntity(EntityDebrisParticle,x,y);}}});EntityDebrisParticle=EntityParticle.extend({lifetime:2,fadetime:1,bounciness:0.6,vel:{x:60,y:0},animSheet:new ig.AnimationSheet('
-                                                                                size: {
-                                                                                    x: 8,
-                                                                                    y: 8
-                                                                                },
-                                                                                duration: 5,
-                                                                                count: 5,
-                                                                                durationTimer: null,
-                                                                                nextEmit: null,
-                                                                                init: function (x, y, settings) {
-                                                                                    this.parent(x, y, settings);
-                                                                                    this.durationTimer = new ig.Timer();
-                                                                                    this.nextEmit = new ig.Timer();
-                                                                                },
-                                                                                triggeredBy: function (entity, trigger) {
-                                                                                    this.durationTimer.set(this.duration);
-                                                                                    this.nextEmit.set(0);
-                                                                                },
-                                                                                update: function () {
-                                                                                    if (this.durationTimer.delta() < 0 && this.nextEmit.delta() >= 0) {
-                                                                                        this.nextEmit.set(this.duration / this.count);
-                                                                                        var x = Math.random().map(0, 1, this.pos.x, this.pos.x + this.size.x);
-                                                                                        var y = Math.random().map(0, 1, this.pos.y, this.pos.y + this.size.y);
-                                                                                        ig.game.spawnEntity(EntityDebrisParticle, x, y);
-                                                                                    }
-                                                                                }
-                                                                            });
-                                                                            EntityDebrisParticle = EntityParticle.extend({
-                                                                                lifetime: 2,
-                                                                                fadetime: 1,
-                                                                                bounciness: 0.6,
-                                                                                vel: {
-                                                                                    x: 60,
-                                                                                    y: 0
-                                                                                },
-                                                                                animSheet: new ig.AnimationSheet('media/sprites/debris.png'
-                                                                                edia / sprites / debris.png ',4,4),init:function(x,y,settings){this.addAnim('
-                                                                                4, 4),
-                                                                                init: function (x, y, settings) {
-                                                                                    this.addAnim('idle'
-                                                                                    dle ',5,[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]);this.parent(x,y,settings);}});});
 
 // biolab/entities/delay.js
 ig.baked=true;ig.module('
@@ -6835,20 +7418,240 @@ this.ctx.globalAlpha=1;this.marks=[];}});ig.debug.addPanel({type:ig.DebugGraphPa
 // impact/debug/debug.js
 ig.baked=true;ig.module('impact.debug.debug').requires('impact.debug.entities-panel','impact.debug.maps-panel','impact.debug.graph-panel').defines(function(){});
 
+
 // biolab/biolab.js
-ig.baked=true;ig.module('biolab.biolab').requires('plugins.impact-splash-loader','impact.game','impact.collision-map','impact.background-map','impact.font','biolab.camera','biolab.entities.player','biolab.entities.blob','biolab.entities.grunt','biolab.entities.dropper','biolab.entities.spike','biolab.entities.crate','biolab.entities.mine','biolab.entities.spewer','biolab.entities.earthquake','biolab.entities.mover','biolab.entities.debris','biolab.entities.delay','biolab.entities.void','biolab.entities.hurt','biolab.entities.levelchange','biolab.entities.respawn-pod','biolab.entities.test-tube','biolab.entities.glass-dome','biolab.entities.endhub','biolab.levels.biolab1','biolab.levels.biolab2','biolab.levels.biolab3','impact.debug.debug').defines(function(){BiolabGame=ig.Game.extend({clearColor:'#0d0c0b',gravity:240,player:null,mode:0,lastCheckpoint:null,playerSpawnPos:{x:0,y:0},deathCount:0,tubeCount:0,tubeTotal:0,levelTime:null,levelTimeText:'0',musicBiochemie:new ig.Sound('media/music/biochemie.ogg',false),font:new ig.Font('media/04b03.font.png'),camera:null,lastTick:0.016,realTime:0,showFPS:false,init:function(){var as=new ig.AnimationSheet('media/tiles/biolab.png',8,8);this.backgroundAnims={'media/tiles/biolab.png':{80:new ig.Animation(as,0.13,[80,81,82,83,84,85,86,87]),81:new ig.Animation(as,0.17,[84,83,82,81,80,87,86,85]),88:new ig.Animation(as,0.23,[88,89,90,91,92,93,94,95]),89:new ig.Animation(as,0.19,[95,94,93,92,91,90,89,88])}};this.camera=new Camera(ig.system.width/4,ig.system.height/3,5);this.camera.trap.size.x=ig.system.width/10;this.camera.trap.size.y=ig.system.height/3;this.camera.lookAhead.x=ig.ua.mobile?ig.system.width/6:0;ig.music.volume=0.9;ig.music.add(this.musicBiochemie);this.loadLevel(LevelBiolab1);this.realTime=Date.now();this.lastTick=0.016;},loadLevel:function(level){if(ig.ua.iPhone4||ig.ua.android){for(var i=0;i<level.layer.length;i++){if(level.layer[i].name=='background'){level.layer.erase(level.layer[i]);}}}
-this.parent(level);this.player=this.getEntitiesByType(EntityPlayer)[0];this.lastCheckpoint=null;this.playerSpawnPos={x:this.player.pos.x,y:this.player.pos.y};this.deathCount=0;this.tubeCount=0;this.tubeTotal=this.getEntitiesByType(EntityTestTube).length;this.levelTime=new ig.Timer();this.mode=BiolabGame.MODE.GAME;this.camera.max.x=this.collisionMap.width*this.collisionMap.tilesize-ig.system.width;this.camera.max.y=this.collisionMap.height*this.collisionMap.tilesize-ig.system.height;this.camera.set(this.player);if(ig.ua.mobile){for(var i=0;i<this.backgroundMaps.length;i++){this.backgroundMaps[i].preRender=true;}}},endLevel:function(nextLevel){this.nextLevel=nextLevel;this.levelTimeText=this.levelTime.delta().round(2).toString();this.mode=BiolabGame.MODE.STATS;},end:function(){ig.system.setGame(BiolabCredits);},respawnPlayerAtLastCheckpoint:function(x,y){var pos=this.playerSpawnPos;if(this.lastCheckpoint){pos=this.lastCheckpoint.getSpawnPos()
-this.lastCheckpoint.currentAnim=this.lastCheckpoint.anims.respawn.rewind();}
-this.player=this.spawnEntity(EntityPlayer,pos.x,pos.y);this.player.currentAnim=this.player.anims.spawn;this.deathCount++;},update:function(){this.camera.follow(this.player);this.parent();},draw:function(){this.parent();this.camera.draw();if(this.showFPS){this.font.draw((1/this.lastTick).round(),4,4);}},run:function(){var now=Date.now();this.lastTick=this.lastTick*0.9+((now-this.realTime)/1000)*0.1;this.realTime=now;if(ig.input.pressed('fps')){this.showFPS=!this.showFPS;}
-if(this.mode==BiolabGame.MODE.GAME){this.update();this.draw();}
-else if(this.mode==BiolabGame.MODE.STATS){this.showStats();}},showStats:function(){if(ig.input.pressed('shoot')||ig.input.pressed('jump')){this.loadLevel(this.nextLevel);return;}
-var mv=ig.ua.mobile?20:0;ig.system.clear(this.clearColor);this.font.draw('Level Complete!',ig.system.width/2,20,ig.Font.ALIGN.CENTER);this.font.draw('Time:',98-mv,56,ig.Font.ALIGN.RIGHT);this.font.draw(this.levelTimeText+'s',104-mv,56);this.font.draw('Tubes Collected:',98-mv,68,ig.Font.ALIGN.RIGHT);this.font.draw(this.tubeCount+'/'+this.tubeTotal,104-mv,68);this.font.draw('Deaths:',98-mv,80,ig.Font.ALIGN.RIGHT);this.font.draw(this.deathCount.toString(),104-mv,80);this.font.draw('Press X or C to Proceed',ig.system.width/2,140,ig.Font.ALIGN.CENTER);}});BiolabGame.MODE={GAME:1,STATS:2};BiolabTitle=ig.Class.extend({introTimer:null,noise:null,sound:new ig.Sound('media/sounds/intro.ogg',false),biolab:new ig.Image('media/title-biolab.png'),disaster:new ig.Image('media/title-disaster.png'),player:new ig.Image('media/title-player.png'),font:new ig.Font('media/04b03.font.png'),init:function(){if(!BiolabTitle.initialized){ig.input.bind(ig.KEY.LEFT_ARROW,'left');ig.input.bind(ig.KEY.RIGHT_ARROW,'right');ig.input.bind(ig.KEY.X,'jump');ig.input.bind(ig.KEY.C,'shoot');ig.input.bind(ig.KEY.F,'fps');if(ig.ua.mobile){ig.input.bindTouch('#buttonFPS','fps');ig.input.bindTouch('#buttonLeft','left');ig.input.bindTouch('#buttonRight','right');ig.input.bindTouch('#buttonShoot','shoot');ig.input.bindTouch('#buttonJump','jump');}
-BiolabTitle.initialized=true;}
-this.introTimer=new ig.Timer(1);},run:function(){if(ig.input.pressed('shoot')||ig.input.pressed('jump')){ig.system.setGame(BiolabGame);return;}
-var d=this.introTimer.delta();if(!this.soundPlayed&&d>-0.3){this.soundPlayed=true;this.sound.play();}
-if(ig.ua.mobile){ig.system.clear('#0d0c0b');this.biolab.draw((d*d*-d).limit(0,1).map(1,0,-160,12),6);this.disaster.draw((d*d*-d).limit(0,1).map(1,0,300,12),46);this.player.draw((d*d*-d).limit(0,1).map(0.5,0,240,70),56);if(d>0&&(d%1<0.5||d>2)){this.font.draw('Press Button to Play',80,140,ig.Font.ALIGN.CENTER);}}
-else{ig.system.clear('#0d0c0b');this.biolab.draw((d*d*-d).limit(0,1).map(1,0,-160,44),26);this.disaster.draw((d*d*-d).limit(0,1).map(1,0,300,44),70);this.player.draw((d*d*-d).limit(0,1).map(0.5,0,240,166),56);if(d>0&&(d%1<0.5||d>2)){this.font.draw('Press X or C to Play',120,140,ig.Font.ALIGN.CENTER);}}}});BiolabTitle.initialized=false;BiolabCredits=ig.Class.extend({introTimer:null,font:new ig.Font('media/04b03.font.png'),lineHeight:12,scroll:0,scrollSpeed:10,credits:['          Thanks for Playing!','','','Concept, Graphics & Programming','    Dominic Szablewski','','Music','    Andreas Loesch','','Beta Testing','    Sebastian Gerhard','    Benjamin Hartmann','    Jos Hirth','    David Jacovangelo','    Tim Juraschka','    Christopher Klink','    Mike Neumann','','','','','Made with IMPACT - http://impactjs.org/'],init:function(){this.timer=new ig.Timer();},run:function(){var d=this.timer.delta();var color=Math.round(d.map(0,3,255,0)).limit(0,255);ig.system.clear('rgb('+color+','+color+','+color+')');if((d>3&&ig.input.pressed('shoot')||ig.input.pressed('jump'))||(ig.system.height-this.scroll+(this.credits.length+2)*this.lineHeight<0)){ig.system.setGame(BiolabTitle);return;}
-var mv=ig.ua.mobile?0:32;if(d>4){this.scroll+=ig.system.tick*this.scrollSpeed;for(var i=0;i<this.credits.length;i++){var y=ig.system.height-this.scroll+i*this.lineHeight;this.font.draw(this.credits[i],mv,y);}}}});BiolabGame.start=function(){if(ig.ua.iPad){ig.Sound.enabled=false;ig.main('#canvas',BiolabTitle,60,240,160,2,ig.ImpactSplashLoader);}
-else if(ig.ua.iPhone4){ig.Sound.enabled=false;ig.main('#canvas',BiolabTitle,60,160,160,4,ig.ImpactSplashLoader);}
-else if(ig.ua.mobile){ig.Sound.enabled=false;ig.main('#canvas',BiolabTitle,60,160,160,2,ig.ImpactSplashLoader);}
-else{ig.main('#canvas',BiolabTitle,60,240,160,2,ig.ImpactSplashLoader);}};});
+ig.baked = true;
+ig.module('biolab.biolab').requires('plugins.impact-splash-loader', 'impact.game', 'impact.collision-map', 'impact.background-map', 'impact.font', 'biolab.camera', 'biolab.entities.player', 'biolab.entities.blob', 'biolab.entities.grunt', 'biolab.entities.dropper', 'biolab.entities.spike', 'biolab.entities.crate', 'biolab.entities.mine', 'biolab.entities.spewer', 'biolab.entities.earthquake', 'biolab.entities.mover', 'biolab.entities.debris', 'biolab.entities.delay', 'biolab.entities.void', 'biolab.entities.hurt', 'biolab.entities.levelchange', 'biolab.entities.respawn-pod', 'biolab.entities.test-tube', 'biolab.entities.glass-dome', 'biolab.entities.endhub', 'biolab.levels.biolab1', 'biolab.levels.biolab2', 'biolab.levels.biolab3', 'impact.debug.debug').defines(function () {
+    BiolabGame = ig.Game.extend({
+        clearColor: '#0d0c0b',
+        gravity: 240,
+        player: null,
+        mode: 0,
+        lastCheckpoint: null,
+        playerSpawnPos: {
+            x: 0,
+            y: 0
+        },
+        deathCount: 0,
+        tubeCount: 0,
+        tubeTotal: 0,
+        levelTime: null,
+        levelTimeText: '0',
+        musicBiochemie: new ig.Sound('media/music/biochemie.ogg', false),
+        font: new ig.Font('media/04b03.font.png'),
+        camera: null,
+        lastTick: 0.016,
+        realTime: 0,
+        showFPS: false,
+        init: function () {
+            var as = new ig.AnimationSheet('media/tiles/biolab.png', 8, 8);
+            this.backgroundAnims = {
+                'media/tiles/biolab.png': {
+                    80: new ig.Animation(as, 0.13, [80, 81, 82, 83, 84, 85, 86, 87]),
+                    81: new ig.Animation(as, 0.17, [84, 83, 82, 81, 80, 87, 86, 85]),
+                    88: new ig.Animation(as, 0.23, [88, 89, 90, 91, 92, 93, 94, 95]),
+                    89: new ig.Animation(as, 0.19, [95, 94, 93, 92, 91, 90, 89, 88])
+                }
+            };
+            this.camera = new Camera(ig.system.width / 4, ig.system.height / 3, 5);
+            this.camera.trap.size.x = ig.system.width / 10;
+            this.camera.trap.size.y = ig.system.height / 3;
+            this.camera.lookAhead.x = ig.ua.mobile ? ig.system.width / 6 : 0;
+            ig.music.volume = 0.9;
+            ig.music.add(this.musicBiochemie);
+            this.loadLevel(LevelBiolab1);
+            this.realTime = Date.now();
+            this.lastTick = 0.016;
+        },
+        loadLevel: function (level) {
+            if (ig.ua.iPhone4 || ig.ua.android) {
+                for (var i = 0; i < level.layer.length; i++) {
+                    if (level.layer[i].name == 'background') {
+                        level.layer.erase(level.layer[i]);
+                    }
+                }
+            }
+            this.parent(level);
+            this.player = this.getEntitiesByType(EntityPlayer)[0];
+            this.lastCheckpoint = null;
+            this.playerSpawnPos = {
+                x: this.player.pos.x,
+                y: this.player.pos.y
+            };
+            this.deathCount = 0;
+            this.tubeCount = 0;
+            this.tubeTotal = this.getEntitiesByType(EntityTestTube).length;
+            this.levelTime = new ig.Timer();
+            this.mode = BiolabGame.MODE.GAME;
+            this.camera.max.x = this.collisionMap.width * this.collisionMap.tilesize - ig.system.width;
+            this.camera.max.y = this.collisionMap.height * this.collisionMap.tilesize - ig.system.height;
+            this.camera.set(this.player);
+            if (ig.ua.mobile) {
+                for (var i = 0; i < this.backgroundMaps.length; i++) {
+                    this.backgroundMaps[i].preRender = true;
+                }
+            }
+        },
+        endLevel: function (nextLevel) {
+            this.nextLevel = nextLevel;
+            this.levelTimeText = this.levelTime.delta().round(2).toString();
+            this.mode = BiolabGame.MODE.STATS;
+        },
+        end: function () {
+            ig.system.setGame(BiolabCredits);
+        },
+        respawnPlayerAtLastCheckpoint: function (x, y) {
+            var pos = this.playerSpawnPos;
+            if (this.lastCheckpoint) {
+                pos = this.lastCheckpoint.getSpawnPos()
+                this.lastCheckpoint.currentAnim = this.lastCheckpoint.anims.respawn.rewind();
+            }
+            this.player = this.spawnEntity(EntityPlayer, pos.x, pos.y);
+            this.player.currentAnim = this.player.anims.spawn;
+            this.deathCount++;
+        },
+        update: function () {
+            this.camera.follow(this.player);
+            this.parent();
+        },
+        draw: function () {
+            this.parent();
+            this.camera.draw();
+            if (this.showFPS) {
+                this.font.draw((1 / this.lastTick).round(), 4, 4);
+            }
+        },
+        run: function () {
+            var now = Date.now();
+            this.lastTick = this.lastTick * 0.9 + ((now - this.realTime) / 1000) * 0.1;
+            this.realTime = now;
+            if (ig.input.pressed('fps')) {
+                this.showFPS = !this.showFPS;
+            }
+            if (this.mode == BiolabGame.MODE.GAME) {
+                this.update();
+                this.draw();
+            } else if (this.mode == BiolabGame.MODE.STATS) {
+                this.showStats();
+            }
+        },
+        showStats: function () {
+            if (ig.input.pressed('shoot') || ig.input.pressed('jump')) {
+                this.loadLevel(this.nextLevel);
+                return;
+            }
+            var mv = ig.ua.mobile ? 20 : 0;
+            ig.system.clear(this.clearColor);
+            this.font.draw('Level Complete!', ig.system.width / 2, 20, ig.Font.ALIGN.CENTER);
+            this.font.draw('Time:', 98 - mv, 56, ig.Font.ALIGN.RIGHT);
+            this.font.draw(this.levelTimeText + 's', 104 - mv, 56);
+            this.font.draw('Tubes Collected:', 98 - mv, 68, ig.Font.ALIGN.RIGHT);
+            this.font.draw(this.tubeCount + '/' + this.tubeTotal, 104 - mv, 68);
+            this.font.draw('Deaths:', 98 - mv, 80, ig.Font.ALIGN.RIGHT);
+            this.font.draw(this.deathCount.toString(), 104 - mv, 80);
+            this.font.draw('Press X or C to Proceed', ig.system.width / 2, 140, ig.Font.ALIGN.CENTER);
+        }
+    });
+    BiolabGame.MODE = {
+        GAME: 1,
+        STATS: 2
+    };
+    BiolabTitle = ig.Class.extend({
+        introTimer: null,
+        noise: null,
+        sound: new ig.Sound('media/sounds/intro.ogg', false),
+        biolab: new ig.Image('media/title-biolab.png'),
+        disaster: new ig.Image('media/title-disaster.png'),
+        player: new ig.Image('media/title-player.png'),
+        font: new ig.Font('media/04b03.font.png'),
+        init: function () {
+            if (!BiolabTitle.initialized) {
+                ig.input.bind(ig.KEY.LEFT_ARROW, 'left');
+                ig.input.bind(ig.KEY.RIGHT_ARROW, 'right');
+                ig.input.bind(ig.KEY.X, 'jump');
+                ig.input.bind(ig.KEY.C, 'shoot');
+                ig.input.bind(ig.KEY.F, 'fps');
+                if (ig.ua.mobile) {
+                    ig.input.bindTouch('#buttonFPS', 'fps');
+                    ig.input.bindTouch('#buttonLeft', 'left');
+                    ig.input.bindTouch('#buttonRight', 'right');
+                    ig.input.bindTouch('#buttonShoot', 'shoot');
+                    ig.input.bindTouch('#buttonJump', 'jump');
+                }
+                BiolabTitle.initialized = true;
+            }
+            this.introTimer = new ig.Timer(1);
+        },
+        run: function () {
+            if (ig.input.pressed('shoot') || ig.input.pressed('jump')) {
+                ig.system.setGame(BiolabGame);
+                return;
+            }
+            var d = this.introTimer.delta();
+            if (!this.soundPlayed && d > -0.3) {
+                this.soundPlayed = true;
+                this.sound.play();
+            }
+            if (ig.ua.mobile) {
+                ig.system.clear('#0d0c0b');
+                this.biolab.draw((d * d * -d).limit(0, 1).map(1, 0, -160, 12), 6);
+                this.disaster.draw((d * d * -d).limit(0, 1).map(1, 0, 300, 12), 46);
+                this.player.draw((d * d * -d).limit(0, 1).map(0.5, 0, 240, 70), 56);
+                if (d > 0 && (d % 1 < 0.5 || d > 2)) {
+                    this.font.draw('Press Button to Play', 80, 140, ig.Font.ALIGN.CENTER);
+                }
+            } else {
+                ig.system.clear('#0d0c0b');
+                this.biolab.draw((d * d * -d).limit(0, 1).map(1, 0, -160, 44), 26);
+                this.disaster.draw((d * d * -d).limit(0, 1).map(1, 0, 300, 44), 70);
+                this.player.draw((d * d * -d).limit(0, 1).map(0.5, 0, 240, 166), 56);
+                if (d > 0 && (d % 1 < 0.5 || d > 2)) {
+                    this.font.draw('Press X or C to Play', 120, 140, ig.Font.ALIGN.CENTER);
+                }
+            }
+        }
+    });
+    BiolabTitle.initialized = false;
+    BiolabCredits = ig.Class.extend({
+        introTimer: null,
+        font: new ig.Font('media/04b03.font.png'),
+        lineHeight: 12,
+        scroll: 0,
+        scrollSpeed: 10,
+        credits: ['          Thanks for Playing!', '', '', 'Concept, Graphics & Programming', '    Dominic Szablewski', '', 'Music', '    Andreas Loesch', '', 'Beta Testing', '    Sebastian Gerhard', '    Benjamin Hartmann', '    Jos Hirth', '    David Jacovangelo', '    Tim Juraschka', '    Christopher Klink', '    Mike Neumann', '', '', '', '', 'Made with IMPACT - http://impactjs.org/'],
+        init: function () {
+            this.timer = new ig.Timer();
+        },
+        run: function () {
+            var d = this.timer.delta();
+            var color = Math.round(d.map(0, 3, 255, 0)).limit(0, 255);
+            ig.system.clear('rgb(' + color + ',' + color + ',' + color + ')');
+            if ((d > 3 && ig.input.pressed('shoot') || ig.input.pressed('jump')) || (ig.system.height - this.scroll + (this.credits.length + 2) * this.lineHeight < 0)) {
+                ig.system.setGame(BiolabTitle);
+                return;
+            }
+            var mv = ig.ua.mobile ? 0 : 32;
+            if (d > 4) {
+                this.scroll += ig.system.tick * this.scrollSpeed;
+                for (var i = 0; i < this.credits.length; i++) {
+                    var y = ig.system.height - this.scroll + i * this.lineHeight;
+                    this.font.draw(this.credits[i], mv, y);
+                }
+            }
+        }
+    });
+    BiolabGame.start = function () {
+        if (ig.ua.iPad) {
+            ig.Sound.enabled = false;
+            ig.main('#canvas', BiolabTitle, 60, 240, 160, 2, ig.ImpactSplashLoader);
+        } else if (ig.ua.iPhone4) {
+            ig.Sound.enabled = false;
+            ig.main('#canvas', BiolabTitle, 60, 160, 160, 4, ig.ImpactSplashLoader);
+        } else if (ig.ua.mobile) {
+            ig.Sound.enabled = false;
+            ig.main('#canvas', BiolabTitle, 60, 160, 160, 2, ig.ImpactSplashLoader);
+        } else {
+            ig.main('#canvas', BiolabTitle, 60, 240, 160, 2, ig.ImpactSplashLoader);
+        }
+    };
+});

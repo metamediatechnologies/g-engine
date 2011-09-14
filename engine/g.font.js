@@ -1,17 +1,20 @@
-  _g.module(
-      'g.font'
-    )
-    .requires('g.image'
-    )
-    .defines(function () {
+_g.module(
+    'g.font'
+)
+.requires(
+    'g.image'
+)
+.defines(function () {
         _g.Font = _g.Image.extend({
             widthMap: [],
             indices: [],
             firstChar: 32,
+
             onload: function (ev) {
                 this._loadMetrics(this.data);
                 this.parent(ev);
             },
+
             draw: function (text, x, y, align) {
                 if (typeof (text) != 'string') {
                     text = text.toString();
@@ -29,6 +32,7 @@
                     x += this._drawChar(c - this.firstChar, x, y);
                 }
             },
+
             _drawChar: function (c, targetX, targetY) {
                 if (!this.loaded || c < 0 || c >= this.indices.length) {
                     return 0;
@@ -38,9 +42,14 @@
                 var charY = 0;
                 var charWidth = this.widthMap[c] * scale;
                 var charHeight = (this.height - 2) * scale;
-                _g.system.context.drawImage(this.data, charX, charY, charWidth, charHeight, _g.system.getDrawPos(targetX), _g.system.getDrawPos(targetY), charWidth, charHeight);
+                _g.system.context.drawImage(this.data, charX, charY,
+                                            charWidth, charHeight,
+                                            _g.system.getDrawPos(targetX),
+                                            _g.system.getDrawPos(targetY),
+                                            charWidth, charHeight);
                 return this.widthMap[c] + 1;
             },
+
             _loadMetrics: function (image) {
                 this.widthMap = [];
                 this.indices = [];
@@ -48,7 +57,8 @@
                 canvas.width = image.width;
                 canvas.height = 1;
                 var ctx = canvas.getContext('2d');
-                ctx.drawImage(image, 0, image.height - 1, image.width, 1, 0, 0, image.width, 1);
+                ctx.drawImage(image, 0, image.height - 1, image.width,
+                              1, 0, 0, image.width, 1);
                 var px = ctx.getImageData(0, 0, image.width, 1);
                 var currentChar = 0;
                 var currentWidth = 0;
@@ -67,6 +77,7 @@
                 this.indices.push(x - currentWidth);
             }
         });
+
         _g.Font.ALIGN = {
             LEFT: 0,
             RIGHT: 1,

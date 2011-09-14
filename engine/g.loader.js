@@ -3,9 +3,9 @@
       'g.loader'
     )
     .requires(
-      //'g.image',
-      //'g.font',
-      //'g.sound'
+      'g.image',
+      'g.font',
+      'g.sound'
     )
     .defines(function () {
 

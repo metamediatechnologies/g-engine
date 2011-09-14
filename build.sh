@@ -6,14 +6,20 @@ cd ./_utils
 
 # 1 - PREPROCESSING
 cat ../engine/_prefix.js \
-  ../engine/g.js ../engine/g.loader.js \
+  ../engine/g.js \
   \
   ../engine/g.timer.js \
   ../engine/g.image.js \
-  ../engine/g.animation.js \
+  ../engine/g.font.js \
+  ../engine/g.sound.js \
+  ../engine/g.input.js \
   \
+  ../engine/g.loader.js \
+  \
+  ../engine/g.animation.js \
   ../engine/g.map.js \
   ../engine/g.background-map.js \
+  ../engine/g.collision-map.js \
   \
   ../engine/g.system.js \
   ../engine/g.main.js  \

@@ -97,13 +97,17 @@
             'MINUS': 189,
             'PERIOD': 190
         };
+
         _g.Input = _g.Class.extend({
             bindings: {},
             actions: {},
+            presses: {},
             locks: {},
             delayedKeyup: [],
             isUsingMouse: false,
             isUsingKeyboard: false,
+            isUsingAccelerometer: false,
+
             mouse: {
                 x: 0,
                 y: 0
@@ -114,10 +118,15 @@
                 }
                 this.isUsingMouse = true;
                 window.addEventListener('mousewheel', this.mousewheel.bind(this), false);
-                _g.core.canvas.addEventListener('contextmenu', this.contextmenu.bind(this), false);
-                _g.core.canvas.addEventListener('mousedown', this.keydown.bind(this), false);
-                _g.core.canvas.addEventListener('mouseup', this.keyup.bind(this), false);
-                _g.core.canvas.addEventListener('mousemove', this.mousemove.bind(this), false);
+                _g.system.canvas.addEventListener('contextmenu', this.contextmenu.bind(this), false);
+                _g.system.canvas.addEventListener('mousedown', this.keydown.bind(this), false);
+                _g.system.canvas.addEventListener('mouseup', this.keyup.bind(this), false);
+                _g.system.canvas.addEventListener('mousemove', this.mousemove.bind(this), false);
+
+                _g.system.canvas.addEventListener('touchstart',this.keydown.bind(this),false);
+                _g.system.canvas.addEventListener('touchend',this.keyup.bind(this),false);
+                _g.system.canvas.addEventListener('touchmove', this.mousemove.bind(this),false);
+
             },
             initKeyboard: function () {
                 if (this.isUsingKeyboard) {
@@ -127,17 +136,26 @@
                 window.addEventListener('keydown', this.keydown.bind(this), false);
                 window.addEventListener('keyup', this.keyup.bind(this), false);
             },
+            initAccelerometer: function () {
+                if (this.isUsingAccelerometer) {
+                    return;
+                }
+                window.addEventListener('devicemotion', this.devicemotion.bind(this),false);
+            },
+
             mousewheel: function (event) {
                 var code = event.wheel > 0 ? _g.KEY.MWHEEL_UP : _g.KEY.MWHEEL_DOWN;
                 var action = this.bindings[code];
                 if (action) {
                     this.actions[action] = true;
+                    this.presses[action] = true;
                     event.stopPropagation();
                     this.delayedKeyup.push(action);
                 }
             },
+
             mousemove: function (event) {
-                var el = _g.core.canvas;
+                var el = _g.system.canvas;
                 var pos = {
                     left: 0,
                     top: 0
@@ -147,15 +165,24 @@
                     pos.top += el.offsetTop;
                     el = el.offsetParent;
                 }
-                this.mouse.x = (event.pageX - pos.left) / _g.core.scale;
-                this.mouse.y = (event.pageY - pos.top) / _g.core.scale;
+                var tx = event.pageX;
+                var ty = event.pageY;
+                if (event.touches) {
+                    tx = event.touches[0].clientX;
+                    ty = event.touches[0].clientY;
+                }
+                this.mouse.x = (tx - pos.left) / _g.system.scale;
+                this.mouse.y = (ty - pos.top) / _g.system.scale;
             },
+
             contextmenu: function (event) {
                 if (this.bindings[_g.KEY.MOUSE2]) {
                     event.stopPropagation();
                     event.preventDefault();
                 }
             },
+
+
             keydown: function (event) {
                 if (event.target.type == 'text') {
                     return;
