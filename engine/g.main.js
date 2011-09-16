@@ -28,9 +28,9 @@
       _g.log("main(): Enter");
 
         _g.system = new _g.System(canvasId, fps, width, height, scale || 1);
-      /*
+
         _g.input = new _g.Input();
-        _g.soundManager = new ig.SoundManager();
+      /*  _g.soundManager = new ig.SoundManager();
         _g.music = new _g.Music();
       */
         _g.ready = true;

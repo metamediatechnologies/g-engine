@@ -4,7 +4,7 @@
       'g.input'
     )
     .defines(function () {
-        _g.KEY = {
+        _g.KEY = {            
             'MOUSE1': -1,
             'MOUSE2': -3,
             'MWHEEL_UP': -4,

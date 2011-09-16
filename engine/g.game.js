@@ -23,9 +23,10 @@
 
           entities: [],
           namedEntities: {},
-          //collisionMap: _g.CollisionMap.staticNoCollision,
+          backgrounds: [],
           backgroundMaps: [],
           backgroundAnims: {},
+          //collisionMap: _g.CollisionMap.staticNoCollision,
           cellSize: 64,
 
 /*
@@ -85,6 +86,9 @@
           draw: function() {
             //_g.log("Game:draw()");
             _g.system.clear(this.clearColor);
+            for (var i = 0; i < this.backgrounds.length; i++) {
+                this.backgrounds[i].draw();
+            }
             for (var i = 0; i < this.backgroundMaps.length; i++) {
                 this.backgroundMaps[i].draw();
             }

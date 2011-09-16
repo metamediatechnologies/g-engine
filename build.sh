@@ -16,10 +16,11 @@ cat ../engine/_prefix.js \
   \
   ../engine/g.loader.js \
   \
-  ../engine/g.animation.js \
+  ../engine/g.background.js \
   ../engine/g.map.js \
   ../engine/g.background-map.js \
   ../engine/g.collision-map.js \
+  ../engine/g.animation.js \
   \
   ../engine/g.system.js \
   ../engine/g.main.js  \

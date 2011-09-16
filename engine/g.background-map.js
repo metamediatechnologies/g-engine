@@ -45,7 +45,7 @@
             },
 
             preRenderMapToChunks: function () {
-                _g.log("BackgroundMap.preRenderMapToChunks");
+                //_g.log("BackgroundMap.preRenderMapToChunks");
 
                 var totalWidth = this.width * this.tilesize * _g.system.scale,
                     totalHeight = this.height * this.tilesize * _g.system.scale;
@@ -91,7 +91,7 @@
             },
 
             draw: function () {
-                _g.log("BackgroundMap.draw");
+               //_g.log("BackgroundMap.draw");
                 if (!this.tiles.loaded) {
                     return;
                 }
@@ -103,7 +103,7 @@
             },
 
             drawPreRendered: function () {
-                _g.log("BackgroundMap.drawPreRendered");
+                //_g.log("BackgroundMap.drawPreRendered");
 
                 if (!this.preRenderedChunks) {
                     this.preRenderMapToChunks();
@@ -149,7 +149,7 @@
             },
 
             drawTiled: function () {
-                _g.log("BackgroundMap.drawTiled");
+                //_g.log("BackgroundMap.drawTiled");
 
                 var tile = 0,
                     anim = null,

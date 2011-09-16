@@ -7421,7 +7421,15 @@ ig.baked=true;ig.module('impact.debug.debug').requires('impact.debug.entities-pa
 
 // biolab/biolab.js
 ig.baked = true;
-ig.module('biolab.biolab').requires('plugins.impact-splash-loader', 'impact.game', 'impact.collision-map', 'impact.background-map', 'impact.font', 'biolab.camera', 'biolab.entities.player', 'biolab.entities.blob', 'biolab.entities.grunt', 'biolab.entities.dropper', 'biolab.entities.spike', 'biolab.entities.crate', 'biolab.entities.mine', 'biolab.entities.spewer', 'biolab.entities.earthquake', 'biolab.entities.mover', 'biolab.entities.debris', 'biolab.entities.delay', 'biolab.entities.void', 'biolab.entities.hurt', 'biolab.entities.levelchange', 'biolab.entities.respawn-pod', 'biolab.entities.test-tube', 'biolab.entities.glass-dome', 'biolab.entities.endhub', 'biolab.levels.biolab1', 'biolab.levels.biolab2', 'biolab.levels.biolab3', 'impact.debug.debug').defines(function () {
+ig.module('biolab.biolab').requires('plugins.impact-splash-loader', 'impact.game', 'impact.collision-map',
+'impact.background-map', 'impact.font', 'biolab.camera', 'biolab.entities.player', 'biolab.entities.blob',
+ 'biolab.entities.grunt', 'biolab.entities.dropper', 'biolab.entities.spike', 'biolab.entities.crate',
+ 'biolab.entities.mine', 'biolab.entities.spewer', 'biolab.entities.earthquake',
+ 'biolab.entities.mover', 'biolab.entities.debris', 'biolab.entities.delay', 'biolab.entities.void',
+  'biolab.entities.hurt', 'biolab.entities.levelchange', 'biolab.entities.respawn-pod',
+  'biolab.entities.test-tube', 'biolab.entities.glass-dome', 'biolab.entities.endhub',
+  'biolab.levels.biolab1', 'biolab.levels.biolab2', 'biolab.levels.biolab3',
+   'impact.debug.debug').defines(function () {
     BiolabGame = ig.Game.extend({
         clearColor: '#0d0c0b',
         gravity: 240,
